@@ -33,7 +33,8 @@ body h1 {
 }
 
 .navbar {
-    order: 2; 
+    display: flex;
+    justify-content: end;
 }
 
 .row {
@@ -62,7 +63,7 @@ body h1 {
 }
 
 .nav-list li a {
-    text-decoration: underline;
+    display: inline-block;
     color: #a4fab2;
 }
 .wrapper {
@@ -359,10 +360,115 @@ footer {
     height: 100%;
 }
 
+.container ul li a{
+    text-decoration: none;
+    background-color: #091a0a;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.container ul li a:hover{
+    background-color: #035f94;
+    color: rgb(255, 255, 255);
+}
 
 a:hover {
     text-decoration: underline;
 }
 .nav-list li a:hover {
     border-bottom: 2px solid #fff;
+}
+
+#loginLinks{
+    display: flex;
+    justify-content: end;
+    gap: 30px;
+}
+
+#loginLinks .navbaricons{
+    color: #fff;
+    display: none;
+}
+
+#loginLinks .navbaricons:hover{
+    color: #ff0000;
+    cursor: pointer;
+}
+
+#loginLinks .links a{
+    display: inline-block;
+    text-decoration: none;
+}
+
+#loginLinks a:hover{
+    color: #ff0000;
+    cursor: pointer;
+}
+
+
+@media screen and (max-width:1024px) {
+    .container .nav-list{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 10px;
+        background: rgba(89, 9, 238, 0.7);
+        z-index: 2;
+        position: absolute;
+        padding: 20px;
+        right: 0;
+        display: none;
+    }
+
+    .container .nav-list li{
+        animation: navAnimation  2s ease 0s forwards;
+    }
+    #loginLinks .navbaricons{
+        display: block;
+        position: absolute;
+        top: 50px;
+        right: 20px;
+    }
+
+    @keyframes navAnimation {
+        0% {
+            transform: rotateX(90deg);
+        }
+
+        100%{
+            transform: rotateX(0deg);
+        }
+    }
+
+    body h1{
+        font-size: 28px;
+    }
+
+    p{
+        font-size: 15px;
+    }
+    
+    h2{
+        font-size: 20px;
+    }
+
+    .events-section ul li,.about-section ul li,.types-section ul li,.contact-section ul li{
+        font-size: 10px;
+    }
+
+    .car-details {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px; 
+    }
+
+    .main-content {
+        gap: 15px;
+        padding: 50px;
+    }
+
+    .section button {
+        padding: 10px 26px;
+        margin: 2px 1px;
+      }
+
 }

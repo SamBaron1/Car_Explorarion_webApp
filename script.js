@@ -14,9 +14,26 @@
 //     this.classList.toggle("active");
 //   });
 // }
-//**************deno ***********AFTER SIGING UP */
-function signIn() {
-  alert("Successfully Signed In. Welcome :)");
-  document.getElementById("loginLinks").style.visibility = "hidden";
-  window.location.href = "index.html";
-};
+
+
+
+// MEDIA SCREEN  
+const opennav=document.querySelector('#opennavbtn');
+const closenav=document.querySelector('#closenavbtn');
+const menu=document.querySelector('.nav-list');
+
+
+const open=()=>{
+  opennav.style.display='none';
+  closenav.style.display='block';
+  menu.style.display='flex';
+}
+
+const close=()=>{
+  opennav.style.display="block";
+  closenav.style.display="none";
+  menu.style.display="none";
+}
+
+opennav.addEventListener('click',open);
+closenav.addEventListener('click',close);

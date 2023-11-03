@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="fontawesome-free-6.4.2-web/css/all.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-8Z+Xj1zVJ3+U6vYJf2Ywz5t7K1L9x9h0Q6vJ8yZtXv7HlqLsQO2jKmG9gRb5rZsWxW8yLrBdQq4fVl3vz1+2jA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -12,13 +13,22 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <title>Car Exploration Web App</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 
 <body>
     <div class="header">
         <div id="loginLinks">
-            <a href="login.html" id="login">Login</a>
-            <a href="sign_up.html">Sign Up</a>
+
+            <div class="links">
+                <a href="login.html" id="login">Login</a>
+                <a href="sign_up.html">Sign Up</a>
+            </div>
+            <div class="navbaricons">
+                <i class="fa-solid fa-bars" id="opennavbtn"></i>
+                <i class="fa-solid fa-xmark" id="closenavbtn" style="display: none;"></i>
+            </div>
+
         </div>
         <div id="searchContainer">
             <input type="text" id="searchInput" placeholder="Search for cars...">
@@ -26,6 +36,14 @@
         </div>
     </div>
     <div class="container">
+        <div class="row">
+            
+            <div class="icon">
+            
+                <img src="images/Bugatti.jpeg" alt="icon">
+            </div>
+     
+        </div>
         <div class="navbar">
             <ul class="nav-list">
                 <li><a href="#">HOME</a></li>
@@ -34,14 +52,6 @@
                 <li><a href="#">EVENTS</a></li>
                 <li><a href="#">CONTACTS</a></li>
             </ul>
-        </div>
-        <div class="row">
-            
-            <div class="icon">
-            
-                <img src="images/Bugatti.jpeg" alt="icon">
-            </div>
-     
         </div>
     </div>
     
@@ -262,7 +272,7 @@
         </div>
     </footer>
     
-    <script src="script.js"></script>
+    
 </body>
 
 </html>
