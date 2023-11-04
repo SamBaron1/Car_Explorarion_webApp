@@ -226,26 +226,24 @@ p {
     align-items: center;
     padding: 10px;
 }
-#loginLinks {
+.links {
     width: 20%;
     height: 5vh;
     position: relative;
-    left: 80%;
     top: 10px;
     display: flex;
     justify-content: space-around;
-}
-#loginLinks a {
-    width: 40%;
-    background-color: #035f94;
-    margin-left: 10px;
-    color: #fff;  
-    text-decoration: none ; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius:20px;
     
+}
+
+#login,#signUp{
+    background-color: rgb(0, 119, 255);
+    width: 30%;
+    height: 100%;
+    padding: 3px;
+    text-align: center;
+    color: white;
+    border-radius: 5px;
 }
 #searchContainer {
     display: flex;
