@@ -455,3 +455,112 @@ a:hover {
       }
 
 }
+
+@media screen and (max-width:600px) {
+    body{
+        width: fit-content;
+        margin: 0;
+        padding: 0;
+        max-width: 100vw;
+    }
+
+    .car-details {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 10px; 
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+        margin: 0;
+        overflow: hidden;
+        padding: 0;
+        width: 100vw;
+    }
+
+    .main-content{
+        width: 100vw;
+        margin: 0;
+        padding: 0;
+        gap: 2px;
+    }
+}
+
+
+
+
+
+/*-------------------------------------       
+        8. Clients-say 
+--------------------------------------*/
+.clients-say{padding:115px 0 80px;background: #f8f9fb;}
+
+/*single-testimonial-box */
+.single-testimonial-box  {
+    padding: 50px 30px 57px;
+    text-align: center;
+    border: 1px solid #dadfe9;
+    overflow-x: hidden;
+    -webkit-transition: .3s; 
+    -moz-transition:.3s; 
+    -ms-transition:.3s; 
+    -o-transition:.3s;
+    transition: .3s;
+}
+
+/*testimonial-description*/
+.clients-say .testimonial-carousel .col-sm-3,
+.clients-say .testimonial-carousel .col-xs-12{
+    width:100%;
+    height:auto;
+}
+/* testimonial-info */
+.testimonial-img {
+    margin-right: 5px;
+    border-radius:50%;
+    -webkit-transition: .3s; 
+    -moz-transition:.3s; 
+    -ms-transition:.3s; 
+    -o-transition:.3s;
+    transition: .3s;
+}
+.testimonial-person h2 a,.testimonial-person h4 {
+    font-size: 16px;
+    color: #5e6778;
+    font-weight: 600;
+}
+.testimonial-person h4{
+    margin-top: 10px;
+}/* testimonial-info */
+
+
+/* testimonial-comment */
+.testimonial-comment p {
+    font-size: 16px;
+    color: #5e6778;
+    margin-top: 30px;
+    margin-bottom: 25px;
+}/* testimonial-comment */
+
+
+/*testimonial-description*/
+.single-testimonial-box:hover h2 a,.single-testimonial-box:hover h4, .single-testimonial-box:hover p{color: #fff;}
+.single-testimonial-box:hover{
+    background: #4e4ffa;
+    border: 1px solid #4e4ffa;
+    box-shadow: 0 12px 30px 0px rgba(0,1,193,.2);
+}
+
+/*owl carousel*/
+.clients-say .owl-carousel .owl-stage {
+    position: relative;
+    padding: 100px 0 40px;
+}
+.clients-say .owl-carousel .owl-item img {
+    display: block;
+    width: 70px;
+    height: 70px;
+    border-radius:50%;
+    margin:0 auto;
+}
+/*owl carousel*/
+

@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="fontawesome-free-6.4.2-web/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-8Z+Xj1zVJ3+U6vYJf2Ywz5t7K1L9x9h0Q6vJ8yZtXv7HlqLsQO2jKmG9gRb5rZsWxW8yLrBdQq4fVl3vz1+2jA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"> -->
     <title>Car Exploration Web App</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
@@ -145,84 +145,126 @@
             </ul>
         </div>
     </div>
-    <div class="car-brands">
-        <div class="car-image">
-            <img src="images/electric.jpeg" alt="brand image1">
-            <img src="images/brands.jpeg" alt="brand image">
-            <img src="images/subaru.jpeg" alt="brand image2">
-        </div>
-    </div>
-    <div class="wrapper">
-        <div class="main-content">
-            <div class="section about-section">
-                <h2>About Us</h2>
-                <p>We are passionate about cars and want to provide a platform for car enthusiasts to explore and discover new vehicles.</p>
-                <ul>
-                    <li>All Car Stock Photos by Brand</li>
-                    <li>Car Brands List and Logos</li>
-                    <li>How many car brands and models are there?</li>
-                    <li>What is the difference between car brand and model?</li>
-                    <li>What is the most popular car model?</li>
-                    <li>37 Types Of Car Brands You Should Know</li>
-                    <li>2023 Latest Car Brands, Car Models, Variants, Price</li>
-                    <li>American Car Brands</li>
-                    <li>Complete List of All Car Manufacturers...</li>
-                </ul>
-                <button onclick="window.location.href='#'">Click Here</button>
-            </div>
-        
-            <div class="section types-section">
-                <h2>Types</h2>
-                <p>Stay updated with the latest car types around the world and choose your preference.</p>
-                <ul>
-                    <li>Minivan</li>
-                    <li>Hatchback</li>
-                    <li>Sports car</li>
-                    <li>Sedan</li>
-                    <li>Station Wagon</li>
-                    <li>Luxury car</li>
-                    <li>SUV</li>
-                    <li>Pickup truck</li>
-                    <li>Cross-over...</li>
-                </ul>
-                <button onclick="window.location.href='#'">Click Here</button>
-            </div>
-        
-            <div class="section events-section">
-                <h2>Events</h2>
-                <p>Stay updated with the latest events happening around the world.</p>
-                <ul>
-                    <li>Road trips.</li>
-                    <li>Product exhibition.</li>
-                    <li>Test drives in a controlled environment.</li>
-                    <li>Vehicle presentation.</li>
-                    <li>Monterey Car Week</li>
-                    <li>Goodwood Festival of Speed (UK)</li>
-                    <li>Consumer Electronics Show (CES)</li>
-                    <li>New York International Auto Show (USA)</li>
-                    <li>Tokyo Motor Show (Japan)...</li>
-                </ul>
-                <button onclick="window.location.href='#'">Click Here</button>
-            </div>
-        
-            <div class="section contact-section">
-                <h2>Contact Us</h2>
-                <p>Have questions or feedback? Get in touch with us!</p>
-                <ul>
-                    <li>Sales Inquiries</li>
-                    <li>Service and Maintenance</li>
-                    <li>Parts and Accessories</li>
-                    <li>Customization and Modifications</li>
-                    <li>Dealership Information</li>
-                    <li>Safety and Recall Information</li>
-                    <li>Environmental and Sustainability</li>
-                    <li>Financing and Leasing</li>
-                    <li>Regulatory and Compliance...</li>
-                </ul>
-                <button onclick="window.location.href='#'">Click Here</button>
-            </div>
-        </div>
-    </div>    
+
+    		<!-- clients-say strat -->
+		<section id="clients-say"  class="clients-say">
+			<div class="container">
+				<div class="section-header">
+					<h2>what our clients say</h2>
+				</div><!--/.section-header-->
+				<div class="row">
+					<div class="owl-carousel testimonial-carousel">
+						<div class="col-sm-3 col-xs-12">
+							<div class="single-testimonial-box">
+								<div class="testimonial-description">
+									<div class="testimonial-info">
+										<div class="testimonial-img">
+											<img src="images/images/clients/c1.png" alt="image of clients person" />
+										</div><!--/.testimonial-img-->
+									</div><!--/.testimonial-info-->
+									<div class="testimonial-comment">
+										<p>
+											Sed ut pers unde omnis iste natus error sit voluptatem accusantium dolor laudan rem aperiam, eaque ipsa quae ab illo inventore verit. 
+										</p>
+									</div><!--/.testimonial-comment-->
+									<div class="testimonial-person">
+										<h2><a href="#">tomas lili</a></h2>
+										<h4>new york</h4>
+									</div><!--/.testimonial-person-->
+								</div><!--/.testimonial-description-->
+							</div><!--/.single-testimonial-box-->
+						</div><!--/.col-->
+						<div class="col-sm-3 col-xs-12">
+							<div class="single-testimonial-box">
+								<div class="testimonial-description">
+									<div class="testimonial-info">
+										<div class="testimonial-img">
+											<img src="images/images/clients/c2.png" alt="image of clients person" />
+										</div><!--/.testimonial-img-->
+									</div><!--/.testimonial-info-->
+									<div class="testimonial-comment">
+										<p>
+											Sed ut pers unde omnis iste natus error sit voluptatem accusantium dolor laudan rem aperiam, eaque ipsa quae ab illo inventore verit. 
+										</p>
+									</div><!--/.testimonial-comment-->
+									<div class="testimonial-person">
+										<h2><a href="#">romi rain</a></h2>
+										<h4>london</h4>
+									</div><!--/.testimonial-person-->
+								</div><!--/.testimonial-description-->
+							</div><!--/.single-testimonial-box-->
+						</div><!--/.col-->
+						<div class="col-sm-3 col-xs-12">
+							<div class="single-testimonial-box">
+								<div class="testimonial-description">
+									<div class="testimonial-info">
+										<div class="testimonial-img">
+											<img src="images/images/clients/c3.png" alt="image of clients person" />
+										</div><!--/.testimonial-img-->
+									</div><!--/.testimonial-info-->
+									<div class="testimonial-comment">
+										<p>
+											Sed ut pers unde omnis iste natus error sit voluptatem accusantium dolor laudan rem aperiam, eaque ipsa quae ab illo inventore verit. 
+										</p>
+									</div><!--/.testimonial-comment-->
+									<div class="testimonial-person">
+										<h2><a href="#">john doe</a></h2>
+										<h4>washington</h4>
+									</div><!--/.testimonial-person-->
+								</div><!--/.testimonial-description-->
+							</div><!--/.single-testimonial-box-->
+						</div><!--/.col-->
+					</div><!--/.testimonial-carousel-->
+				</div><!--/.row-->
+			</div><!--/.container-->
+
+		</section><!--/.clients-say-->	
+		<!-- clients-say end -->
+
+		<!--brand strat -->
+		<section id="brand"  class="brand">
+			<div class="container">
+				<div class="brand-area">
+					<div class="owl-carousel owl-theme brand-item">
+						<div class="item">
+							<a href="#">
+								<img src="images/images/brand/br1.png" alt="brand-image" />
+							</a>
+						</div><!--/.item-->
+						<div class="item">
+							<a href="#">
+								<img src="images/images/brand/br2.png" alt="brand-image" />
+							</a>
+						</div><!--/.item-->
+						<div class="item">
+							<a href="#">
+								<img src="images/images/brand/br3.png" alt="brand-image" />
+							</a>
+						</div><!--/.item-->
+						<div class="item">
+							<a href="#">
+								<img src="images/images/brand/br4.png" alt="brand-image" />
+							</a>
+						</div><!--/.item-->
+
+						<div class="item">
+							<a href="#">
+								<img src="images/images/brand/br5.png" alt="brand-image" />
+							</a>
+						</div><!--/.item-->
+
+						<div class="item">
+							<a href="#">
+								<img src="images/images/brand/br6.png" alt="brand-image" />
+							</a>
+						</div><!--/.item-->
+					</div><!--/.owl-carousel-->
+				</div><!--/.clients-area-->
+
+			</div><!--/.container-->
+
+		</section><!--/brand-->	
+		<!--brand end -->
     <footer class="grid-container">
         <div class="footer-row">
             <h3>Get in Touch</h3>
@@ -253,12 +295,12 @@
         </div>
     
         <div class="social-icons">
-            <i class="fa fa-whatsapp" aria-hidden="true"></i>
-            <i class="fa fa-facebook-official" aria-hidden="true"></i>
-            <i class="fa fa-twitter" aria-hidden="true"></i>
-            <i class="fa fa-telegram" aria-hidden="true"></i>
-            <i class="fa fa-instagram" aria-hidden="true"></i>
-            <i class="fa fa-youtube-play" aria-hidden="true"></i>
+            <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+            <i class="fa-brands fa-facebook-official" aria-hidden="true"></i>
+            <i class="fa-brands fa-twitter" aria-hidden="true"></i>
+            <i class="fa-brands fa-telegram" aria-hidden="true"></i>
+            <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+            <i class="fa-brands fa-youtube-play" aria-hidden="true"></i>
         </div>
     
         <div class="copyright">
