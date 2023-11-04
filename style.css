@@ -504,78 +504,169 @@ a:hover {
 
 
 
-/*-------------------------------------       
+/* -------------------------------------       
         8. Clients-say 
 --------------------------------------*/
-.clients-say{padding:115px 0 80px;background: #f8f9fb;}
 
-/*single-testimonial-box */
-.single-testimonial-box  {
-    padding: 50px 30px 57px;
+/* Clients Say Section Styles */
+.clients-say {
     text-align: center;
-    border: 1px solid #dadfe9;
-    overflow-x: hidden;
-    -webkit-transition: .3s; 
-    -moz-transition:.3s; 
-    -ms-transition:.3s; 
-    -o-transition:.3s;
-    transition: .3s;
+    padding: 40px 0;
 }
 
-/*testimonial-description*/
-.clients-say .testimonial-carousel .col-sm-3,
-.clients-say .testimonial-carousel .col-xs-12{
-    width:100%;
-    height:auto;
-}
-/* testimonial-info */
-.testimonial-img {
-    margin-right: 5px;
-    border-radius:50%;
-    -webkit-transition: .3s; 
-    -moz-transition:.3s; 
-    -ms-transition:.3s; 
-    -o-transition:.3s;
-    transition: .3s;
-}
-.testimonial-person h2 a,.testimonial-person h4 {
-    font-size: 16px;
-    color: #5e6778;
-    font-weight: 600;
-}
-.testimonial-person h4{
-    margin-top: 10px;
-}/* testimonial-info */
-
-
-/* testimonial-comment */
-.testimonial-comment p {
-    font-size: 16px;
-    color: #5e6778;
-    margin-top: 30px;
-    margin-bottom: 25px;
-}/* testimonial-comment */
-
-
-/*testimonial-description*/
-.single-testimonial-box:hover h2 a,.single-testimonial-box:hover h4, .single-testimonial-box:hover p{color: #fff;}
-.single-testimonial-box:hover{
-    background: #4e4ffa;
-    border: 1px solid #4e4ffa;
-    box-shadow: 0 12px 30px 0px rgba(0,1,193,.2);
+.section-header h2 {
+    font-size: 40px;
+    font-weight:900;
+    color: #000000;
 }
 
-/*owl carousel*/
-.clients-say .owl-carousel .owl-stage {
-    position: relative;
-    padding: 100px 0 40px;
+.testimonial-box {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    display: inline-block;
+    max-width: 300px;
 }
-.clients-say .owl-carousel .owl-item img {
-    display: block;
+
+.testimonial-img img {
+    border-radius: 50%;
     width: 70px;
     height: 70px;
-    border-radius:50%;
-    margin:0 auto;
 }
-/*owl carousel*/
 
+.testimonial-person h2 a {
+    font-size: 16px;
+    color: #333;
+}
+
+.testimonial-person h4 {
+    font-size: 14px;
+    color: #777;
+}
+
+.testimonial-comment p {
+    font-size: 16px;
+    color: #333;
+    margin-top: 20px;
+}
+
+.testimonial-box:hover {
+    background: #4e4ffa;
+    border-color: #4e4ffa;
+    color: #fff;
+}
+
+/*-------------------------------------
+        9. Brand
+--------------------------------------*/
+.brand-area{
+    display: flex;
+    color: #1b10e6;
+    background-color: #0056b3;
+    height: 150;
+    margin: 40px 0;
+    padding: 50px;
+}
+
+
+/*-------------------------------------
+        3.  Welcome-hero
+--------------------------------------*/
+.welcome-hero {
+    position: relative;
+    background-image:url(Images/images/welcome-hero/welcome-banner.jpg);
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 50px;
+    z-index: 10;
+}
+
+
+.header-area{position: absolute;top:0;left:0;width: 100%;z-index: 99;}
+
+.welcome-hero-txt{text-align: center;padding:290px 0 372px;}
+.welcome-hero-txt h2 {
+    font-size: 42px;
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 45px;
+}
+.welcome-hero-txt p {
+    font-size: 18px;
+    text-transform: initial;
+    color: #fff;
+    font-weight: 500;
+    max-width: 735px;
+    margin: 0 auto;
+}
+.welcome-btn {
+    display: inline-block;
+    width: 230px;
+    height: 60px;
+    background: #4e4ffa;
+    color: #fff;
+    border-radius: 3px;
+    margin-top: 55px;
+    transition: .3s linear;
+}
+.welcome-btn:hover{
+    background: #0102fa;
+}
+/*.welcome-hero-txt
+
+
+
+-------------------------------------
+        4. Model-Search
+--------------------------------------*/
+.model-search-content {
+    box-sizing: content-box;
+    padding: 40px 0;
+    background: #fff;
+    box-shadow:0 10px 40px 0px rgba(38,40,64,.2);
+    position: absolute;
+    top: 1050px;
+    right: 5rem;
+    width: 80%;
+    border-radius: 3px;
+    z-index: 30;
+}
+
+/*.single-model-search*/
+.single-model-search{margin-bottom: 30px;}
+.single-model-search:last-child {margin-bottom: 0;}
+
+.single-model-search h2 {
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+/*model-select-icon*/
+.model-select-icon{
+    position:relative;
+}
+.model-select-icon .form-control {
+    outline: 0!important;
+    box-shadow: none;
+    border: 1px solid #f8f8f8;
+    background: #f8f8f8;
+    height: 60px;
+}
+.model-select-icon select {
+    font-size: 16px;
+    color: #888f9d;
+    text-transform: capitalize;
+}
+
+.welcome-btn.model-search-btn {
+    width: 160px;
+    margin-top: 80px;
+    margin-left: 53px;
+}
+
+/*.single-model-search

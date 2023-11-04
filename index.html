@@ -14,16 +14,10 @@
     <title>Car Exploration Web App</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
-    <style>
-        .links{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-    </style>
 </head>
 
 <body>
+    <div class="welcome-hero">
     <div class="header">
         <div id="loginLinks">
 
@@ -37,10 +31,11 @@
             </div>
 
         </div>
-        <div id="searchContainer">
+
+        <!-- <div id="searchContainer">
             <input type="text" id="searchInput" placeholder="Search for cars...">
             <button id="searchButton">Search</button>
-        </div>
+        </div> -->
     </div>
     <div class="container">
         <div class="row">
@@ -61,7 +56,139 @@
             </ul>
         </div>
     </div>
+
+    <div class="home-container">
+        <div class="welcome-hero-txt">
+            <h2>get your desired car in resonable price</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore   magna aliqua. 
+            </p>
+            <button class="welcome-btn" onclick="window.location.href='#'">contact us</button>
+        </div>
+    </div>
+</div>
     
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="model-search-content">
+                <div class="row">
+                    <div class="col-md-offset-1 col-md-2 col-sm-12">
+                        <div class="single-model-search">
+                            <h2>select year</h2>
+                            <div class="model-select-icon">
+                                <select class="form-control">
+
+                                      <option value="default">year</option><!-- /.option-->
+
+                                      <option value="2018">2018</option><!-- /.option-->
+
+                                      <option value="2017">2017</option><!-- /.option-->
+                                      <option value="2016">2016</option><!-- /.option-->
+
+                                </select><!-- /.select-->
+                            </div><!-- /.model-select-icon -->
+                        </div>
+                        <div class="single-model-search">
+                            <h2>body style</h2>
+                            <div class="model-select-icon">
+                                <select class="form-control">
+
+                                      <option value="default">style</option><!-- /.option-->
+
+                                      <option value="sedan">sedan</option><!-- /.option-->
+
+                                      <option value="van">van</option><!-- /.option-->
+                                      <option value="roadster">roadster</option><!-- /.option-->
+
+                                </select><!-- /.select-->
+                            </div><!-- /.model-select-icon -->
+                        </div>
+                    </div>
+                    <div class="col-md-offset-1 col-md-2 col-sm-12">
+                        <div class="single-model-search">
+                            <h2>select make</h2>
+                            <div class="model-select-icon">
+                                <select class="form-control">
+
+                                      <option value="default">make</option><!-- /.option-->
+
+                                      <option value="toyota">toyota</option><!-- /.option-->
+
+                                      <option value="holden">holden</option><!-- /.option-->
+                                      <option value="maecedes-benz">maecedes-benz.</option><!-- /.option-->
+
+                                </select><!-- /.select-->
+                            </div><!-- /.model-select-icon -->
+                        </div>
+                        <div class="single-model-search">
+                            <h2>car condition</h2>
+                            <div class="model-select-icon">
+                                <select class="form-control">
+
+                                      <option value="default">condition</option><!-- /.option-->
+
+                                      <option value="something">something</option><!-- /.option-->
+
+                                      <option value="something">something</option><!-- /.option-->
+                                      <option value="something">something</option><!-- /.option-->
+
+                                </select><!-- /.select-->
+                            </div><!-- /.model-select-icon -->
+                        </div>
+                    </div>
+                    <div class="col-md-offset-1 col-md-2 col-sm-12">
+                        <div class="single-model-search">
+                            <h2>select model</h2>
+                            <div class="model-select-icon">
+                                <select class="form-control">
+
+                                      <option value="default">model</option><!-- /.option-->
+
+                                      <option value="kia-rio">kia-rio</option><!-- /.option-->
+
+                                      <option value="mitsubishi">mitsubishi</option><!-- /.option-->
+                                      <option value="ford">ford</option><!-- /.option-->
+
+                                </select><!-- /.select-->
+                            </div><!-- /.model-select-icon -->
+                        </div>
+                        <div class="single-model-search">
+                            <h2>select price</h2>
+                            <div class="model-select-icon">
+                                <select class="form-control">
+
+                                      <option value="default">price</option><!-- /.option-->
+
+                                      <option value="$0.00">$0.00</option><!-- /.option-->
+
+                                      <option value="$0.00">$0.00</option><!-- /.option-->
+                                      <option value="$0.00">$0.00</option><!-- /.option-->
+
+                                </select><!-- /.select-->
+                            </div><!-- /.model-select-icon -->
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-sm-12">
+                        <div class="single-model-search text-center">
+                            <button class="welcome-btn model-search-btn" onclick="window.location.href='#'">
+                                search
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
     <h1>Welcome to Car Exploration</h1>
     <div class="car-details">
         <div class="car-container">
@@ -156,85 +283,62 @@
     </div>
 
     		<!-- clients-say strat -->
-		<section id="clients-say"  class="clients-say">
-			<div class="container">
-				<div class="section-header">
-					<h2>what our clients say</h2>
-				</div><!--/.section-header-->
-				<div class="row">
-					<div class="owl-carousel testimonial-carousel">
-						<div class="col-sm-3 col-xs-12">
-							<div class="single-testimonial-box">
-								<div class="testimonial-description">
-									<div class="testimonial-info">
-										<div class="testimonial-img">
-											<img src="images/images/clients/c1.png" alt="image of clients person" />
-										</div><!--/.testimonial-img-->
-									</div><!--/.testimonial-info-->
-									<div class="testimonial-comment">
-										<p>
-											Sed ut pers unde omnis iste natus error sit voluptatem accusantium dolor laudan rem aperiam, eaque ipsa quae ab illo inventore verit. 
-										</p>
-									</div><!--/.testimonial-comment-->
-									<div class="testimonial-person">
-										<h2><a href="#">tomas lili</a></h2>
-										<h4>new york</h4>
-									</div><!--/.testimonial-person-->
-								</div><!--/.testimonial-description-->
-							</div><!--/.single-testimonial-box-->
-						</div><!--/.col-->
-						<div class="col-sm-3 col-xs-12">
-							<div class="single-testimonial-box">
-								<div class="testimonial-description">
-									<div class="testimonial-info">
-										<div class="testimonial-img">
-											<img src="images/images/clients/c2.png" alt="image of clients person" />
-										</div><!--/.testimonial-img-->
-									</div><!--/.testimonial-info-->
-									<div class="testimonial-comment">
-										<p>
-											Sed ut pers unde omnis iste natus error sit voluptatem accusantium dolor laudan rem aperiam, eaque ipsa quae ab illo inventore verit. 
-										</p>
-									</div><!--/.testimonial-comment-->
-									<div class="testimonial-person">
-										<h2><a href="#">romi rain</a></h2>
-										<h4>london</h4>
-									</div><!--/.testimonial-person-->
-								</div><!--/.testimonial-description-->
-							</div><!--/.single-testimonial-box-->
-						</div><!--/.col-->
-						<div class="col-sm-3 col-xs-12">
-							<div class="single-testimonial-box">
-								<div class="testimonial-description">
-									<div class="testimonial-info">
-										<div class="testimonial-img">
-											<img src="images/images/clients/c3.png" alt="image of clients person" />
-										</div><!--/.testimonial-img-->
-									</div><!--/.testimonial-info-->
-									<div class="testimonial-comment">
-										<p>
-											Sed ut pers unde omnis iste natus error sit voluptatem accusantium dolor laudan rem aperiam, eaque ipsa quae ab illo inventore verit. 
-										</p>
-									</div><!--/.testimonial-comment-->
-									<div class="testimonial-person">
-										<h2><a href="#">john doe</a></h2>
-										<h4>washington</h4>
-									</div><!--/.testimonial-person-->
-								</div><!--/.testimonial-description-->
-							</div><!--/.single-testimonial-box-->
-						</div><!--/.col-->
-					</div><!--/.testimonial-carousel-->
-				</div><!--/.row-->
-			</div><!--/.container-->
+            <div class="clients-say">
+                    <div class="section-header">
+                        <h2>What Our Clients Say</h2>
+                    </div>
+                    <div class="testimonials">
+                        <div class="testimonial-box">
+                            <div class="testimonial-img">
+                                <img src="images/images/clients/c1.png" alt="Image of Client" />
+                            </div>
+                            <div class="testimonial-person">
+                                <h2><a href="#">Tomas Lili</a></h2>
+                                <h4>New York</h4>
+                            </div>
+                            <div class="testimonial-comment">
+                                <p>
+                                    Sed ut pers unde omnis iste natus error sit voluptatem accusantium dolor laudan rem aperiam, eaque ipsa quae ab illo inventore verit.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="testimonial-box">
+                            <div class="testimonial-img">
+                                <img src="images/images/clients/c2.png" alt="Image of Client" />
+                            </div>
+                            <div class="testimonial-person">
+                                <h2><a href="#">Romi Rain</a></h2>
+                                <h4>London</h4>
+                            </div>
+                            <div class="testimonial-comment">
+                                <p>
+                                    Sed ut pers unde omnis iste natus error sit voluptatem accusantium dolor laudan rem aperiam, eaque ipsa quae ab illo inventore verit.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="testimonial-box">
+                            <div class="testimonial-img">
+                                <img src="images/images/clients/c3.png" alt="Image of Client" />
+                            </div>
+                            <div class="testimonial-person">
+                                <h2><a href="#">John Doe</a></h2>
+                                <h4>Washington</h4>
+                            </div>
+                            <div class="testimonial-comment">
+                                <p>
+                                    Sed ut pers unde omnis iste natus error sit voluptatem accusantium dolor laudan rem aperiam, eaque ipsa quae ab illo inventore verit.
+                                </p>
+                            </div>
+                        </div>
 
-		</section><!--/.clients-say-->	
+                    </div>
+            </div>
 		<!-- clients-say end -->
 
 		<!--brand strat -->
 		<section id="brand"  class="brand">
-			<div class="container">
+			<div class="brand-container">
 				<div class="brand-area">
-					<div class="owl-carousel owl-theme brand-item">
 						<div class="item">
 							<a href="#">
 								<img src="images/images/brand/br1.png" alt="brand-image" />
@@ -267,7 +371,6 @@
 								<img src="images/images/brand/br6.png" alt="brand-image" />
 							</a>
 						</div><!--/.item-->
-					</div><!--/.owl-carousel-->
 				</div><!--/.clients-area-->
 
 			</div><!--/.container-->
