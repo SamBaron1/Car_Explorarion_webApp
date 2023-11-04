@@ -24,6 +24,7 @@ body h1 {
 
 }
 
+
 .container {
     display: flex;
     align-items: center;
@@ -225,10 +226,26 @@ p {
     align-items: center;
     padding: 10px;
 }
-
+#loginLinks {
+    width: 20%;
+    height: 5vh;
+    position: relative;
+    left: 80%;
+    top: 10px;
+    display: flex;
+    justify-content: space-around;
+}
 #loginLinks a {
+    width: 40%;
+    background-color: #035f94;
     margin-left: 10px;
-    color: #fff;
+    color: #fff;  
+    text-decoration: none ; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius:20px;
+    
 }
 #searchContainer {
     display: flex;
