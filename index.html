@@ -6,23 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="fontawesome-free-6.4.2-web/css/all.min.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-8Z+Xj1zVJ3+U6vYJf2Ywz5t7K1L9x9h0Q6vJ8yZtXv7HlqLsQO2jKmG9gRb5rZsWxW8yLrBdQq4fVl3vz1+2jA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"> -->
     <title>Car Exploration Web App</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
 
 <body>
+    <div class="welcome-hero">
     <div class="header">
         <div id="loginLinks">
 
             <div class="links">
                 <a href="login.html" id="login">Login</a>
-                <a href="sign_up.html">Sign Up</a>
+                <a href="sign_up.html" id="signUp">Sign Up</a>
             </div>
             <div class="navbaricons">
                 <i class="fa-solid fa-bars" id="opennavbtn"></i>
@@ -30,10 +31,11 @@
             </div>
 
         </div>
-        <div id="searchContainer">
+
+        <!-- <div id="searchContainer">
             <input type="text" id="searchInput" placeholder="Search for cars...">
             <button id="searchButton">Search</button>
-        </div>
+        </div> -->
     </div>
     <div class="container">
         <div class="row">
@@ -54,7 +56,139 @@
             </ul>
         </div>
     </div>
+
+    <div class="home-container">
+        <div class="welcome-hero-txt">
+            <h2>get your desired car in resonable price</h2>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore   magna aliqua. 
+            </p>
+            <button class="welcome-btn" onclick="window.location.href='#'">contact us</button>
+        </div>
+    </div>
+</div>
     
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="model-search-content">
+                <div class="row">
+                    <div class="col-md-offset-1 col-md-2 col-sm-12">
+                        <div class="single-model-search">
+                            <h2>select year</h2>
+                            <div class="model-select-icon">
+                                <select class="form-control">
+
+                                      <option value="default">year</option><!-- /.option-->
+
+                                      <option value="2018">2018</option><!-- /.option-->
+
+                                      <option value="2017">2017</option><!-- /.option-->
+                                      <option value="2016">2016</option><!-- /.option-->
+
+                                </select><!-- /.select-->
+                            </div><!-- /.model-select-icon -->
+                        </div>
+                        <div class="single-model-search">
+                            <h2>body style</h2>
+                            <div class="model-select-icon">
+                                <select class="form-control">
+
+                                      <option value="default">style</option><!-- /.option-->
+
+                                      <option value="sedan">sedan</option><!-- /.option-->
+
+                                      <option value="van">van</option><!-- /.option-->
+                                      <option value="roadster">roadster</option><!-- /.option-->
+
+                                </select><!-- /.select-->
+                            </div><!-- /.model-select-icon -->
+                        </div>
+                    </div>
+                    <div class="col-md-offset-1 col-md-2 col-sm-12">
+                        <div class="single-model-search">
+                            <h2>select make</h2>
+                            <div class="model-select-icon">
+                                <select class="form-control">
+
+                                      <option value="default">make</option><!-- /.option-->
+
+                                      <option value="toyota">toyota</option><!-- /.option-->
+
+                                      <option value="holden">holden</option><!-- /.option-->
+                                      <option value="maecedes-benz">maecedes-benz.</option><!-- /.option-->
+
+                                </select><!-- /.select-->
+                            </div><!-- /.model-select-icon -->
+                        </div>
+                        <div class="single-model-search">
+                            <h2>car condition</h2>
+                            <div class="model-select-icon">
+                                <select class="form-control">
+
+                                      <option value="default">condition</option><!-- /.option-->
+
+                                      <option value="something">something</option><!-- /.option-->
+
+                                      <option value="something">something</option><!-- /.option-->
+                                      <option value="something">something</option><!-- /.option-->
+
+                                </select><!-- /.select-->
+                            </div><!-- /.model-select-icon -->
+                        </div>
+                    </div>
+                    <div class="col-md-offset-1 col-md-2 col-sm-12">
+                        <div class="single-model-search">
+                            <h2>select model</h2>
+                            <div class="model-select-icon">
+                                <select class="form-control">
+
+                                      <option value="default">model</option><!-- /.option-->
+
+                                      <option value="kia-rio">kia-rio</option><!-- /.option-->
+
+                                      <option value="mitsubishi">mitsubishi</option><!-- /.option-->
+                                      <option value="ford">ford</option><!-- /.option-->
+
+                                </select><!-- /.select-->
+                            </div><!-- /.model-select-icon -->
+                        </div>
+                        <div class="single-model-search">
+                            <h2>select price</h2>
+                            <div class="model-select-icon">
+                                <select class="form-control">
+
+                                      <option value="default">price</option><!-- /.option-->
+
+                                      <option value="$0.00">$0.00</option><!-- /.option-->
+
+                                      <option value="$0.00">$0.00</option><!-- /.option-->
+                                      <option value="$0.00">$0.00</option><!-- /.option-->
+
+                                </select><!-- /.select-->
+                            </div><!-- /.model-select-icon -->
+                        </div>
+                    </div>
+                    <div class="col-md-2 col-sm-12">
+                        <div class="single-model-search text-center">
+                            <button class="welcome-btn model-search-btn" onclick="window.location.href='#'">
+                                search
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
     <h1>Welcome to Car Exploration</h1>
     <div class="car-details">
         <div class="car-container">
@@ -147,84 +281,102 @@
             </ul>
         </div>
     </div>
-    <div class="car-brands">
-        <div class="car-image">
-            <img src="images/electric.jpeg" alt="brand image1">
-            <img src="images/brands.jpeg" alt="brand image">
-            <img src="images/subaru.jpeg" alt="brand image2">
-        </div>
-    </div>
-    <div class="wrapper">
-        <div class="main-content">
-            <div class="section about-section">
-                <h2>About Us</h2>
-                <p>We are passionate about cars and want to provide a platform for car enthusiasts to explore and discover new vehicles.</p>
-                <ul>
-                    <li>All Car Stock Photos by Brand</li>
-                    <li>Car Brands List and Logos</li>
-                    <li>How many car brands and models are there?</li>
-                    <li>What is the difference between car brand and model?</li>
-                    <li>What is the most popular car model?</li>
-                    <li>37 Types Of Car Brands You Should Know</li>
-                    <li>2023 Latest Car Brands, Car Models, Variants, Price</li>
-                    <li>American Car Brands</li>
-                    <li>Complete List of All Car Manufacturers...</li>
-                </ul>
-                <button onclick="window.location.href='#'">Click Here</button>
+
+    		<!-- clients-say strat -->
+            <div class="clients-say">
+                    <div class="section-header">
+                        <h2>What Our Clients Say</h2>
+                    </div>
+                    <div class="testimonials">
+                        <div class="testimonial-box">
+                            <div class="testimonial-img">
+                                <img src="images/images/clients/c1.png" alt="Image of Client" />
+                            </div>
+                            <div class="testimonial-person">
+                                <h2><a href="#">Tomas Lili</a></h2>
+                                <h4>New York</h4>
+                            </div>
+                            <div class="testimonial-comment">
+                                <p>
+                                    Sed ut pers unde omnis iste natus error sit voluptatem accusantium dolor laudan rem aperiam, eaque ipsa quae ab illo inventore verit.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="testimonial-box">
+                            <div class="testimonial-img">
+                                <img src="images/images/clients/c2.png" alt="Image of Client" />
+                            </div>
+                            <div class="testimonial-person">
+                                <h2><a href="#">Romi Rain</a></h2>
+                                <h4>London</h4>
+                            </div>
+                            <div class="testimonial-comment">
+                                <p>
+                                    Sed ut pers unde omnis iste natus error sit voluptatem accusantium dolor laudan rem aperiam, eaque ipsa quae ab illo inventore verit.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="testimonial-box">
+                            <div class="testimonial-img">
+                                <img src="images/images/clients/c3.png" alt="Image of Client" />
+                            </div>
+                            <div class="testimonial-person">
+                                <h2><a href="#">John Doe</a></h2>
+                                <h4>Washington</h4>
+                            </div>
+                            <div class="testimonial-comment">
+                                <p>
+                                    Sed ut pers unde omnis iste natus error sit voluptatem accusantium dolor laudan rem aperiam, eaque ipsa quae ab illo inventore verit.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
             </div>
-        
-            <div class="section types-section">
-                <h2>Types</h2>
-                <p>Stay updated with the latest car types around the world and choose your preference.</p>
-                <ul>
-                    <li>Minivan</li>
-                    <li>Hatchback</li>
-                    <li>Sports car</li>
-                    <li>Sedan</li>
-                    <li>Station Wagon</li>
-                    <li>Luxury car</li>
-                    <li>SUV</li>
-                    <li>Pickup truck</li>
-                    <li>Cross-over...</li>
-                </ul>
-                <button onclick="window.location.href='#'">Click Here</button>
-            </div>
-        
-            <div class="section events-section">
-                <h2>Events</h2>
-                <p>Stay updated with the latest events happening around the world.</p>
-                <ul>
-                    <li>Road trips.</li>
-                    <li>Product exhibition.</li>
-                    <li>Test drives in a controlled environment.</li>
-                    <li>Vehicle presentation.</li>
-                    <li>Monterey Car Week</li>
-                    <li>Goodwood Festival of Speed (UK)</li>
-                    <li>Consumer Electronics Show (CES)</li>
-                    <li>New York International Auto Show (USA)</li>
-                    <li>Tokyo Motor Show (Japan)...</li>
-                </ul>
-                <button onclick="window.location.href='#'">Click Here</button>
-            </div>
-        
-            <div class="section contact-section">
-                <h2>Contact Us</h2>
-                <p>Have questions or feedback? Get in touch with us!</p>
-                <ul>
-                    <li>Sales Inquiries</li>
-                    <li>Service and Maintenance</li>
-                    <li>Parts and Accessories</li>
-                    <li>Customization and Modifications</li>
-                    <li>Dealership Information</li>
-                    <li>Safety and Recall Information</li>
-                    <li>Environmental and Sustainability</li>
-                    <li>Financing and Leasing</li>
-                    <li>Regulatory and Compliance...</li>
-                </ul>
-                <button onclick="window.location.href='#'">Click Here</button>
-            </div>
-        </div>
-    </div>    
+		<!-- clients-say end -->
+
+		<!--brand strat -->
+		<section id="brand"  class="brand">
+			<div class="brand-container">
+				<div class="brand-area">
+						<div class="item">
+							<a href="#">
+								<img src="images/images/brand/br1.png" alt="brand-image" />
+							</a>
+						</div><!--/.item-->
+						<div class="item">
+							<a href="#">
+								<img src="images/images/brand/br2.png" alt="brand-image" />
+							</a>
+						</div><!--/.item-->
+						<div class="item">
+							<a href="#">
+								<img src="images/images/brand/br3.png" alt="brand-image" />
+							</a>
+						</div><!--/.item-->
+						<div class="item">
+							<a href="#">
+								<img src="images/images/brand/br4.png" alt="brand-image" />
+							</a>
+						</div><!--/.item-->
+
+						<div class="item">
+							<a href="#">
+								<img src="images/images/brand/br5.png" alt="brand-image" />
+							</a>
+						</div><!--/.item-->
+
+						<div class="item">
+							<a href="#">
+								<img src="images/images/brand/br6.png" alt="brand-image" />
+							</a>
+						</div><!--/.item-->
+				</div><!--/.clients-area-->
+
+			</div><!--/.container-->
+
+		</section><!--/brand-->	
+		<!--brand end -->
     <footer class="grid-container">
         <div class="footer-row">
             <h3>Get in Touch</h3>
@@ -255,12 +407,12 @@
         </div>
     
         <div class="social-icons">
-            <i class="fa fa-whatsapp" aria-hidden="true"></i>
-            <i class="fa fa-facebook-official" aria-hidden="true"></i>
-            <i class="fa fa-twitter" aria-hidden="true"></i>
-            <i class="fa fa-telegram" aria-hidden="true"></i>
-            <i class="fa fa-instagram" aria-hidden="true"></i>
-            <i class="fa fa-youtube-play" aria-hidden="true"></i>
+            <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+            <i class="fa-brands fa-facebook-official" aria-hidden="true"></i>
+            <i class="fa-brands fa-twitter" aria-hidden="true"></i>
+            <i class="fa-brands fa-telegram" aria-hidden="true"></i>
+            <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+            <i class="fa-brands fa-youtube-play" aria-hidden="true"></i>
         </div>
     
         <div class="copyright">
