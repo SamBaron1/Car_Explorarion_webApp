@@ -14,13 +14,14 @@
         }
         form{
             width: 30%;
-            height: 60vh;
+            height: fit-content;
             border: 1px solid black;
             text-align: center;
             margin: auto;
             background-color: blanchedalmond;
             position: relative;
             top: 20vh;
+            padding: 30px;
            
 
             
@@ -39,7 +40,7 @@
         Last Name
         <input placeholder="last name"  type="text"><br><br>
         Email 
-        <input placeholder="email@gmail.com"  type="text"><br><br>
+        <input placeholder="email@gmail.com"  type="email"><br><br>
         Password 
         <input placeholder="password"  type="password"><br><br>
         Confirm Password 
@@ -56,6 +57,7 @@
     
         <input type="button" value="submit" onclick="signIn()">
         <input type="button" value="cancel" onclick="back()">
+        <p>Already have an account?<a href="login.html">login</a></p>
     </form>
     <script src="script.js" >
      
