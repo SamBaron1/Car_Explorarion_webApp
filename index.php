@@ -24,6 +24,7 @@
             <div class="links">
                 <a href="login.html" id="login">Login</a>
                 <a href="sign_up.html" id="signUp">Sign Up</a>
+                
             </div>
             <div class="navbaricons">
                 <i class="fa-solid fa-bars" id="opennavbtn"></i>
@@ -55,6 +56,19 @@
                 <li><a href="#logos">Logos</a></li>
                 <li><a href="#contacts">CONTACTS</a></li>
             </ul>
+                <div class="profile">
+                    <div class="dashboard">
+                        <div class="profile_pic">
+                            <img src="images/2023-Chevrolet-Corvette.jpg" alt="">
+                        </div>
+                            <div class="profile_others">
+                        <ul>
+                            <li id="debug"><a href="dashboard.php">Dashboard</a></li>
+                            <li>Logout</li>
+                        </ul>
+                            </div>
+                    </div>
+                </div>
         </div>
     </div>
 
