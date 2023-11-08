@@ -48,8 +48,7 @@ body h1 {
 .icon img{
     width: 20%;
     height: auto;
-    margin-top: 30px;
-
+    margin-top: 50px;
 }
 
 .nav-list {
@@ -154,8 +153,9 @@ body h1 {
 
 .car-details {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     gap: 20px; 
+
 }
 .car-details ul {
     list-style: none;
@@ -163,7 +163,7 @@ body h1 {
 }
 
 .car-container {
-    background-color: transparent;
+    background-color: #8cff2e;
     border: 1px solid #fa930d;
     padding: 10px;
     text-align: center;
@@ -179,6 +179,7 @@ body h1 {
     height: 100%; 
     display: block; 
     margin: 0 auto 5px; 
+    object-fit: cover;
 }
 .car-container img:hover {
     transform: scale(1.05); 
@@ -517,7 +518,7 @@ a:hover {
 .section-header h2 {
     font-size: 40px;
     font-weight:900;
-    color: #000000;
+    color: #77d7f1;
 }
 
 .testimonial-box {
@@ -554,8 +555,8 @@ a:hover {
 }
 
 .testimonial-box:hover {
-    background: #4e4ffa;
-    border-color: #4e4ffa;
+    background: #44ecf8;
+    border-color: #bcf733;
     color: #fff;
 }
 
@@ -564,11 +565,16 @@ a:hover {
 --------------------------------------*/
 .brand-area{
     display: flex;
-    color: #1b10e6;
-    background-color: #0056b3;
+    color: #2f04f1;
+    background-color: #ecf3f5;
     height: 150;
     margin: 40px 0;
     padding: 50px;
+    border-radius: 7px;
+    justify-content: space-between;
+    position: relative;
+    align-self: flex-start;
+    
 }
 
 
@@ -577,7 +583,7 @@ a:hover {
 --------------------------------------*/
 .welcome-hero {
     position: relative;
-    background-image:url(Images/images/welcome-hero/welcome-banner.jpg);
+    background-image:url(Images/blackmer.jpeg);
     background-position: center;
     background-size: cover;
     margin-bottom: 50px;
@@ -590,7 +596,7 @@ a:hover {
 .welcome-hero-txt{text-align: center;padding:290px 0 372px;}
 .welcome-hero-txt h2 {
     font-size: 42px;
-    color: #fff;
+    color: #fc1414;
     font-weight: 700;
     text-transform: uppercase;
     margin-bottom: 45px;
@@ -598,23 +604,24 @@ a:hover {
 .welcome-hero-txt p {
     font-size: 18px;
     text-transform: initial;
-    color: #fff;
+    color: #fcd705;
     font-weight: 500;
     max-width: 735px;
     margin: 0 auto;
+    font-style: italic;
 }
 .welcome-btn {
     display: inline-block;
     width: 230px;
     height: 60px;
-    background: #4e4ffa;
-    color: #fff;
-    border-radius: 3px;
+    background: #4efa5c;
+    color: #111010;
+    border-radius: 7px;
     margin-top: 55px;
     transition: .3s linear;
 }
 .welcome-btn:hover{
-    background: #0102fa;
+    background: #c4fa01;
 }
 /*.welcome-hero-txt
 
@@ -626,14 +633,14 @@ a:hover {
 .model-search-content {
     box-sizing: content-box;
     padding: 40px 0;
-    background: #fff;
+    background: #d8d4d4;
     box-shadow:0 10px 40px 0px rgba(38,40,64,.2);
     position: absolute;
     top: 1050px;
     right: 5rem;
     width: 80%;
-    border-radius: 3px;
     z-index: 30;
+    border-radius: 10px;
 }
 
 /*.single-model-search*/
@@ -653,9 +660,12 @@ a:hover {
 .model-select-icon .form-control {
     outline: 0!important;
     box-shadow: none;
-    border: 1px solid #f8f8f8;
+    border: 1px solid #0df519;
     background: #f8f8f8;
     height: 60px;
+    border-radius: 7px;
+    position: relative;
+    padding: 10px;
 }
 .model-select-icon select {
     font-size: 16px;
