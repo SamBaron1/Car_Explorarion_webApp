@@ -423,7 +423,9 @@ a:hover {
 }
 
 #loginLinks .links a{
-    display: inline-block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-decoration: none;
 }
 
