@@ -158,10 +158,11 @@ body {
 
 #slider_container{
     width: 100%;
-    height: 50vh;
+    height: auto;
     display: flex;
     justify-content: center;
-    
+    padding: 10px;
+    margin-top: 50px;
 }
 #slider{
     width: 80%;
@@ -175,8 +176,14 @@ body {
 }
 #description{
     width: 50%;
-    background-color: #ff00fb;
+    background-color: #fff;
     text-align: center;
+    align-items: center;
+}
+
+#description p{
+    align-items: center;
+    font-size: 20px;
 }
 
 .car-details {
@@ -191,7 +198,7 @@ body {
 }
 
 .car-container {
-    background-color: #8cff2e;
+    background-color: grey;
     border: 1px solid #fa930d;
     padding: 10px;
     text-align: center;
@@ -583,7 +590,7 @@ a:hover {
 }
 
 .testimonial-box:hover {
-    background: #44ecf8;
+    background: rgb(224, 218, 218);
     border-color: #bcf733;
     color: #fff;
 }
@@ -624,15 +631,19 @@ a:hover {
 .welcome-hero-txt{text-align: center;padding:290px 0 372px;}
 .welcome-hero-txt h2 {
     font-size: 42px;
-    color: #fc1414;
+    color: #fff;
     font-weight: 700;
     text-transform: uppercase;
     margin-bottom: 45px;
+    background-color: grey;
+    margin-left: 150px;
+    margin-right: 150px;
+    border-radius: 10px;
 }
 .welcome-hero-txt p {
     font-size: 18px;
     text-transform: initial;
-    color: #fcd705;
+    color: rgb(248, 148, 18);
     font-weight: 500;
     max-width: 735px;
     margin: 0 auto;
@@ -649,7 +660,7 @@ a:hover {
     transition: .3s linear;
 }
 .welcome-btn:hover{
-    background: #c4fa01;
+    background: grey;
 }
 /*.welcome-hero-txt
 
@@ -660,20 +671,25 @@ a:hover {
 --------------------------------------*/
 .model-search-content {
     box-sizing: content-box;
-    padding: 40px 0;
+    padding: 10px;
     background: #d8d4d4;
     box-shadow:0 10px 40px 0px rgba(38,40,64,.2);
     position: absolute;
     top: 1050px;
-    right: 5rem;
-    width: 80%;
+    right: 20rem;
+    width: 50%;
     z-index: 30;
     border-radius: 10px;
 }
 
 /*.single-model-search*/
-.single-model-search{margin-bottom: 30px;}
-.single-model-search:last-child {margin-bottom: 0;}
+.single-model-search{
+    margin-bottom: 30px;
+    padding: 5px;
+}
+.single-model-search:last-child {
+    margin-bottom: 0;
+}
 
 .single-model-search h2 {
     font-size: 16px;
@@ -684,11 +700,12 @@ a:hover {
 /*model-select-icon*/
 .model-select-icon{
     position:relative;
+
 }
 .model-select-icon .form-control {
     outline: 0!important;
     box-shadow: none;
-    border: 1px solid #0df519;
+    border: 1px solid #020202;
     background: #f8f8f8;
     height: 60px;
     border-radius: 7px;
@@ -763,7 +780,10 @@ a:hover {
 
 .single-service-item:hover h2 a,.single-service-item:hover p{color: #fff;}
 .single-service-item:hover  p:before {background: #fff;}
-.single-service-item:hover{box-shadow: 0 12px 30px 0px rgba(0,1,193,.2);background: #4ec9fa;border: 1px solid #4e4ffa;}
+.single-service-item:hover{box-shadow: 0 12px 30px 0px rgba(0,1,193,.2);
+    background: rgb(190, 183, 183);
+    border: 1px solid #4e4ffa;
+}
 
 .footer-message{
     justify-content: center;
