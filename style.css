@@ -150,6 +150,28 @@ body h1 {
 }
 
 
+#slider_container{
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    
+}
+#slider{
+    width: 80%;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+}
+#car_picture{
+    width: 50%;
+    background-size: cover;
+}
+#description{
+    width: 50%;
+    background-color: #ff00fb;
+    text-align: center;
+}
 
 .car-details {
     display: grid;
