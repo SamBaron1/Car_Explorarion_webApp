@@ -106,7 +106,7 @@ body h1 {
     text-wrap: wrap;
 }
 .section button {
-    background-color: lightgreen; /* Green */
+    background-color: green;/* Green */
     border: none;
     border-radius: 3px;
     color: white;
@@ -155,13 +155,17 @@ body h1 {
     height: 50vh;
     display: flex;
     justify-content: center;
-    
+    background: transparent;
+    border-radius: 5px solid transparent;
 }
 #slider{
     width: 80%;
     height: 50vh;
     display: flex;
     justify-content: center;
+    color: white;
+    position: relative;
+    text-align: center;
 }
 #car_picture{
     width: 50%;
@@ -170,9 +174,20 @@ body h1 {
 #description{
     width: 50%;
     background-color: #ff00fb;
+    color: white;
+    border: 2px solid transparent;
     text-align: center;
 }
-
+#description >p{
+    align-items: center;
+    text-align: center;
+    display: flex;
+    position: relative;
+}
+.featured-cars{
+    background: transparent;
+    
+}
 .car-details {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -185,7 +200,7 @@ body h1 {
 }
 
 .car-container {
-    background-color: #8cff2e;
+    background-color: lightgray;
     border: 1px solid #fa930d;
     padding: 10px;
     text-align: center;
@@ -194,6 +209,7 @@ body h1 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 
 .car-container img {
@@ -320,6 +336,7 @@ footer {
     text-align: center;
     padding: 20px;
     background-color: #c7c7c5;
+    cursor: pointer;
 }
 
 .footer-row {
@@ -552,6 +569,7 @@ a:hover {
     margin: 10px;
     display: inline-block;
     max-width: 300px;
+    cursor: pointer;
 }
 
 .testimonial-img img {
@@ -577,7 +595,7 @@ a:hover {
 }
 
 .testimonial-box:hover {
-    background: #44ecf8;
+    background: aquamarine;
     border-color: #bcf733;
     color: #fff;
 }
