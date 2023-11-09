@@ -160,17 +160,17 @@ body h1 {
 #slider{
     width: 80%;
     height: 50vh;
-    border: #ff0000 solid 2px;
     display: flex;
     justify-content: center;
 }
 #car_picture{
     width: 50%;
-    background-color: #007BFF;
+    background-size: cover;
 }
 #description{
     width: 50%;
     background-color: #ff00fb;
+    text-align: center;
 }
 
 .car-details {
