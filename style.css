@@ -7,7 +7,7 @@
 body {
     background-color: hsla(270, 92%, 5%, 0.984); 
     font-family: Roboto, sans-serif;
-    background-image: url('images/backiee-132473.jpg');
+    background-image: url('images/images/featured-cars/backiee-132473.jpg');
     background-size: cover;
     background-repeat: no-repeat; 
     background-attachment: fixed; 
@@ -583,7 +583,7 @@ a:hover {
 --------------------------------------*/
 .welcome-hero {
     position: relative;
-    background-image:url(Images/blackmer.jpeg);
+    background-image:url(Images/images/welcome-hero/blackmer.jpeg);
     background-position: center;
     background-size: cover;
     margin-bottom: 50px;
