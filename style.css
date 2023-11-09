@@ -12,11 +12,16 @@ body {
     background-repeat: no-repeat; 
     background-attachment: fixed; 
 }
-body h1 {
+.body-h1{
+    background-color: #111111;
+    border-radius: 50%;
     justify-content: center;
     align-items: center;
+    margin: 20px;
+}
+.body-h1 h1 {
     margin-left: 35%;
-    color: rgb(255, 0, 106);
+    color: #ff8c20;
     text-decoration: dotted;
     font-weight: 900;
     font-family: monospace;
@@ -35,20 +40,21 @@ body h1 {
 .navbar {
     display: flex;
     justify-content: end;
+    flex-wrap: nowrap;
 }
 
 .row {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 50%; 
+    width: 20%; 
     margin: 0 auto;
 }
 
 .icon img{
-    width: 20%;
+    width: 40%;
     height: auto;
-    margin-top: 50px;
+    margin-top: 30px;
 }
 
 .nav-list {
@@ -701,4 +707,79 @@ a:hover {
     margin-left: 53px;
 }
 
-/*.single-model-search
+.service-container { 
+    background-color: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    margin: 10px;
+    padding: 10px;
+    
+
+}
+
+.single-service-item{
+    text-align: center;
+    padding: 20px;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    border: 1px solid #dadfe9;
+    transition: .3s linear;
+    background-color: #fff;
+    margin: 10px;
+    flex: 1;
+    max-width: 300px; 
+    box-sizing: border-box;
+
+}
+
+.single-service-image img {
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+.single-service-item h2 p {
+    font-size:20px;
+    margin: 35px 0 20px;
+}
+.single-service-item h2 a span {
+    text-transform:  lowercase;
+}
+.single-service-item p {
+    padding-bottom: 35px;
+    text-transform: initial;
+    position: relative;
+}
+.single-service-item p:before {
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 3px;
+    background: #b8ea30;
+    bottom: 0;
+    left: 50%;
+    margin-left: -10px;
+}
+
+.single-service-item:hover h2 a,.single-service-item:hover p{color: #fff;}
+.single-service-item:hover  p:before {background: #fff;}
+.single-service-item:hover{box-shadow: 0 12px 30px 0px rgba(0,1,193,.2);background: #4ec9fa;border: 1px solid #4e4ffa;}
+
+.footer-message{
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(230, 255, 255);
+    border-radius: 50%;
+    margin-bottom: 20px;
+
+}
+.footer-message P {
+    text-decoration: none;
+    color: #ff8c20;
+    font-size: 40px;
+    font-style: italic;
+    font-weight: 600;
+    padding: 10px;
+    margin-left: 260px;
+    font-family: monospace;
+}
