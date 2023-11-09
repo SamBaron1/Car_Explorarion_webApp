@@ -1,4 +1,4 @@
-* {
+*, *::before, *::after{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -106,7 +106,7 @@ body h1 {
     text-wrap: wrap;
 }
 .section button {
-    background-color: #4CAF50; /* Green */
+    background-color: lightgreen; /* Green */
     border: none;
     border-radius: 3px;
     color: white;
