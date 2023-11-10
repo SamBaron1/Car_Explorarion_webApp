@@ -805,3 +805,74 @@ a:hover {
     margin-left: 260px;
     font-family: monospace;
 }
+
+
+
+
+
+.profile_pic img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.profile{
+    padding: 12px;
+    height: 200px;
+    width: 150px;
+    /* background-color: #000000; */
+}
+
+.profile_others{
+    background: rgba(32, 105, 182,0.8);
+    height: 100px;
+    width: fit-content;
+    border-radius: 10px;
+    visibility: hidden;
+}
+
+.profile_others ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.dashboard:hover > .profile_others{
+    visibility: visible;
+}
+.profile_others ul li{
+    background-color:#310394 ;
+    background-color:#2ce9f7;
+    width: fit-content;
+    margin: 6px;
+    padding: 5px;
+    color: #000000;
+    cursor: pointer;
+}
+
+.profile_others ul li:last-child{
+    background-color: red;
+}
+
+.profile_others ul li:last-child:hover{
+    background-color: rgb(56, 21, 21);
+    color: #fff;
+
+}
+
+.dashboard{
+    margin-top: 30px;
+}
+
+.profile_others ul li a{
+    all: unset;
+}
+
+.profile_others ul li a:hover{
+    all: unset;
+    color: #fff;
+}
