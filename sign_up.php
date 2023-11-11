@@ -1,5 +1,11 @@
 <?php 
     session_start();
+
+    $firstname=$_SESSION['signup-data']['firstname'] ?? null;
+    $lastname=$_SESSION['signup-data']['lastname'] ?? null;
+    $email=$_SESSION['signup-data']['email'] ?? null;
+    $password=$_SESSION['signup-data']['password'] ?? null;
+    $confirmpassword=$_SESSION['signup-data']['confirmpassword'] ?? null;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -13,7 +19,7 @@
     </style>
 </head>
 <body>
-    <form action="signupback.php" method="post" enctype="multipart/form-data">
+    <form action="signupback.php" enctype="multipart/form-data" method="post" >
         <h1>Car Exploration</h1>
         <hr>
         <?php
@@ -27,19 +33,19 @@
         <br>
         <br>
         First Name
-        <input placeholder="first name"  type="text" name="firstname"><br><br>
+        <input placeholder="first name"  type="text" name="firstname" value="<?=$firstname?>"><br><br>
         Last Name
-        <input placeholder="last name"  type="text" name="lastname"><br><br>
+        <input placeholder="last name"  type="text" name="lastname" value="<?=$lastname ?>"><br><br>
         Email 
-        <input placeholder="email@gmail.com"  type="email" name="email"><br><br>
+        <input placeholder="email@gmail.com"  type="email" name="email" value="<?=$email ?>"><br><br>
         Password 
-        <input placeholder="password"  type="password" name="password"><br><br>
+        <input placeholder="password"  type="password" name="password" value="<?= $password?>"><br><br>
         Confirm Password 
-        <input placeholder="confirm password"  type="password" name="confirmpassword"><br><br>
+        <input placeholder="confirm password"  type="password" name="confirmpassword" value="<?=$confirmpassword?>"><br><br>
         Insert Profile Picture:
-        <input type="file" name="Profilepic"><br><br>
+        <input type="file" name="profilepic" id="profilepic"><br><br>
         Continent
-        <select title="Continent" name="Continent">
+        <select title="Continent" name="continent">
             <option>Africa</option>
             <option>Asia</option>
             <option>American</option>

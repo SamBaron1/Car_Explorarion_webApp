@@ -3,5 +3,5 @@
     define('dbhost','localhost');
     define('dbuser','root');
     define('dbpassword','');
-    define('dbname','car');
+    define('dbname','carapp');
 
