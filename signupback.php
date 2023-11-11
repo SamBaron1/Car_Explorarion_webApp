@@ -65,7 +65,7 @@ session_start();
             }
         }
 
-        if($_SESSION['signuperror']){
+        if(isset($_SESSION['signuperror'])){
             unlink($profilepic_path);
     
             $_SESSION['signup-data']=$_POST;
@@ -75,9 +75,9 @@ session_start();
             $insert_to_database="INSERT INTO users(firstname,lastname,email,password,profilepic,continent) VALUES('$firstname','$lastname','$email','$hashedpassword','$profilepic_path','$continent')";
             mysqli_query($conn,$insert_to_database);
     
-            if(mysqli_errno($conn)){
+            if(!mysqli_errno($conn)){
                 $_SESSION['signupsuccess']="Account created successfully.log in";
-                header('location:'.ROOT_URL.'signin.php');
+                header('location:'.ROOT_URL.'login.php');
                 die();
             }
         }

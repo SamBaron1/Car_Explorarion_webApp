@@ -3,6 +3,10 @@
     background: red;
     padding: 5px;
 }
+.successmessage{
+    background: green;
+    padding: 5px;
+}
 body{
     background: radial-gradient(circle, #d6998b, rgb(157, 133, 225));  
     
