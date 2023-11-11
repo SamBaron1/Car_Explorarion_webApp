@@ -1,5 +1,4 @@
 <?php 
-    session_start();
     require_once 'database/connection.php';
 
     $email=$_SESSION['login-data']['email'] ?? null;

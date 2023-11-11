@@ -1,5 +1,5 @@
 <?php 
-    session_start();
+    require_once 'database/constants.php';
 
     $firstname=$_SESSION['signup-data']['firstname'] ?? null;
     $lastname=$_SESSION['signup-data']['lastname'] ?? null;
