@@ -1,5 +1,9 @@
 <?php 
     session_start();
+    require_once 'database/connection.php';
+
+    $email=$_SESSION['login-data']['email'] ?? null;
+    $password=$_SESSION['login-data']['password'] ?? null;
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -11,7 +15,7 @@
     
 </head>
 <body>
-    <form action="">
+    <form action="<?=ROOT_URL.'loginback.php' ?>" method="post">
         <h1>Car Exploration</h1>
         <hr>
         <?php
@@ -22,13 +26,22 @@
             ?></p>
         </div>
         <?php endif ?>
+
+        <?php
+            if(isset($_SESSION['loginerror'])) :?>
+            <div class="errormessage">
+                <p><?=$_SESSION['loginerror'];
+                 unset($_SESSION['loginerror']);
+                 ?></p>
+            </div>
+        <?php endif?>
         <br>
         <br>
         Email <br>
-        <input placeholder="email"  type="text"><br><br>
+        <input placeholder="email"  type="text" name="email" value="<?=$email ?>"><br><br>
         Password <br>
-        <input placeholder="password"  type="text"><br><br>
-        <input type="button" value="submit"><br><br>
+        <input placeholder="password"  type="password" name="password" value="<?=$password ?>"><br><br>
+        <input type="submit" name="submit"><br><br>
         <a href="reset_password.php">Forgot Password?</a>
         <?php
         if(!isset($_SESSION['signupsuccess'])): ?>
