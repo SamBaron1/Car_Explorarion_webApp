@@ -10,6 +10,11 @@ session_start();
         $confirmpassword=filter_var($_POST['confirmpassword'],FILTER_SANITIZE_FULL_SPECIAL_CHARS);
         $profilepic=$_FILES['profilepic'];
         $continent=$_POST['continent'];
+    // }
+
+    //     echo "<pre>";
+    //     print_r($profilepic);
+    //     echo "</pre>";
 
         if(!$firstname){
             $_SESSION['signuperror']="First name cannot be blank";
@@ -60,19 +65,19 @@ session_start();
             }
         }
 
-        if($_SESSION['signuperror']){
+        if(isset($_SESSION['signuperror'])){
             unlink($profilepic_path);
     
             $_SESSION['signup-data']=$_POST;
             header('location:'.ROOT_URL.'sign_up.php');
             die();
         }else{
-            $insert_to_database="INSERT INTO users(firstname,lastname,email,profilepic,continent) VALUES('$firstname','$lastname','$email','$hashedpassword','$profilepic_path','$continent')";
+            $insert_to_database="INSERT INTO users(firstname,lastname,email,password,profilepic,continent) VALUES('$firstname','$lastname','$email','$hashedpassword','$profilepic_path','$continent')";
             mysqli_query($conn,$insert_to_database);
     
-            if(mysqli_errno($conn)){
+            if(!mysqli_errno($conn)){
                 $_SESSION['signupsuccess']="Account created successfully.log in";
-                header('location:'.ROOT_URL.'signin.php');
+                header('location:'.ROOT_URL.'login.php');
                 die();
             }
         }
