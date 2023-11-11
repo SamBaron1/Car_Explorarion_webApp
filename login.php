@@ -18,7 +18,7 @@
         if(isset($_SESSION['signupsuccess'])): ?>
         <div class="successmessage">
             <p><?=$_SESSION['signupsuccess'];
-            unset($_SESSION['signupsuccess']);
+            // unset($_SESSION['signupsuccess']);
             ?></p>
         </div>
         <?php endif ?>
@@ -30,7 +30,13 @@
         <input placeholder="password"  type="text"><br><br>
         <input type="button" value="submit"><br><br>
         <a href="reset_password.php">Forgot Password?</a>
+        <?php
+        if(!isset($_SESSION['signupsuccess'])): ?>
         <p>Don't have an account?<a href="sign_up.php">create one</a></p>
+        <?php else:
+            unset($_SESSION['signupsuccess']);
+        ?>
+        <?php endif?>
     </form>
     
 </body>
