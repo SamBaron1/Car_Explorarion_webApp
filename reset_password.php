@@ -14,7 +14,7 @@
         }
         form{
             width: 30%;
-            height: fit-content;
+            height: 60vh;
             border: 1px solid black;
             text-align: center;
             margin: auto;
@@ -36,12 +36,17 @@
         <br>
         Email <br>
         <input placeholder="email"  type="text"><br><br>
-        Password <br>
-        <input placeholder="password"  type="text"><br><br>
-        <input type="button" value="submit"><br><br>
-        <a href="reset_password.html">Forgot Password?</a>
-        <p>Don't have an account?<a href="sign_up.html">create one</a></p>
+        New Password <br>
+        <input placeholder="New Password"  type="text"><br><br>
+        Confirm Password <br>
+        <input placeholder="New Password"  type="text"><br><br>
+        <input type="button" value="Confirm" onclick="setvalue()"><br><br>
     </form>
-    
+    <script>
+        function setvalue(){
+            alert("password changed");
+            window.location.href = "login.php"
+        }
+    </script>
 </body>
 </html>

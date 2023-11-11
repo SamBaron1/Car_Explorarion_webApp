@@ -22,8 +22,8 @@
         <div id="loginLinks">
 
             <div class="links">
-                <a href="login.html" id="login">Login</a>
-                <a href="sign_up.html" id="signUp">Sign Up</a>
+                <a href="login.php" id="login">Login</a>
+                <a href="sign_up.php" id="signUp">Sign Up</a>
             </div>
             <div class="navbaricons">
                 <i class="fa-solid fa-bars" id="opennavbtn"></i>
@@ -63,7 +63,7 @@
                     </div>
                         <div class="profile_others">
                     <ul>
-                        <li id="debug"><a href="dashboard.html">Dashboard</a></li>
+                        <li id="debug"><a href="dashboard.php">Dashboard</a></li>
                         <li>Logout</li>
                     </ul>
                         </div>

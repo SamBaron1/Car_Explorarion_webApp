@@ -182,7 +182,7 @@
                 </div>
                     <div class="profile_others">
                 <ul>
-                    <li id="debug"><a href="index.html">Main</a></li>
+                    <li id="debug"><a href="index.php">Main</a></li>
                     <li>Logout</li>
                 </ul>
                     </div>
@@ -194,32 +194,32 @@
             <aside>
                 <ul>
                     <li>
-                        <a href="addmake.html">
+                        <a href="addmake.php">
                             <h5>Add Make</h5>
                         </a>
                     </li>
                     <li>
-                        <a href="dashboard.html" class="active">
+                        <a href="dashboard.php" class="active">
                             <h5>Manage Make</h5>
                         </a>
                     </li>
                     <li>
-                        <a href="adduser.html">
+                        <a href="adduser.php">
                             <h5>Add user</h5>
                         </a>
                     </li>
                     <li>
-                        <a href="manageuser.html">
+                        <a href="manageuser.php">
                             <h5>Manage Users</h5>
                         </a>
                     </li>
                     <li>
-                        <a href="addcar.html">
+                        <a href="addcar.php">
                             <h5>Add Car</h5>
                         </a>
                     </li>
                     <li>
-                        <a href="managecar.html">
+                        <a href="managecar.php">
                             <h5>Manage Car</h5>
                         </a>
                     </li>
@@ -240,8 +240,8 @@
                         <tr>
                             <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
                             <td>Subaru</td>
-                            <td><a href="edit-car.html" class="btn sm">Edit</a></td>
-                            <td><a href="delete-car.html" class="btn sm danger">Delete</a></td>
+                            <td><a href="edit-car.php" class="btn sm">Edit</a></td>
+                            <td><a href="delete-car.php" class="btn sm danger">Delete</a></td>
                         </tr>
                     </tbody>
                 </table>
