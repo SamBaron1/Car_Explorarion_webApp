@@ -115,32 +115,32 @@
             <aside>
                 <ul>
                     <li>
-                        <a href="addmake.html">
+                        <a href="addmake.php">
                             <h5>Add Make</h5>
                         </a>
                     </li>
                     <li>
-                        <a href="dashboard.html" >
+                        <a href="dashboard.php" >
                             <h5>Manage Make</h5>
                         </a>
                     </li>
                     <li>
-                        <a href="adduser.html">
+                        <a href="adduser.php">
                             <h5>Add user</h5>
                         </a>
                     </li>
                     <li>
-                        <a href="manageuser.html" class="active">
+                        <a href="manageuser.php" class="active">
                             <h5>Manage Users</h5>
                         </a>
                     </li>
                     <li>
-                        <a href="addcar.html">
+                        <a href="addcar.php">
                             <h5>Add Car</h5>
                         </a>
                     </li>
                     <li>
-                        <a href="managecar.html">
+                        <a href="managecar.php">
                             <h5>Manage Car</h5>
                         </a>
                     </li>
@@ -161,8 +161,8 @@
                         <tr>
                             <td>Kijana mtesi</td>
                             <td>mfula@kutesa.com</td>
-                            <td><a href="edit-user.html" class="btn sm">Edit</a></td>
-                            <td><a href="delete-zip.html" class="btn sm danger">Delete</a></td>
+                            <td><a href="edit-user.php" class="btn sm">Edit</a></td>
+                            <td><a href="delete-zip.php" class="btn sm danger">Delete</a></td>
                         </tr>
                     </tbody>
                 </table>
