@@ -1,3 +1,7 @@
+<?php 
+    session_start();
+    require_once 'database/connection.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -178,7 +182,16 @@
         <div class="profile">
             <div class="dashboardprofile">
                 <div class="profile_pic">
-                    <img src="images/images/featured-cars/alphard.jpeg" alt="">
+                    <?php
+                    if(isset($_SESSION['user-email'])){
+                        $image=$_SESSION['user-email'];
+                        $image_query="SELECT profilepic FROM users WHERE email='$image'";
+                        $image_results=mysqli_query($conn,$image_query);
+                        $image_db=mysqli_fetch_assoc($image_results);
+                        $profilepic=$image_db['profilepic'];
+                        echo '<img src="'.$profilepic .'"alt="">';
+                    }
+                    ?>
                 </div>
                     <div class="profile_others">
                 <ul>
