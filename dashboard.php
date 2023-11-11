@@ -189,7 +189,7 @@
                         $image_results=mysqli_query($conn,$image_query);
                         $image_db=mysqli_fetch_assoc($image_results);
                         $profilepic=$image_db['profilepic'];
-                        echo '<img src="' . $profilepic . '" alt="">';
+                        echo '<img src="'.$profilepic .'"alt="">';
                     }
                     ?>
                 </div>
