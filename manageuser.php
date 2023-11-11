@@ -1,3 +1,11 @@
+<?php 
+    require_once 'database/connection.php';
+?>
+<?php
+ if(!isset($_SESSION['user-email'])){
+    header('location:'.ROOT_URL);
+ }
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -147,7 +155,7 @@
                 </ul>
             </aside>
             <main>
-                <h2>Manage Makes</h2>
+                <h2>Manage Users</h2>
                 <table>
                     <thead>
                         <tr>

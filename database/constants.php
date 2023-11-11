@@ -5,3 +5,4 @@
     define('dbpassword','');
     define('dbname','carapp');
 
+    session_start();

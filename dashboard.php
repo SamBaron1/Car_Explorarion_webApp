@@ -1,7 +1,11 @@
 <?php 
-    session_start();
     require_once 'database/connection.php';
 ?>
+<?php
+ if(!isset($_SESSION['user-email'])){
+    header('location:'.ROOT_URL);
+ }
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -196,7 +200,7 @@
                     <div class="profile_others">
                 <ul>
                     <li id="debug"><a href="index.php">Main</a></li>
-                    <li>Logout</li>
+                    <li><a href="<?=ROOT_URL.'logout.php' ?>">Logout</a></li>
                 </ul>
                     </div>
             </div>
