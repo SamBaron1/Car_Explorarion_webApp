@@ -1,3 +1,8 @@
+<?php 
+    require_once 'database/connection.php';
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,10 +26,12 @@
     <div class="header">
         <div id="loginLinks">
 
+        <?php if(!isset($_SESSION['user-email'])):?>
             <div class="links">
-                <a href="login.html" id="login">Login</a>
-                <a href="sign_up.html" id="signUp">Sign Up</a>
+                <a href="login.php" id="login">Login</a>
+                <a href="sign_up.php" id="signUp">Sign Up</a>
             </div>
+        <?php endif?>
             <div class="navbaricons">
                 <i class="fa-solid fa-bars" id="opennavbtn"></i>
                 <i class="fa-solid fa-xmark" id="closenavbtn" style="display: none;"></i>
@@ -42,19 +49,43 @@
             
             <div class="icon">
                 
-                    <img src="images/Bugatti.jpeg" alt="icon">
+                    <img src="images/images/featured-cars/Bugatti.jpeg" alt="icon">
             </div>
      
         </div>
         <div class="navbar">
             <ul class="nav-list">
                 <li><a href="#home">HOME</a></li>
-                <li><a href="#models">MODELS</a></li>
-                <li><a href="#types">TYPES</a></li>
-                <li><a href="#clients">Clients</a></li>
-                <li><a href="#logos">Logos</a></li>
+                <li><a href="#models">FEATURED</a></li>
+                <li><a href="#types">SERVICES</a></li>
+                <li><a href="#clients">CLIENTS</a></li>
+                <li><a href="#logos">BRANDS</a></li>
                 <li><a href="#contacts">CONTACTS</a></li>
             </ul>
+           
+            <?php
+                    if(isset($_SESSION['user-email'])): ?>
+            <div class="profile">
+                <div class="dashboard">
+                    <div class="profile_pic">
+                        <?php
+                        $image=$_SESSION['user-email'];
+                        $image_query="SELECT profilepic FROM users WHERE email='$image'";
+                        $image_results=mysqli_query($conn,$image_query);
+                        $image_db=mysqli_fetch_assoc($image_results);
+                        $profilepic=$image_db['profilepic'];
+                        echo '<img src="'.$profilepic .'"alt="">';
+                        ?>
+                    </div>
+                        <div class="profile_others">
+                    <ul>
+                        <li id="debug"><a href="dashboard.php">Dashboard</a></li>
+                        <li><a href="<?=ROOT_URL.'logout.php' ?>">Logout</a></li>
+                    </ul>
+                        </div>
+                </div>
+            </div>
+            <?php endif?>
         </div>
     </div>
 
@@ -102,7 +133,7 @@
                                       <option value="sedan">sedan</option><!-- /.option-->
 
                                       <option value="van">van</option><!-- /.option-->
-                                      <option value="roadster">roadster</option><!-- /.option-->
+                                      <option value="suv">suv</option><!-- /.option-->
 
                                 </select><!-- /.select-->
                             </div><!-- /.model-select-icon -->
@@ -118,8 +149,8 @@
 
                                       <option value="toyota">toyota</option><!-- /.option-->
 
-                                      <option value="holden">holden</option><!-- /.option-->
-                                      <option value="maecedes-benz">maecedes-benz.</option><!-- /.option-->
+                                      <option value="land-rover">land-rover</option><!-- /.option-->
+                                      <option value="mercedes-benz">mercedes-benz.</option><!-- /.option-->
 
                                 </select><!-- /.select-->
                             </div><!-- /.model-select-icon -->
@@ -130,12 +161,9 @@
                                 <select class="form-control">
 
                                       <option value="default">condition</option><!-- /.option-->
-
-                                      <option value="something">something</option><!-- /.option-->
-
-                                      <option value="something">something</option><!-- /.option-->
-                                      <option value="something">something</option><!-- /.option-->
-
+                                      <option value="new">new</option><!-- /.option-->
+                                      <option value="used">used</option><!-- /.option-->
+                                      <option value="old">old</option><!-- /.option-->
                                 </select><!-- /.select-->
                             </div><!-- /.model-select-icon -->
                         </div>
@@ -147,10 +175,8 @@
                                 <select class="form-control">
 
                                       <option value="default">model</option><!-- /.option-->
-
-                                      <option value="kia-rio">kia-rio</option><!-- /.option-->
-
-                                      <option value="mitsubishi">mitsubishi</option><!-- /.option-->
+                                      <option value="subaru">subaru</option><!-- /.option-->
+                                      <option value="bmw">bmw</option><!-- /.option-->
                                       <option value="ford">ford</option><!-- /.option-->
 
                                 </select><!-- /.select-->
@@ -162,11 +188,9 @@
                                 <select class="form-control">
 
                                       <option value="default">price</option><!-- /.option-->
-
-                                      <option value="$0.00">$0.00</option><!-- /.option-->
-
-                                      <option value="$0.00">$0.00</option><!-- /.option-->
-                                      <option value="$0.00">$0.00</option><!-- /.option-->
+                                      <option value="$20000.00">$20000.00</option><!-- /.option-->
+                                      <option value="$8000.00">$80000.00</option><!-- /.option-->
+                                      <option value="$90000.00">$90000.00</option><!-- /.option-->
 
                                 </select><!-- /.select-->
                             </div><!-- /.model-select-icon -->
@@ -185,25 +209,35 @@
     </div>
 </div>
 
-<div id="slider_container">
-    <div id="slider">
-        <div id="car_picture">
-        </div>
-        <div id="description">
-            <h2 id="car_name">one</h2>
-            <br>
-            <p id="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi autem ea, consequatur soluta voluptatum laboriosam expedita quos ex! Nam molestias hic quisquam et magnam accusamus maiores sapiente omnis est aspernatur.</p>
+
+    <div id="slider_container">
+        <div id="slider">
+            <div id="car_picture">
+            </div>
+            <div id="description">
+                <h2 id="car_name">one</h2>
+                <br>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                    Excepturi autem ea, consequatur soluta voluptatum laboriosam expedita quos ex!
+                    Nam molestias hic quisquam et magnam accusamus maiores sapiente
+                    omnis est aspernatur.</p>
+            </div>
         </div>
     </div>
-</div>
 
+<<<<<<< HEAD:index.html
 
 
 
     <h1 class= "featured-cars">Featured CARS...</h1>
+=======
+    <div class="body-h1">
+        <h1>Featured CARS...</h1>
+    </div>
+>>>>>>> af8f4d7d9c3cba948b63575dec5deb89d11292bc:index.php
     <div class="car-details" id="models">
         <div class="car-container">
-            <img src="images/suzuki.jpeg" alt="Car Image1">
+            <img src="images/images/featured-cars/suzuki.jpeg" alt="Car Image1">
             <ul>
                 <li>Name: SUZUKI</li>
                 <li>Date of Manufacture: 2022-01-01</li>
@@ -213,7 +247,7 @@
         </div>
     
         <div class="car-container">
-            <img src="images/blueranger.jpeg" alt="Car Image2">
+            <img src="images/images/featured-cars/blueranger.jpeg" alt="Car Image2">
             <ul>
                 <li>Name: FORDRANGER</li>
               <li>Date of Manufacture: 2022-01-01</li>
@@ -223,7 +257,7 @@
         </div>
        
         <div class="car-container">
-            <img src="images/defender.jpeg" alt="Car Image3">
+            <img src="images/images/featured-cars/defender.jpeg" alt="Car Image3">
             <ul>
                 <li>Name: DEFENDER</li>
                 <li>Date of Manufacture: 2022-01-01</li>
@@ -233,7 +267,7 @@
         </div>
         
         <div class="car-container">
-            <img src="images/newfortuner.jpeg" alt="Car Image4">
+            <img src="images/images/featured-cars/newfortuner.jpeg" alt="Car Image4">
             <ul>
                 <li>Name: FORTUNER</li>
                 <li>Date of Manufacture: 2022-01-01</li>
@@ -243,7 +277,7 @@
         </div>
         
         <div class="car-container">
-            <img src="images/fordeverest.jpeg" alt="Car Image5">
+            <img src="images/images/featured-cars/fordeverest.jpeg" alt="Car Image5">
             <ul>
                 <li>Name: FORDEVEREST</li>
                 <li>Date of Manufacture: 2022-01-01</li>
@@ -253,7 +287,7 @@
         </div>
         
         <div class="car-container">
-            <img src="images/forester.jpeg" alt="Car Image6">
+            <img src="images/images/featured-cars/forester.jpeg" alt="Car Image6">
             <ul>
                 <li>Name: FORESTER</li>
                 <li>Date of Manufacture: 2022-01-01</li>
@@ -263,7 +297,7 @@
         </div>
         
         <div class="car-container">
-            <img src="images/newaudi.jpeg" alt="Car Image7">
+            <img src="images/images/featured-cars/newaudi.jpeg" alt="Car Image7">
             <ul>
                 <li>Name: AUDI</li>
                 <li>Date of Manufacture: 2022-01-01</li>
@@ -273,7 +307,7 @@
         </div>
         
         <div class="car-container">
-            <img src="images/fordranger.jpeg" alt="Car Image8">
+            <img src="images/images/featured-cars/fordranger.jpeg" alt="Car Image8">
             <ul>
                 <li>Name: RANGER</li>
                 <li>Date of Manufacture: 2022-01-01</li>
@@ -283,7 +317,7 @@
         </div>
         
         <div class="car-container">
-            <img src="images/toyotacrown.jpeg" alt="Car Image8">
+            <img src="images/images/featured-cars/toyotacrown.jpeg" alt="Car Image8">
             <ul>
                 <li>Name: TOYOTA CROWN</li>
                 <li>Date of Manufacture: 2022-01-01</li>
@@ -292,7 +326,7 @@
             </ul>
         </div>
         <div class="car-container">
-            <img src="images/lexus2.jpeg" alt="Car Image8">
+            <img src="images/images/featured-cars/lexus2.jpeg" alt="Car Image8">
             <ul>
                 <li>Name: LEXUS</li>
                 <li>Date of Manufacture: 2022-01-01</li>
@@ -301,7 +335,7 @@
             </ul>
         </div>
         <div class="car-container">
-            <img src="images/newtx.jpeg" alt="Car Image8">
+            <img src="images/images/featured-cars/newtx.jpeg" alt="Car Image8">
             <ul>
                 <li>Name: LANDCRUISER TX</li>
                 <li>Date of Manufacture: 2022-01-01</li>
@@ -310,7 +344,7 @@
             </ul>
         </div>
         <div class="car-container">
-            <img src="images/isuzudmux.jpeg" alt="Car Image8">
+            <img src="images/images/featured-cars/isuzudmux.jpeg" alt="Car Image8">
             <ul>
                 <li>Name: ISUZU DMUX</li>
                 <li>Date of Manufacture: 2022-01-01</li>
@@ -319,7 +353,7 @@
             </ul>
         </div>
         <div class="car-container">
-            <img src="images/discovery.jpeg" alt="Car Image8">
+            <img src="images/images/featured-cars/discovery.jpeg" alt="Car Image8">
             <ul>
                 <li>Name: DISCOVERY</li>
                 <li>Date of Manufacture: 2022-01-01</li>
@@ -328,7 +362,7 @@
             </ul>
         </div>
         <div class="car-container">
-            <img src="images/rangerover2.jpeg" alt="Car Image8">
+            <img src="images/images/featured-cars/rangerover2.jpeg" alt="Car Image8">
             <ul>
                 <li>Name: RANGE ROVER</li>
                 <li>Date of Manufacture: 2022-01-01</li>
@@ -337,7 +371,7 @@
             </ul>
         </div>
         <div class="car-container">
-            <img src="images/pajero.jpeg" alt="Car Image8">
+            <img src="images/images/featured-cars/pajero.jpeg" alt="Car Image8">
             <ul>
                 <li>Name: PAJERO</li>
                 <li>Date of Manufacture: 2022-01-01</li>
@@ -346,7 +380,7 @@
             </ul>
         </div>
         <div class="car-container">
-            <img src="images/alphard.jpeg" alt="Car Image8">
+            <img src="images/images/featured-cars/alphard.jpeg" alt="Car Image8">
             <ul>
                 <li>Name: ALPHARD</li>
                 <li>Date of Manufacture: 2022-01-01</li>
@@ -355,7 +389,7 @@
             </ul>
         </div>
         <div class="car-container">
-            <img src="images/matatuhiace.jpeg" alt="Car Image8">
+            <img src="images/images/featured-cars/matatuhiace.jpeg" alt="Car Image8">
             <ul>
                 <li>Name: HIACE</li>
                 <li>Date of Manufacture: 2022-01-01</li>
@@ -364,7 +398,7 @@
             </ul>
         </div>
         <div class="car-container">
-            <img src="images/chrysler.jpg" alt="Car Image8">
+            <img src="images/images/featured-cars/chrysler.jpg" alt="Car Image8">
             <ul>
                 <li>Name: CHRYSLER</li>
                 <li>Date of Manufacture: 2022-01-01</li>
@@ -373,7 +407,7 @@
             </ul>
         </div>
         <div class="car-container">
-            <img src="images/damemobius.jpeg" alt="Car Image8">
+            <img src="images/images/featured-cars/damemobius.jpeg" alt="Car Image8">
             <ul>
                 <li>Name: MOBIUS</li>
                 <li>Date of Manufacture: 2022-01-01</li>
@@ -382,7 +416,7 @@
             </ul>
         </div>
         <div class="car-container">
-            <img src="images/gwagon.jpeg" alt="Car Image8">
+            <img src="images/images/featured-cars/gwagon.jpeg" alt="Car Image8">
             <ul>
                 <li>Name: G-WAGON</li>
                 <li>Date of Manufacture: 2022-01-01</li>
@@ -391,7 +425,7 @@
             </ul>
         </div>
         <div class="car-container">
-            <img src="images/mercedes1.jpeg" alt="Car Image8">
+            <img src="images/images/featured-cars/mercedes1.jpeg" alt="Car Image8">
             <ul>
                 <li>Name: MERCEDES BENZ</li>
                 <li>Date of Manufacture: 2022-01-01</li>
@@ -400,7 +434,7 @@
             </ul>
         </div>
         <div class="car-container">
-            <img src="images/bmw2.jpeg" alt="Car Image8">
+            <img src="images/images/featured-cars/bmw2.jpeg" alt="Car Image8">
             <ul>
                 <li>Name: BMW NEWMODEL</li>
                 <li>Date of Manufacture: 2022-01-01</li>
@@ -409,7 +443,7 @@
             </ul>
         </div>
         <div class="car-container">
-            <img src="images/lexus1.jpeg" alt="Car Image8">
+            <img src="images/images/featured-cars/lexus1.jpeg" alt="Car Image8">
             <ul>
                 <li>Name: LEXUS L600</li>
                 <li>Date of Manufacture: 2022-01-01</li>
@@ -418,7 +452,7 @@
             </ul>
         </div>
         <div class="car-container">
-            <img src="images/volkswagen.jpeg" alt="Car Image8">
+            <img src="images/images/featured-cars/volkswagen.jpeg" alt="Car Image8">
             <ul>
                 <li>Name: VOLKSWAGEN</li>
                 <li>Date of Manufacture: 2022-01-01</li>
@@ -427,7 +461,7 @@
             </ul>
         </div>
         <div class="car-container">
-            <img src="images/lc200.jpeg" alt="Car Image8">
+            <img src="images/images/featured-cars/lc200.jpeg" alt="Car Image8">
             <ul>
                 <li>Name: LANDCRUISER LC200</li>
                 <li>Date of Manufacture: 2022-01-01</li>
@@ -437,15 +471,87 @@
         </div>
     </div>
 
+
+
+
+    <div class="body-h1">
+        <h1>Our Services</h1>
+    </div>
+            <!--service start -->
+            <div id="service" class="service">
+                <div class="service-container">
+                        
+                        <div class="single-service-item">
+                            <div class="single-service-image">
+                                <img src="images/maintenance.png" alt="icon1">
+                            </div>
+                            <div class="single-service-h2">
+                                <h2><a href="#">Automated Garage</a></h2>
+                            </div>
+                            <div class="single-service-p">
+                                <p>
+                                    Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut den fugit sed quia.  
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="single-service-item">
+                            <div class="single-service-image">
+                                <img src="images/bigdealer.jpg" alt="icon1">
+                            </div>
+                            <div class="single-service-h2">
+                                <h2><a href="#">largest dealership <span> of</span> cars</a></h2>
+                            </div>
+                            <div class="single-service-p">
+                                <p>
+                                    Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut den fugit sed quia.  
+                                </p>
+                            </div>
+                        </div>
+                  
+                        <div class="single-service-item">
+                            <div class="single-service-image">
+                                <img src="images/phone.png" alt="icon2">
+                            </div>
+                            <div class="single-service-h2">
+                                <h2><a href="#">unlimited repair warranty</a></h2>
+                            </div>
+                            <div class="single-service-p">
+                                <p>
+                                    Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut den fugit sed quia.  
+                                </p>
+                            </div>
+                        </div>
+               
+                 
+                        <div class="single-service-item">
+                            <div class="single-service-image">
+                                <img src="images/car-insurance.png" alt="icon3">
+                            </div>
+                            <div class="single-service-h2">
+                                <h2><a href="#">insurance support</a></h2>
+                            </div>
+                            <div class="single-service-p">
+                                <p>
+                                    Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut den fugit sed quia. 
+                                </p>
+                            </div>
+                        </div>
+                    
+				
+                    
+                </div><!--/.container-->
+            </div>
+
+            <div class="body-h1">
+                <h1>What Our Clients Say</h1>
+            </div>
     		<!-- clients-say strat -->
             <div class="clients-say" id="clients">
-                    <div class="section-header">
-                        <h2>What Our Clients Say</h2>
-                    </div>
                     <div class="testimonials">
                         <div class="testimonial-box">
                             <div class="testimonial-img">
-                                <img src="images/client3.jpeg" alt="Image of Client" />
+                                <img src="images/images/clients/client3.jpeg" alt="Image of Client" />
                             </div>
                             <div class="testimonial-person">
                                 <h2><a href="#">Yobra Nim</a></h2>
@@ -459,7 +565,7 @@
                         </div>
                         <div class="testimonial-box">
                             <div class="testimonial-img">
-                                <img src="images/client2.jpeg" alt="Image of Client" />
+                                <img src="images/images/clients/client2.jpeg" alt="Image of Client" />
                             </div>
                             <div class="testimonial-person">
                                 <h2><a href="#">Eddie Gathenge</a></h2>
@@ -473,7 +579,7 @@
                         </div>
                         <div class="testimonial-box">
                             <div class="testimonial-img">
-                                <img src="images/client1.jpeg" alt="Image of Client" />
+                                <img src="images/images/clients/client1.jpeg" alt="Image of Client" />
                             </div>
                             <div class="testimonial-person">
                                 <h2><a href="#">Maina AKA Lawre</a></h2>
@@ -489,7 +595,9 @@
                     </div>
             </div>
 		<!-- clients-say end -->
-
+        <div class="body-h1">
+            <h1>Our Brands</h1>
+        </div>
 		<!--brand strat -->
 		<section id="brand"  class="brand">
 			<div class="brand-container" id="logos">
@@ -501,23 +609,23 @@
 						</div><!--/.item-->
 						<div class="item">
 							<a href="#">
-								<img src="images/benzcars.png" alt="brand-image" />
+								<img src="images/images/brand/benzcars.png" alt="brand-image" />
 							</a>
 						</div><!--/.item-->
 						<div class="item">
 							<a href="#">
-								<img src="images/toyotabrand.jpeg" alt="brand-image" />
+								<img src="images/images/brand/toyotabrand.jpeg" alt="brand-image" />
 							</a>
 						</div><!--/.item-->
 
 						<div class="item">
 							<a href="#">
-								<img src="images/audi.png" alt="brand-image" />
+								<img src="images/images/brand/audi.png" alt="brand-image" />
 							</a>
 						</div><!--/.item-->
                         <div class="item">
 							<a href="#">
-								<img src="images/mitsu.png" alt="brand-image" />
+								<img src="images/images/brand/mitsu.png" alt="brand-image" />
 							</a>
 						</div><!--/.item-->
 				</div><!--/.clients-area-->
@@ -526,6 +634,9 @@
 
 		</section><!--/brand-->	
 		<!--brand end -->
+        <div class="footer-message">
+            <p>YEAH WE FELL IN LOVE WITH MACHINES!!!!!!</P>
+        </div>
     <footer class="grid-container">
         <div class="footer-row">
             <h3>Get in Touch</h3>

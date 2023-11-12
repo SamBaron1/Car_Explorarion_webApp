@@ -1,3 +1,11 @@
+<?php 
+    require_once 'database/connection.php';
+?>
+<?php
+ if(!isset($_SESSION['user-email'])){
+    header('location:'.ROOT_URL);
+ }
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,7 +39,7 @@
 </head>
 <body>
     <form action="">
-        <h1>Car Exploration</h1>
+        <h1>EDIT USER</h1>
         <hr>
         <br>
         <br>
@@ -45,6 +53,8 @@
         <input placeholder="password"  type="password"><br><br>
         Confirm Password 
         <input placeholder="confirm password"  type="password"><br><br>
+        Insert Profile Picture:
+        <input type="file"><br><br>
         Continet
         <select title="Continet">
             <option>Africa</option>
@@ -57,13 +67,6 @@
     
         <input type="button" value="submit" onclick="signIn()">
         <input type="button" value="cancel" onclick="back()">
-        <p>Already have an account?<a href="login.html">login</a></p>
     </form>
-    <script src="script.js" >
-     
-function back(){
-  window.location.href = "index.html"
-};
-    </script>
 </body>
 </html>

@@ -1,3 +1,11 @@
+<?php 
+    require_once 'database/connection.php';
+?>
+<?php
+ if(!isset($_SESSION['user-email'])){
+    header('location:'.ROOT_URL);
+ }
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,13 +22,14 @@
         }
         form{
             width: 30%;
-            height: 60vh;
+            height: fit-content;
             border: 1px solid black;
             text-align: center;
             margin: auto;
             background-color: blanchedalmond;
             position: relative;
             top: 20vh;
+            padding: 30px;
            
 
             
@@ -30,23 +39,20 @@
 </head>
 <body>
     <form action="">
-        <h1>Car Exploration</h1>
+        <h1>ADD MAKE</h1>
         <hr>
         <br>
         <br>
-        Email <br>
-        <input placeholder="email"  type="text"><br><br>
-        New Password <br>
-        <input placeholder="New Password"  type="text"><br><br>
-        Confirm Password <br>
-        <input placeholder="New Password"  type="text"><br><br>
-        <input type="button" value="Confirm" onclick="setvalue()"><br><br>
+        Make Description
+        <input placeholder="This make was invented........"  type="text"><br><br>
+        Make Name
+        <input placeholder="Toyota"  type="text"><br><br>
+        Insert Make Logo:
+        <input type="file"><br><br>
+        
+    
+        <input type="button" value="submit" onclick="signIn()">
+        <input type="button" value="cancel" onclick="back()">
     </form>
-    <script>
-        function setvalue(){
-            alert("password changed");
-            window.location.href = "login.html"
-        }
-    </script>
 </body>
 </html>
