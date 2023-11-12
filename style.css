@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 *, *::before, *::after {
-=======
-*, *::before, *::after{
->>>>>>> e7c64981e8e87b43248d9bc3c85c68b8278ea145
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -494,16 +490,9 @@ a:hover {
     height: auto;
     display: flex;
     justify-content: center;
-<<<<<<< HEAD
     padding: 50px;
     margin-top: 0;
     
-=======
-    background: transparent;
-    border-radius: 5px solid transparent;
-    padding: 10px;
-    margin-top: 50px;
->>>>>>> e7c64981e8e87b43248d9bc3c85c68b8278ea145
 }
 #slider{
     width: 80%;
@@ -543,19 +532,12 @@ a:hover {
     display: flex;
     position: relative;
 }
-<<<<<<< HEAD
 
 
 
 
 /*featured cars*/
 
-=======
-.featured-cars{
-    background: transparent;
-    
-}
->>>>>>> e7c64981e8e87b43248d9bc3c85c68b8278ea145
 .car-details {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -814,7 +796,6 @@ p {
     display: flex;
     position: relative;
     text-align: center;
-<<<<<<< HEAD
     padding: 30px;
     background-color: #04121d;
 }
@@ -833,11 +814,6 @@ p {
 }
 .footer-row3 {
     margin-bottom: 20px;  
-=======
-    padding: 20px;
-    background-color: #c7c7c5;
-    cursor: pointer;
->>>>>>> e7c64981e8e87b43248d9bc3c85c68b8278ea145
 }
 
 .footer-row2 {
@@ -1104,6 +1080,8 @@ p {
         padding: 0;
         gap: 2px;
     }
+
+
     /* Default styles for larger screens */
     .brand-container {
         display: flex;
@@ -1111,20 +1089,12 @@ p {
     }
 
     .item {
-        width: 25%; /* Adjust as needed */
+        width: 50%; /* Adjust as needed */
         box-sizing: border-box;
         padding: 10px;
         text-align: center;
     }
 
-<<<<<<< HEAD
-    /* Styles for smaller screens */
-    @media screen and (max-width: 768px) {
-        .item {
-            width: 50%; /* Adjust as needed for two items per row on smaller screens */
-        }
-    }
-=======
 
 
 
@@ -1179,11 +1149,8 @@ p {
 }
 
 .testimonial-box:hover {
-<<<<<<< HEAD
     background: aquamarine;
-=======
     background: rgb(224, 218, 218);
->>>>>>> af8f4d7d9c3cba948b63575dec5deb89d11292bc
     border-color: #bcf733;
     color: #fff;
 }
@@ -1324,9 +1291,7 @@ p {
     flex-wrap: nowrap;
     margin: 10px;
     padding: 10px;
-    
->>>>>>> e7c64981e8e87b43248d9bc3c85c68b8278ea145
 
 }
 
-
+}
