@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 *, *::before, *::after {
+=======
+*, *::before, *::after{
+>>>>>>> e7c64981e8e87b43248d9bc3c85c68b8278ea145
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -307,7 +311,7 @@ a:hover {
     text-wrap: wrap;
 }
 .section button {
-    background-color: #4CAF50; /* Green */
+    background-color: green;/* Green */
     border: none;
     border-radius: 3px;
     color: white;
@@ -490,15 +494,25 @@ a:hover {
     height: auto;
     display: flex;
     justify-content: center;
+<<<<<<< HEAD
     padding: 50px;
     margin-top: 0;
     
+=======
+    background: transparent;
+    border-radius: 5px solid transparent;
+    padding: 10px;
+    margin-top: 50px;
+>>>>>>> e7c64981e8e87b43248d9bc3c85c68b8278ea145
 }
 #slider{
     width: 80%;
     height: 50vh;
     display: flex;
     justify-content: center;
+    color: white;
+    position: relative;
+    text-align: center;
 }
 #car_picture{
     width: 50%;
@@ -529,12 +543,19 @@ a:hover {
     display: flex;
     position: relative;
 }
+<<<<<<< HEAD
 
 
 
 
 /*featured cars*/
 
+=======
+.featured-cars{
+    background: transparent;
+    
+}
+>>>>>>> e7c64981e8e87b43248d9bc3c85c68b8278ea145
 .car-details {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
@@ -547,6 +568,7 @@ a:hover {
 }
 
 .car-container {
+
     background-color: grey;
     border: 1px solid cyan;
     padding: 10px;
@@ -556,6 +578,7 @@ a:hover {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 
 .car-container img {
@@ -791,6 +814,7 @@ p {
     display: flex;
     position: relative;
     text-align: center;
+<<<<<<< HEAD
     padding: 30px;
     background-color: #04121d;
 }
@@ -809,6 +833,11 @@ p {
 }
 .footer-row3 {
     margin-bottom: 20px;  
+=======
+    padding: 20px;
+    background-color: #c7c7c5;
+    cursor: pointer;
+>>>>>>> e7c64981e8e87b43248d9bc3c85c68b8278ea145
 }
 
 .footer-row2 {
@@ -1088,12 +1117,215 @@ p {
         text-align: center;
     }
 
+<<<<<<< HEAD
     /* Styles for smaller screens */
     @media screen and (max-width: 768px) {
         .item {
             width: 50%; /* Adjust as needed for two items per row on smaller screens */
         }
     }
+=======
+
+
+
+/* -------------------------------------       
+        8. Clients-say 
+--------------------------------------*/
+
+/* Clients Say Section Styles */
+.clients-say {
+    text-align: center;
+    padding: 40px 0;
+}
+
+.section-header h2 {
+    font-size: 40px;
+    font-weight:900;
+    color: #77d7f1;
+}
+
+.testimonial-box {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    display: inline-block;
+    max-width: 300px;
+    cursor: pointer;
+}
+
+.testimonial-img img {
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+}
+
+.testimonial-person h2 a {
+    font-size: 16px;
+    color: #333;
+}
+
+.testimonial-person h4 {
+    font-size: 14px;
+    color: #777;
+}
+
+.testimonial-comment p {
+    font-size: 16px;
+    color: #333;
+    margin-top: 20px;
+}
+
+.testimonial-box:hover {
+<<<<<<< HEAD
+    background: aquamarine;
+=======
+    background: rgb(224, 218, 218);
+>>>>>>> af8f4d7d9c3cba948b63575dec5deb89d11292bc
+    border-color: #bcf733;
+    color: #fff;
+}
+
+/*-------------------------------------
+        9. Brand
+--------------------------------------*/
+.brand-area{
+    display: flex;
+    color: #2f04f1;
+    background-color: #ecf3f5;
+    height: 150;
+    margin: 40px 0;
+    padding: 50px;
+    border-radius: 7px;
+    justify-content: space-between;
+    position: relative;
+    align-self: flex-start;
+    
+}
+
+
+/*-------------------------------------
+        3.  Welcome-hero
+--------------------------------------*/
+.welcome-hero {
+    position: relative;
+    background-image:url(Images/images/welcome-hero/blackmer.jpeg);
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 50px;
+    z-index: 10;
+}
+
+
+.header-area{position: absolute;top:0;left:0;width: 100%;z-index: 99;}
+
+.welcome-hero-txt{text-align: center;padding:290px 0 372px;}
+.welcome-hero-txt h2 {
+    font-size: 42px;
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 45px;
+    background-color: grey;
+    margin-left: 150px;
+    margin-right: 150px;
+    border-radius: 10px;
+}
+.welcome-hero-txt p {
+    font-size: 18px;
+    text-transform: initial;
+    color: rgb(248, 148, 18);
+    font-weight: 500;
+    max-width: 735px;
+    margin: 0 auto;
+    font-style: italic;
+}
+.welcome-btn {
+    display: inline-block;
+    width: 230px;
+    height: 60px;
+    background: #4efa5c;
+    color: #111010;
+    border-radius: 7px;
+    margin-top: 55px;
+    transition: .3s linear;
+}
+.welcome-btn:hover{
+    background: grey;
+}
+/*.welcome-hero-txt
+
+
+
+-------------------------------------
+        4. Model-Search
+--------------------------------------*/
+.model-search-content {
+    box-sizing: content-box;
+    padding: 10px;
+    background: #d8d4d4;
+    box-shadow:0 10px 40px 0px rgba(38,40,64,.2);
+    position: absolute;
+    top: 1050px;
+    right: 20rem;
+    width: 50%;
+    z-index: 30;
+    border-radius: 10px;
+}
+
+/*.single-model-search*/
+.single-model-search{
+    margin-bottom: 30px;
+    padding: 5px;
+}
+.single-model-search:last-child {
+    margin-bottom: 0;
+}
+
+.single-model-search h2 {
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: capitalize;
+    margin-bottom: 20px;
+}
+/*model-select-icon*/
+.model-select-icon{
+    position:relative;
+
+}
+.model-select-icon .form-control {
+    outline: 0!important;
+    box-shadow: none;
+    border: 1px solid #020202;
+    background: #f8f8f8;
+    height: 60px;
+    border-radius: 7px;
+    position: relative;
+    padding: 10px;
+}
+.model-select-icon select {
+    font-size: 16px;
+    color: #888f9d;
+    text-transform: capitalize;
+}
+
+.welcome-btn.model-search-btn {
+    width: 160px;
+    margin-top: 80px;
+    margin-left: 53px;
+}
+
+.service-container { 
+    background-color: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    margin: 10px;
+    padding: 10px;
+    
+>>>>>>> e7c64981e8e87b43248d9bc3c85c68b8278ea145
 
 }
 

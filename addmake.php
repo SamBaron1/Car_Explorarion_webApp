@@ -1,3 +1,11 @@
+<?php 
+    require_once 'database/connection.php';
+?>
+<?php
+ if(!isset($_SESSION['user-email'])){
+    header('location:'.ROOT_URL);
+ }
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

@@ -1,3 +1,8 @@
+<?php 
+    require_once 'database/connection.php';
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,10 +26,12 @@
     <div class="header">
         <div id="loginLinks">
 
+        <?php if(!isset($_SESSION['user-email'])):?>
             <div class="links">
                 <a href="login.php" id="login">Login</a>
                 <a href="sign_up.php" id="signUp">Sign Up</a>
             </div>
+        <?php endif?>
             <div class="navbaricons">
                 <i class="fa-solid fa-bars" id="opennavbtn"></i>
                 <i class="fa-solid fa-xmark" id="closenavbtn" style="display: none;"></i>
@@ -55,20 +62,30 @@
                 <li><a href="#logos">BRANDS</a></li>
                 <li><a href="#contacts">CONTACTS</a></li>
             </ul>
-            
+           
+            <?php
+                    if(isset($_SESSION['user-email'])): ?>
             <div class="profile">
                 <div class="dashboard">
                     <div class="profile_pic">
-                        <img src="images/images/featured-cars/alphard.jpeg" alt="">
+                        <?php
+                        $image=$_SESSION['user-email'];
+                        $image_query="SELECT profilepic FROM users WHERE email='$image'";
+                        $image_results=mysqli_query($conn,$image_query);
+                        $image_db=mysqli_fetch_assoc($image_results);
+                        $profilepic=$image_db['profilepic'];
+                        echo '<img src="'.$profilepic .'"alt="">';
+                        ?>
                     </div>
                         <div class="profile_others">
                     <ul>
                         <li id="debug"><a href="dashboard.php">Dashboard</a></li>
-                        <li>Logout</li>
+                        <li><a href="<?=ROOT_URL.'logout.php' ?>">Logout</a></li>
                     </ul>
                         </div>
                 </div>
             </div>
+            <?php endif?>
         </div>
     </div>
 
@@ -208,9 +225,16 @@
         </div>
     </div>
 
+<<<<<<< HEAD:index.html
+
+
+
+    <h1 class= "featured-cars">Featured CARS...</h1>
+=======
     <div class="body-h1">
         <h1>Featured CARS...</h1>
     </div>
+>>>>>>> af8f4d7d9c3cba948b63575dec5deb89d11292bc:index.php
     <div class="car-details" id="models">
         <div class="car-container">
             <img src="images/images/featured-cars/suzuki.jpeg" alt="Car Image1">
