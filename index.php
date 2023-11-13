@@ -26,6 +26,7 @@
     <div class="welcome-hero">
         <div class="header">
             <div id="loginLinks">
+<<<<<<< HEAD
 
                 <?php if(!isset($_SESSION['user-email'])):?>
                     <div class="links">
@@ -38,6 +39,20 @@
                     <i class="fa-solid fa-xmark" id="closenavbtn" style="display: none;"></i>
                 </div>
 
+=======
+
+                <?php if(!isset($_SESSION['user-email'])):?>
+                    <div class="links">
+                        <a href="login.php" id="login">Login</a>
+                        <a href="sign_up.php" id="signUp">Sign Up</a>
+                    </div>
+                <?php endif?>
+                <div class="navbaricons">
+                    <i class="fa-solid fa-bars" id="opennavbtn"></i>
+                    <i class="fa-solid fa-xmark" id="closenavbtn" style="display: none;"></i>
+                </div>
+
+>>>>>>> 55393332ddeca1be818866d3c30ff7b32dd9f28c
             </div>
 
             <!--<div id="searchContainer">
@@ -97,117 +112,116 @@
             </div>
         </div>
     </div>
-    
 
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="model-search-content">
+                    <div class="row">
+                        <div class="col-md-offset-1 col-md-2 col-sm-12">
+                            <div class="single-model-search">
+                                <h2>select year</h2>
+                                <div class="model-select-icon">
+                                    <select class="form-control">
 
-<div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            <div class="model-search-content">
-                <div class="row">
-                    <div class="col-md-offset-1 col-md-2 col-sm-12">
-                        <div class="single-model-search">
-                            <h2>select year</h2>
-                            <div class="model-select-icon">
-                                <select class="form-control">
+                                        <option value="default">year</option><!-- /.option-->
 
-                                      <option value="default">year</option><!-- /.option-->
+                                        <option value="2018">2018</option><!-- /.option-->
 
-                                      <option value="2018">2018</option><!-- /.option-->
+                                        <option value="2017">2017</option><!-- /.option-->
+                                        <option value="2016">2016</option><!-- /.option-->
 
-                                      <option value="2017">2017</option><!-- /.option-->
-                                      <option value="2016">2016</option><!-- /.option-->
+                                    </select><!-- /.select-->
+                                </div><!-- /.model-select-icon -->
+                            </div>
+                            <div class="single-model-search">
+                                <h2>body style</h2>
+                                <div class="model-select-icon">
+                                    <select class="form-control">
 
-                                </select><!-- /.select-->
-                            </div><!-- /.model-select-icon -->
+                                        <option value="default">style</option><!-- /.option-->
+
+                                        <option value="sedan">sedan</option><!-- /.option-->
+
+                                        <option value="van">van</option><!-- /.option-->
+                                        <option value="suv">suv</option><!-- /.option-->
+
+                                    </select><!-- /.select-->
+                                </div><!-- /.model-select-icon -->
+                            </div>
                         </div>
-                        <div class="single-model-search">
-                            <h2>body style</h2>
-                            <div class="model-select-icon">
-                                <select class="form-control">
+                        <div class="col-md-offset-1 col-md-2 col-sm-12">
+                            <div class="single-model-search">
+                                <h2>select make</h2>
+                                <div class="model-select-icon">
+                                    <select class="form-control">
 
-                                      <option value="default">style</option><!-- /.option-->
+                                        <option value="default">make</option><!-- /.option-->
 
-                                      <option value="sedan">sedan</option><!-- /.option-->
+                                        <option value="toyota">toyota</option><!-- /.option-->
 
-                                      <option value="van">van</option><!-- /.option-->
-                                      <option value="suv">suv</option><!-- /.option-->
+                                        <option value="land-rover">land-rover</option><!-- /.option-->
+                                        <option value="mercedes-benz">mercedes-benz.</option><!-- /.option-->
 
-                                </select><!-- /.select-->
-                            </div><!-- /.model-select-icon -->
+                                    </select><!-- /.select-->
+                                </div><!-- /.model-select-icon -->
+                            </div>
+                            <div class="single-model-search">
+                                <h2>car condition</h2>
+                                <div class="model-select-icon">
+                                    <select class="form-control">
+
+                                        <option value="default">condition</option><!-- /.option-->
+                                        <option value="new">new</option><!-- /.option-->
+                                        <option value="used">used</option><!-- /.option-->
+                                        <option value="old">old</option><!-- /.option-->
+                                    </select><!-- /.select-->
+                                </div><!-- /.model-select-icon -->
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-offset-1 col-md-2 col-sm-12">
-                        <div class="single-model-search">
-                            <h2>select make</h2>
-                            <div class="model-select-icon">
-                                <select class="form-control">
+                        <div class="col-md-offset-1 col-md-2 col-sm-12">
+                            <div class="single-model-search">
+                                <h2>select model</h2>
+                                <div class="model-select-icon">
+                                    <select class="form-control">
 
-                                      <option value="default">make</option><!-- /.option-->
+                                        <option value="default">model</option><!-- /.option-->
+                                        <option value="subaru">subaru</option><!-- /.option-->
+                                        <option value="bmw">bmw</option><!-- /.option-->
+                                        <option value="ford">ford</option><!-- /.option-->
 
-                                      <option value="toyota">toyota</option><!-- /.option-->
+                                    </select><!-- /.select-->
+                                </div><!-- /.model-select-icon -->
+                            </div>
+                            <div class="single-model-search">
+                                <h2>select price</h2>
+                                <div class="model-select-icon">
+                                    <select class="form-control">
 
-                                      <option value="land-rover">land-rover</option><!-- /.option-->
-                                      <option value="mercedes-benz">mercedes-benz.</option><!-- /.option-->
+                                        <option value="default">price</option><!-- /.option-->
+                                        <option value="$20000.00">$20000.00</option><!-- /.option-->
+                                        <option value="$8000.00">$80000.00</option><!-- /.option-->
+                                        <option value="$90000.00">$90000.00</option><!-- /.option-->
 
-                                </select><!-- /.select-->
-                            </div><!-- /.model-select-icon -->
+                                    </select><!-- /.select-->
+                                </div><!-- /.model-select-icon -->
+                            </div>
                         </div>
-                        <div class="single-model-search">
-                            <h2>car condition</h2>
-                            <div class="model-select-icon">
-                                <select class="form-control">
-
-                                      <option value="default">condition</option><!-- /.option-->
-                                      <option value="new">new</option><!-- /.option-->
-                                      <option value="used">used</option><!-- /.option-->
-                                      <option value="old">old</option><!-- /.option-->
-                                </select><!-- /.select-->
-                            </div><!-- /.model-select-icon -->
-                        </div>
-                    </div>
-                    <div class="col-md-offset-1 col-md-2 col-sm-12">
-                        <div class="single-model-search">
-                            <h2>select model</h2>
-                            <div class="model-select-icon">
-                                <select class="form-control">
-
-                                      <option value="default">model</option><!-- /.option-->
-                                      <option value="subaru">subaru</option><!-- /.option-->
-                                      <option value="bmw">bmw</option><!-- /.option-->
-                                      <option value="ford">ford</option><!-- /.option-->
-
-                                </select><!-- /.select-->
-                            </div><!-- /.model-select-icon -->
-                        </div>
-                        <div class="single-model-search">
-                            <h2>select price</h2>
-                            <div class="model-select-icon">
-                                <select class="form-control">
-
-                                      <option value="default">price</option><!-- /.option-->
-                                      <option value="$20000.00">$20000.00</option><!-- /.option-->
-                                      <option value="$8000.00">$80000.00</option><!-- /.option-->
-                                      <option value="$90000.00">$90000.00</option><!-- /.option-->
-
-                                </select><!-- /.select-->
-                            </div><!-- /.model-select-icon -->
-                        </div>
-                    </div>
-                    <div class="col-md-2 col-sm-12">
-                        <div class="single-model-search text-center">
-                            <button class="welcome-btn model-search-btn" onclick="window.location.href='#'">
-                                search
-                            </button>
+                        <div class="col-md-2 col-sm-12">
+                            <div class="single-model-search text-center">
+                                <button class="welcome-btn model-search-btn" onclick="window.location.href='#'">
+                                    search
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
 
+     
     <div id="slider_container">
         <div id="slider">
             <div id="car_picture">
@@ -222,6 +236,8 @@
             </div>
         </div>
     </div>
+
+
     <h1 class="sub-title">Featured <span>Cars</span></h1>
     <div class="car-details" id="models">
         <div class="car-container">
@@ -238,12 +254,12 @@
             <img src="images/images/featured-cars/blueranger.jpeg" alt="Car Image2">
             <ul>
                 <li>Name: FORDRANGER</li>
-              <li>Date of Manufacture: 2022-01-01</li>
-              <li>Country of Origin: Japan</li>
-              <li>Mileage: 10,000 km</li>
+            <li>Date of Manufacture: 2022-01-01</li>
+            <li>Country of Origin: Japan</li>
+            <li>Mileage: 10,000 km</li>
             </ul>
         </div>
-       
+    
         <div class="car-container">
             <img src="images/images/featured-cars/defender.jpeg" alt="Car Image3">
             <ul>
@@ -461,20 +477,16 @@
 
 
 
-
             <!--service start -->
             <div id="service" class="service">
-            <h1 class="sub-title">Our <span>Services</span></h1>
+                <h1 class="sub-title">Our <span>Services</span></h1>
                 <div class="service-container">
-                        
                         <div class="single-service-item">
                             <div class="single-service-image">
                                 <img src="images/maintenance.png" alt="icon1">
                             </div>
                             <div class="single-service-h2">
-                                <h2><a href="#">Automated Garage</a></h2>
-                            </div>
-                            <div class="single-service-p">
+                                <h2>Automated Garage</h2>
                                 <p>
                                     Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut den fugit sed quia.  
                                 </p>
@@ -486,9 +498,7 @@
                                 <img src="images/bigdealer.jpg" alt="icon1">
                             </div>
                             <div class="single-service-h2">
-                                <h2><a href="#">largest dealership <span> of</span> cars</a></h2>
-                            </div>
-                            <div class="single-service-p">
+                                <h2>largest dealership <span> of</span> cars</h2>
                                 <p>
                                     Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut den fugit sed quia.  
                                 </p>
@@ -500,9 +510,7 @@
                                 <img src="images/phone.png" alt="icon2">
                             </div>
                             <div class="single-service-h2">
-                                <h2><a href="#">unlimited repair warranty</a></h2>
-                            </div>
-                            <div class="single-service-p">
+                                <h2>unlimited repair warranty</h2>
                                 <p>
                                     Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut den fugit sed quia.  
                                 </p>
@@ -515,9 +523,7 @@
                                 <img src="images/car-insurance.png" alt="icon3">
                             </div>
                             <div class="single-service-h2">
-                                <h2><a href="#">insurance support</a></h2>
-                            </div>
-                            <div class="single-service-p">
+                                <h2>insurance support</h2>
                                 <p>
                                     Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut den fugit sed quia. 
                                 </p>
@@ -531,7 +537,7 @@
 
     		<!-- clients-say strat -->
             <div class="clients-say" id="clients">
-            <h1 class="sub-title">What Our <span>Clients Say</span></h1>
+                <h1 class="sub-title">What Our <span>Clients Say</span></h1>
                     <div class="testimonials">
                         <div class="testimonial-box">
                             <div class="testimonial-img">
@@ -539,7 +545,7 @@
                             </div>
                             <div class="testimonial-person">
                                 <h2><a href="#">Yobra Nim</a></h2>
-                                <h4>New York</h4>
+                                <h4>Murang'a 027</h4>
                             </div>
                             <div class="testimonial-comment">
                                 <p>
@@ -553,7 +559,7 @@
                             </div>
                             <div class="testimonial-person">
                                 <h2><a href="#">Eddie Gathenge</a></h2>
-                                <h4>London</h4>
+                                <h4>Kiambu 026</h4>
                             </div>
                             <div class="testimonial-comment">
                                 <p>
@@ -567,7 +573,7 @@
                             </div>
                             <div class="testimonial-person">
                                 <h2><a href="#">Maina AKA Lawre</a></h2>
-                                <h4>Washington</h4>
+                                <h4>Nyandarua 018</h4>
                             </div>
                             <div class="testimonial-comment">
                                 <p>
@@ -654,10 +660,10 @@
 						</div><!--/.item-->
 				</div><!--/.clients-area-->
 
-			</div><!--/.container-->
+                </div><!--/.container-->
 
-		</section><!--/brand-->	
-		<!--brand end -->
+            </section><!--/brand-->	
+            <!--brand end -->
         <footer>
             <div class="footer">
                 <div class="grid-container">
@@ -712,6 +718,7 @@
 
         </div>
         <a href="#" class="top"><i class="bx bx-up-arrow-alt"></i> </a>
+        
     
 </body>
 
