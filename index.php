@@ -676,7 +676,7 @@
                         <p>Car Prices</p>
                         <p>Highest Rated Cars</p>
                         <div class="final">
-                            we are the bad guys!!!
+                            Automotives No Limit!!!
                         </div>
                     
                     </div>

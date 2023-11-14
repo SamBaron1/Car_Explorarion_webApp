@@ -65,6 +65,8 @@ body {
     border-radius: 5px;
     position: relative;
     margin-top: 95px;
+    box-shadow: 1px 1px 20px #aec7ddf7,
+    1px 1px 40px #c2a4e6f7;
     
 }
 #searchContainer {
@@ -177,6 +179,8 @@ body {
     border-radius: 15px;
     font-size: 15px;
     margin: 13px;
+    box-shadow: 1px 1px 20px #e5fd0bf7,
+    1px 1px 40px #00b800f7;
 }
 
 .nav-container ul li a:hover{
@@ -356,7 +360,7 @@ a:hover {
 
 .welcome-hero {
     position: relative;
-    background-image:url(Images/images/welcome-hero/blackmer.jpeg);
+    background-image:url(Images/images/wp3.jpeg);
     background-position: center;
     background-size: cover;
     margin-bottom: 50px;
@@ -384,12 +388,15 @@ a:hover {
  .welcome-hero-txt p {
     font-size: 20px;
     text-transform: initial;
-    color: rgb(255, 255, 255);
+    color: rgb(187, 255, 0);
     font-weight: 500;
     max-width: 735px;
     margin: 0 auto;
     font-style: italic;
     font-family: monospace;
+    box-shadow: 1px 1px 20px #e5fd0bf7,
+    1px 1px 40px #00b800f7;
+    background-color: grey;
 }
 .welcome-btn {
     display: inline-block;
