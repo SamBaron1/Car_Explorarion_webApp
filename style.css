@@ -361,6 +361,7 @@ a:hover {
     background-size: cover;
     margin-bottom: 50px;
     z-index: 10;
+    box-sizing: border-box;
 }
 
  .welcome-hero-txt{
@@ -561,9 +562,9 @@ a:hover {
     align-items: center;
     cursor: pointer;
     justify-content: center;
-    box-shadow: 0 0 50px cyan,
-    0 0 25px cyan, 0 0 50px cyan,
-    0 0 100px cyan, 0 0 200px cyan;
+    box-shadow: 1px 1px 20px #012290f7,
+    1px 1px 40px #0053b8f7;
+    
 }
 
 .car-container img {

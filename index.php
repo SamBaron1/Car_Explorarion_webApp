@@ -26,7 +26,6 @@
     <div class="welcome-hero">
         <div class="header">
             <div id="loginLinks">
-<<<<<<< HEAD
 
                 <?php if(!isset($_SESSION['user-email'])):?>
                     <div class="links">
@@ -39,20 +38,6 @@
                     <i class="fa-solid fa-xmark" id="closenavbtn" style="display: none;"></i>
                 </div>
 
-=======
-
-                <?php if(!isset($_SESSION['user-email'])):?>
-                    <div class="links">
-                        <a href="login.php" id="login">Login</a>
-                        <a href="sign_up.php" id="signUp">Sign Up</a>
-                    </div>
-                <?php endif?>
-                <div class="navbaricons">
-                    <i class="fa-solid fa-bars" id="opennavbtn"></i>
-                    <i class="fa-solid fa-xmark" id="closenavbtn" style="display: none;"></i>
-                </div>
-
->>>>>>> 55393332ddeca1be818866d3c30ff7b32dd9f28c
             </div>
 
             <!--<div id="searchContainer">
@@ -238,7 +223,7 @@
     </div>
 
 
-    <h1 class="sub-title">Featured <span>Cars</span></h1>
+    <h1 class="sub-title">Featured <span>Cars.</span></h1>
     <div class="car-details" id="models">
         <div class="car-container">
             <img src="images/images/featured-cars/suzuki.jpeg" alt="Car Image1">
@@ -479,7 +464,7 @@
 
             <!--service start -->
             <div id="service" class="service">
-                <h1 class="sub-title">Our <span>Services</span></h1>
+                <h1 class="sub-title">Our <span>Services.</span></h1>
                 <div class="service-container">
                         <div class="single-service-item">
                             <div class="single-service-image">
@@ -537,7 +522,7 @@
 
     		<!-- clients-say strat -->
             <div class="clients-say" id="clients">
-                <h1 class="sub-title">What Our <span>Clients Say</span></h1>
+                <h1 class="sub-title">What Our <span>Clients Say.</span></h1>
                     <div class="testimonials">
                         <div class="testimonial-box">
                             <div class="testimonial-img">
@@ -588,7 +573,7 @@
 
 		<!--brand strat -->
 		<section id="brand"  class="brand">
-        <h1 class="sub-title">Our <span>Brands</span></h1>
+        <h1 class="sub-title">Our <span>Brands.</span></h1>
 			<div class="brand-container" id="logos">
 				<div class="brand-area">
 						<div class="item">
