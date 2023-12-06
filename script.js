@@ -82,14 +82,14 @@ let car_names = ["SUZUKI",
                   "PAJERO",
                   "ALPHARD",
                   "HIACE",
-                  "CHRYSLER",
+                  "BENTLEY",
                   "MOBIUS",
                   "G-WAGON",
                   "MERCEDES BENZ",
                   "BMW NEWMODEL",
                   "LEXUS L600",
                   "VOLKSWAGEN",
-                  "LANDCRUISER LC200"
+                  "LANDCRUISER LC300"
                   ];
 let no_of_cars = car_images.length;
 let no_of_car_names = car_names.length;

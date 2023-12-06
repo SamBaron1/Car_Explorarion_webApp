@@ -91,7 +91,7 @@
             <div class="welcome-hero-txt">
                 <h2>get your desired car in resonable price</h2>
                 <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore   magna aliqua. 
+                    Pre-loved vehicles from smartcars dealers. A real-time guaranteed traders.
                 </p>
                 <button class="welcome-btn" onclick="window.location.href='#'">contact us</button>
             </div>
@@ -111,9 +111,9 @@
 
                                         <option value="default">year</option><!-- /.option-->
 
-                                        <option value="2018">2018</option><!-- /.option-->
+                                        <option value="2018">2021</option><!-- /.option-->
 
-                                        <option value="2017">2017</option><!-- /.option-->
+                                        <option value="2017">2018</option><!-- /.option-->
                                         <option value="2016">2016</option><!-- /.option-->
 
                                     </select><!-- /.select-->
@@ -171,10 +171,10 @@
                                     <select class="form-control">
 
                                         <option value="default">model</option><!-- /.option-->
-                                        <option value="subaru">subaru</option><!-- /.option-->
-                                        <option value="bmw">bmw</option><!-- /.option-->
-                                        <option value="ford">ford</option><!-- /.option-->
-
+                                        <option value="subaru">subaru forester</option><!-- /.option-->
+                                        <option value="bmw">bmw x6</option><!-- /.option-->
+                                        <option value="ford">ford-everest</option><!-- /.option-->
+                                        <option value="ford">toyota-crown</option>
                                     </select><!-- /.select-->
                                 </div><!-- /.model-select-icon -->
                             </div>
@@ -214,94 +214,113 @@
             <div id="description">
                 <h2 id="car_name">one</h2>
                 <br>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    Excepturi autem ea, consequatur soluta voluptatum laboriosam expedita quos ex!
-                    Nam molestias hic quisquam et magnam accusamus maiores sapiente
-                    omnis est aspernatur.</p>
+                <p>
+                "Explore Unrivaled Performance and Elegance: 
+                    Our curated selection of cars combines cutting-edge technology,
+                     sophisticated design, and powerful performance.
+                      Discover a range of vehicles that redefine driving experience.
+                 Excellence in every model, yours to explore."
+                </p>
             </div>
         </div>
     </div>
 
 
     <h1 class="sub-title">Featured <span>Cars.</span></h1>
-    <div class="car-details" id="models">
+    <div class="car-details" id="featured">
         <div class="car-container">
             <img src="images/images/featured-cars/suzuki.jpeg" alt="Car Image1">
             <ul>
-                <li>Name: SUZUKI</li>
-                <li>Date of Manufacture: 2022-01-01</li>
-                <li>Country of Origin: Japan</li>
-                <li>Mileage: 10,000 km</li>
+                <li>Name: Suzuki-swift</li>
+                <li>Drive Type: AWD/FF</li>
+                <li>Engine Capacity: 1586cc</li>
+                <li>Number of seats: 5</li>
+                <li>Mileage: 10.3 kmpl</li>
+                <li>Price: Kshs.1.4M</li>
             </ul>
         </div>
     
         <div class="car-container">
             <img src="images/images/featured-cars/blueranger.jpeg" alt="Car Image2">
             <ul>
-                <li>Name: FORDRANGER</li>
-            <li>Date of Manufacture: 2022-01-01</li>
-            <li>Country of Origin: Japan</li>
-            <li>Mileage: 10,000 km</li>
+            <li>Name: FordRanger</li>
+                <li>Drive Type: 4WD</li>
+                <li>Engine Capacity: 125Kw/2.0ltr</li>
+                <li>Number of seats: 5</li>
+                <li>Mileage: 10.3 kmpl</li>
+                <li>Price: Kshs. 5.5M</li>
             </ul>
         </div>
     
         <div class="car-container">
             <img src="images/images/featured-cars/defender.jpeg" alt="Car Image3">
             <ul>
-                <li>Name: DEFENDER</li>
-                <li>Date of Manufacture: 2022-01-01</li>
-                <li>Country of Origin: Japan</li>
-                <li>Mileage: 10,000 km</li>
+                <li>Name: Defender</li>
+                <li>Drive Type: 4WD</li>
+                <li>Engine Capacity: 5000cc</li>
+                <li>Number of seats: 7</li>
+                <li>Mileage: 13.3 kmpl</li>
+                <li>Price: Kshs. 17.4M</li>
             </ul>
         </div>
         
         <div class="car-container">
             <img src="images/images/featured-cars/newfortuner.jpeg" alt="Car Image4">
             <ul>
-                <li>Name: FORTUNER</li>
-                <li>Date of Manufacture: 2022-01-01</li>
-                <li>Country of Origin: Japan</li>
-                <li>Mileage: 10,000 km</li>
+            <li>Name: Fortuner</li>
+                <li>Drive Type: 4WD</li>
+                <li>Engine Capacity: 2755cc</li>
+                <li>Number of seats: 7</li>
+                <li>Mileage: 10.3 kmpl</li>
+                <li>Price: Kshs. 11.5M</li>
             </ul>
         </div>
         
         <div class="car-container">
             <img src="images/images/featured-cars/fordeverest.jpeg" alt="Car Image5">
             <ul>
-                <li>Name: FORDEVEREST</li>
-                <li>Date of Manufacture: 2022-01-01</li>
-                <li>Country of Origin: Japan</li>
-                <li>Mileage: 10,000 km</li>
+            <li>Name: Ford-Everest</li>
+                <li>Drive Type: 4WD</li>
+                <li>Engine Capacity: 3.0ltr turbo</li>
+                <li>Number of seats: 5/7</li>
+                <li>Mileage: 10.3 kmpl</li>
+                <li>Price: Kshs. 5.3M</li>
             </ul>
         </div>
         
         <div class="car-container">
             <img src="images/images/featured-cars/forester.jpeg" alt="Car Image6">
             <ul>
-                <li>Name: FORESTER</li>
-                <li>Date of Manufacture: 2022-01-01</li>
-                <li>Country of Origin: Japan</li>
-                <li>Mileage: 10,000 km</li>
+            <li>Name: Subaru-Forester2022</li>
+                <li>Drive Type: AWD</li>
+                <li>Engine Capacity: 1994-2498cc</li>
+                <li>Number of seats: 5</li>
+                <li>Mileage: 10.3 kmpl</li>
+                <li>Price: Kshs. 5.8M</li>
             </ul>
         </div>
         
         <div class="car-container">
             <img src="images/images/featured-cars/newaudi.jpeg" alt="Car Image7">
             <ul>
-                <li>Name: AUDI</li>
-                <li>Date of Manufacture: 2022-01-01</li>
-                <li>Country of Origin: Japan</li>
-                <li>Mileage: 10,000 km</li>
+            <li>Name: Audi</li>
+                <li>Drive Type: AWD/FF</li>
+                <li>Engine Capacity: 1984cc</li>
+                <li>Number of seats: 5</li>
+                <li>Mileage: 10.3 kmpl</li>
+                <li>Price: Kshs. 4.5M</li>
             </ul>
         </div>
         
         <div class="car-container">
             <img src="images/images/featured-cars/fordranger.jpeg" alt="Car Image8">
             <ul>
-                <li>Name: RANGER</li>
-                <li>Date of Manufacture: 2022-01-01</li>
-                <li>Country of Origin: Japan</li>
-                <li>Mileage: 10,000 km</li>
+            <li>Name: Ranger</li>
+                <li>Drive Type: 4WD</li>
+                <li>Engine Capacity: 2784cc</li>
+                <li>Number of seats: 6</li>
+                <li>Mileage: 10.3 kmpl</li>
+                <li>Price: Kshs. 5M</li>
             </ul>
         </div>
         
@@ -309,153 +328,187 @@
             <img src="images/images/featured-cars/toyotacrown.jpeg" alt="Car Image8">
             <ul>
                 <li>Name: TOYOTA CROWN</li>
-                <li>Date of Manufacture: 2022-01-01</li>
-                <li>Country of Origin: Japan</li>
-                <li>Mileage: 10,000 km</li>
+                <li>Drive Type: AWD/FR</li>
+                <li>Engine Capacity: 1988-2997cc</li>
+                <li>Number of seats: 5-6</li>
+                <li>Mileage: 10.3 kmpl</li>
+                <li>Price: Kshs. 6M</li>
             </ul>
         </div>
         <div class="car-container">
             <img src="images/images/featured-cars/lexus2.jpeg" alt="Car Image8">
             <ul>
                 <li>Name: LEXUS</li>
-                <li>Date of Manufacture: 2022-01-01</li>
-                <li>Country of Origin: Japan</li>
-                <li>Mileage: 10,000 km</li>
+                <li>Drive Type: 4WD</li>
+                <li>Engine Capacity: 5.7Ltr</li>
+                <li>Number of seats: 8</li>
+                <li>Mileage: 13.3 kmpl</li>
+                <li>Price: Kshs. 21-32M</li>
             </ul>
         </div>
         <div class="car-container">
             <img src="images/images/featured-cars/newtx.jpeg" alt="Car Image8">
             <ul>
-                <li>Name: LANDCRUISER TX</li>
-                <li>Date of Manufacture: 2022-01-01</li>
-                <li>Country of Origin: Japan</li>
-                <li>Mileage: 10,000 km</li>
+                <li>Name: LANDCRUISER TX2021</li>
+                <li>Drive Type: 4WD</li>
+                <li>Engine Capacity: 3.0L diesel</li>
+                <li>Number of seats: 7</li>
+                <li>Mileage: 13.3 kmpl</li>
+                <li>Price: Kshs. 7.5M</li>
             </ul>
         </div>
         <div class="car-container">
             <img src="images/images/featured-cars/isuzudmux.jpeg" alt="Car Image8">
             <ul>
                 <li>Name: ISUZU DMUX</li>
-                <li>Date of Manufacture: 2022-01-01</li>
-                <li>Country of Origin: Japan</li>
-                <li>Mileage: 10,000 km</li>
+                <li>Drive Type: RWD</li>
+                <li>Engine Capacity: 2499cc</li>
+                <li>Number of seats: 7</li>
+                <li>Mileage: 10.3 kmpl</li>
+                <li>Price: Kshs. 4.8M</li>
             </ul>
         </div>
         <div class="car-container">
             <img src="images/images/featured-cars/discovery.jpeg" alt="Car Image8">
             <ul>
                 <li>Name: DISCOVERY</li>
-                <li>Date of Manufacture: 2022-01-01</li>
-                <li>Country of Origin: Japan</li>
-                <li>Mileage: 10,000 km</li>
+                <li>Drive Type: 4WD</li>
+                <li>Engine Capacity: 2993cc</li>
+                <li>Number of seats: 7</li>
+                <li>Mileage: 11.4 kmpl</li>
+                <li>Price: Kshs. 8.9M</li>
             </ul>
         </div>
         <div class="car-container">
             <img src="images/images/featured-cars/rangerover2.jpeg" alt="Car Image8">
             <ul>
-                <li>Name: RANGE ROVER</li>
-                <li>Date of Manufacture: 2022-01-01</li>
-                <li>Country of Origin: Japan</li>
-                <li>Mileage: 10,000 km</li>
+                <li>Name: RANGEROVER2023 SPORT</li>
+                <li>Drive Type: 4WD</li>
+                <li>Engine Capacity: 2997cc</li>
+                <li>Number of seats: 5</li>
+                <li>Mileage: 11.4 kmpl</li>
+                <li>Price: Kshs. 41M</li>
             </ul>
         </div>
         <div class="car-container">
             <img src="images/images/featured-cars/pajero.jpeg" alt="Car Image8">
             <ul>
                 <li>Name: PAJERO</li>
-                <li>Date of Manufacture: 2022-01-01</li>
-                <li>Country of Origin: Japan</li>
+                <li>Drive Type: 4WD</li>
+                <li>Engine Capacity: 2997cc</li>
+                <li>Number of seats: 7</li>  
                 <li>Mileage: 10,000 km</li>
+                <li>Price: Kshs. 6.8M</li>
             </ul>
         </div>
         <div class="car-container">
             <img src="images/images/featured-cars/alphard.jpeg" alt="Car Image8">
             <ul>
-                <li>Name: ALPHARD</li>
-                <li>Date of Manufacture: 2022-01-01</li>
-                <li>Country of Origin: Japan</li>
-                <li>Mileage: 10,000 km</li>
+                <li>Name: ALPHARD 2023</li>
+                <li>Drive Type: AWD/FF</li>
+                <li>Engine Capacity: 2362-3456cc</li>
+                <li>Number of seats: 4-8</li>
+                <li>Mileage: 10.3 kmpl</li>
+                <li>Price: Kshs. 6M</li>
             </ul>
         </div>
         <div class="car-container">
             <img src="images/images/featured-cars/matatuhiace.jpeg" alt="Car Image8">
             <ul>
-                <li>Name: HIACE</li>
-                <li>Date of Manufacture: 2022-01-01</li>
-                <li>Country of Origin: Japan</li>
-                <li>Mileage: 10,000 km</li>
+                <li>Name: HIACE 2021</li>
+                <li>Drive Type: AWD/FF</li>
+                <li>Engine Capacity: 2986cc</li>
+                <li>Number of seats: 15</li>
+                <li>Mileage: 10.3 kmpl</li>
+                <li>Price: Kshs. 6.5M</li>
             </ul>
         </div>
         <div class="car-container">
             <img src="images/images/featured-cars/chrysler.jpg" alt="Car Image8">
             <ul>
-                <li>Name: CHRYSLER</li>
-                <li>Date of Manufacture: 2022-01-01</li>
-                <li>Country of Origin: Japan</li>
-                <li>Mileage: 10,000 km</li>
+                <li>Name: BENTLEY</li>
+                <li>Drive Type: 4WD</li>
+                <li>Engine Capacity: 3993-5993cc</li>
+                <li>Number of seats: 4-5</li>
+                <li>Mileage: 12.9 kmpl</li>
+                <li>Price: Kshs. 30-45M</li>
             </ul>
         </div>
         <div class="car-container">
             <img src="images/images/featured-cars/damemobius.jpeg" alt="Car Image8">
             <ul>
                 <li>Name: MOBIUS</li>
-                <li>Date of Manufacture: 2022-01-01</li>
-                <li>Country of Origin: Japan</li>
-                <li>Mileage: 10,000 km</li>
+                <li>Drive Type: 4WD</li>
+                <li>Engine Capacity: 1798cc</li>
+                <li>Number of seats: 5</li>
+                <li>Mileage: 10.3 kmpl</li>
+                <li>Price: Kshs. 3.95M</li>
             </ul>
         </div>
         <div class="car-container">
             <img src="images/images/featured-cars/gwagon.jpeg" alt="Car Image8">
             <ul>
                 <li>Name: G-WAGON</li>
-                <li>Date of Manufacture: 2022-01-01</li>
-                <li>Country of Origin: Japan</li>
-                <li>Mileage: 10,000 km</li>
+                <li>Drive Type: AWD</li>
+                <li>Engine Capacity: 2960-5977cc</li>
+                <li>Number of seats: 4-7</li>
+                <li>Mileage: 13.3 kmpl</li>
+                <li>Price: Kshs. 31M</li>
             </ul>
         </div>
         <div class="car-container">
             <img src="images/images/featured-cars/mercedes1.jpeg" alt="Car Image8">
             <ul>
                 <li>Name: MERCEDES BENZ</li>
-                <li>Date of Manufacture: 2022-01-01</li>
-                <li>Country of Origin: Japan</li>
-                <li>Mileage: 10,000 km</li>
+                <li>Drive Type: AWD/FF</li>
+                <li>Engine Capacity: 1993cc</li>
+                <li>Number of seats: 5</li>
+                <li>Mileage: 10.3 kmpl</li>
+                <li>Price: Kshs. 23M</li>
             </ul>
         </div>
         <div class="car-container">
             <img src="images/images/featured-cars/bmw2.jpeg" alt="Car Image8">
             <ul>
                 <li>Name: BMW NEWMODEL</li>
-                <li>Date of Manufacture: 2022-01-01</li>
-                <li>Country of Origin: Japan</li>
-                <li>Mileage: 10,000 km</li>
+                <li>Drive Type: AWD/FF</li>
+                <li>Engine Capacity: 113hp </li>
+                <li>Number of seats: 5</li>
+                <li>Mileage: 13.3 kmpl</li>
+                <li>Price: Kshs. 8.9M</li>
             </ul>
         </div>
         <div class="car-container">
             <img src="images/images/featured-cars/lexus1.jpeg" alt="Car Image8">
             <ul>
                 <li>Name: LEXUS L600</li>
-                <li>Date of Manufacture: 2022-01-01</li>
-                <li>Country of Origin: Japan</li>
-                <li>Mileage: 10,000 km</li>
+                <li>Drive Type: 4WD</li>
+                <li>Engine Capacity: 3.4L v-6</li>
+                <li>Number of seats: 7</li>
+                <li>Mileage: 13.4 kmpl</li>
+                <li>Price: Kshs. 21-32M</li>
             </ul>
         </div>
         <div class="car-container">
             <img src="images/images/featured-cars/volkswagen.jpeg" alt="Car Image8">
             <ul>
                 <li>Name: VOLKSWAGEN</li>
-                <li>Date of Manufacture: 2022-01-01</li>
-                <li>Country of Origin: Japan</li>
-                <li>Mileage: 10,000 km</li>
+                <li>Drive Type: FF</li>
+                <li>Engine Capacity: 1984cc</li>
+                <li>Number of seats: 5</li>
+                <li>Mileage: 10.3 kmpl</li>
+                <li>Price: Kshs. 3.4M</li>
             </ul>
         </div>
         <div class="car-container">
             <img src="images/images/featured-cars/lc200.jpeg" alt="Car Image8">
             <ul>
-                <li>Name: LANDCRUISER LC200</li>
-                <li>Date of Manufacture: 2022-01-01</li>
-                <li>Country of Origin: Japan</li>
-                <li>Mileage: 100,000 km</li>
+                <li>Name: LANDCRUISER LC300</li>
+                <li>Drive Type: 4WD</li>
+                <li>Engine Capacity: 3346cc twin-Turbo</li>
+                <li>Number of seats: 8</li>
+                <li>Mileage: 13.4 kmpl</li>
+                <li>Price: Kshs.26.2M</li>
             </ul>
         </div>
     </div>
@@ -463,7 +516,7 @@
 
 
             <!--service start -->
-            <div id="service" class="service">
+            <div class="service" id="services">
                 <h1 class="sub-title">Our <span>Services.</span></h1>
                 <div class="service-container">
                         <div class="single-service-item">
@@ -473,7 +526,7 @@
                             <div class="single-service-h2">
                                 <h2>Automated Garage</h2>
                                 <p>
-                                    Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut den fugit sed quia.  
+                                   Our automated garage takes the hassle out of parking.Experience convenience at its best with state-of-the-art technology, ensuring seamless parking and retrieval. 
                                 </p>
                             </div>
                         </div>
@@ -485,8 +538,7 @@
                             <div class="single-service-h2">
                                 <h2>largest dealership <span> of</span> cars</h2>
                                 <p>
-                                    Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut den fugit sed quia.  
-                                </p>
+                                  Home to the widest selection.Your journey begins with the largest slection in the market.
                             </div>
                         </div>
                   
@@ -497,7 +549,7 @@
                             <div class="single-service-h2">
                                 <h2>unlimited repair warranty</h2>
                                 <p>
-                                    Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut den fugit sed quia.  
+                                 Our unlimited repair ensures worry-free ownership. Drive with confidence, knowing that we stand behind the quality of our service and repairs."  
                                 </p>
                             </div>
                         </div>
@@ -510,7 +562,7 @@
                             <div class="single-service-h2">
                                 <h2>insurance support</h2>
                                 <p>
-                                    Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut den fugit sed quia. 
+                                From personalized policies to prompt claims assistance, we've got you safeguarded on your journey. Drive with confidence, knowing we have your back."
                                 </p>
                             </div>
                         </div>
@@ -534,7 +586,7 @@
                             </div>
                             <div class="testimonial-comment">
                                 <p>
-                                    Sed ut pers unde omnis iste natus error sit voluptatem accusantium dolor laudan rem aperiam, eaque ipsa quae ab illo inventore verit.
+                                The diverse range of vehicles exceeded my expectations, and the service throughout the buying process was seamless. Couldn't be happier with my purchase!"
                                 </p>
                             </div>
                         </div>
@@ -548,7 +600,7 @@
                             </div>
                             <div class="testimonial-comment">
                                 <p>
-                                    Sed ut pers unde omnis iste natus error sit voluptatem accusantium dolor laudan rem aperiam, eaque ipsa quae ab illo inventore verit.
+                                From the impressive selection of top-notch vehicles to the after-sales service, every aspect is a testament to their commitment to excellence. 
                                 </p>
                             </div>
                         </div>
@@ -562,7 +614,7 @@
                             </div>
                             <div class="testimonial-comment">
                                 <p>
-                                    Sed ut pers unde omnis iste natus error sit voluptatem accusantium dolor laudan rem aperiam, eaque ipsa quae ab illo inventore verit.
+                                "Unmatched Quality and Support: The attention to detail in both the cars and customer care is unmatched. Proud to be part of the SmartCars family!"
                                 </p>
                             </div>
                         </div>
@@ -572,7 +624,7 @@
 		<!-- clients-say end -->
 
 		<!--brand strat -->
-		<section id="brand"  class="brand">
+		<section id="brands"  class="brand">
         <h1 class="sub-title">Our <span>Brands.</span></h1>
 			<div class="brand-container" id="logos">
 				<div class="brand-area">
@@ -594,7 +646,7 @@
 						</div><!--/.item-->
 						<div class="item">
 							<a href="#">
-								<img src="images/images/brand/toyotabrand.jpeg" alt="brand-image" />
+								<img src="images/images/brand/toyota.jpeg" alt="brand-image" />
 							</a>
                             <div class="description">
                                 <p>Toyota</p>
@@ -611,7 +663,7 @@
 						</div><!--/.item-->
                         <div class="item">
 							<a href="#">
-								<img src="images/images/brand/mitsu.png" alt="brand-image" />
+								<img src="images/images/brand/mitsubishi.png" alt="brand-image" />
 							</a>
                             <div class="description">
                                 <p>Mitsubishi</p>
@@ -637,7 +689,7 @@
 						</div><!--/.item-->
                         <div class="item">
 							<a href="#">
-								<img src="images/images/brand/suzukii.png" alt="brand-image" />
+								<img src="images/images/brand/suzuki.png" alt="brand-image" />
 							</a>
                             <div class="description">
                                 <p>Suzuki</p>
@@ -650,7 +702,7 @@
             </section><!--/brand-->	
             <!--brand end -->
         <footer>
-            <div class="footer">
+            <div class="footer" id="contacts">
                 <div class="grid-container">
                     <div class="footer-row">
                         <h3>Get in Touch</h3>
