@@ -15,7 +15,36 @@
     <title>Document</title>
     <link rel="stylesheet" href="other.css">
     <style>
-      
+       form{
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        min-height: 50vh;
+        
+       }
+       form h1{
+        font-family: monospace;
+        border-bottom: 3px solid black;
+        padding-bottom: 5px;
+       }
+       form input{
+        border: 0;
+        outline: none;
+        border-bottom: 2px solid black;
+        text-align: center;
+        padding: 10px 0 5px 0;
+        margin-bottom: 5px;
+       }
+       #profilepic{
+        border: 0;
+       }
+       .buttons input {
+        width: 100%;
+        background-color:blue;
+        border-radius: 10px;
+        border: 0;
+       }
+       
     </style>
 </head>
 <body>
@@ -30,32 +59,52 @@
             ?></p>
         </div>
         <?php endif ?>
-        <br>
-        <br>
-        First Name
-        <input placeholder="first name"  type="text" name="firstname" value="<?=$firstname?>"><br><br>
-        Last Name
-        <input placeholder="last name"  type="text" name="lastname" value="<?=$lastname ?>"><br><br>
-        Email 
-        <input placeholder="email@gmail.com"  type="email" name="email" value="<?=$email ?>"><br><br>
-        Password 
-        <input placeholder="password"  type="password" name="password" value="<?= $password?>"><br><br>
-        Confirm Password 
-        <input placeholder="confirm password"  type="password" name="confirmpassword" value="<?=$confirmpassword?>"><br><br>
-        Insert Profile Picture:
-        <input type="file" name="profilepic" id="profilepic"><br><br>
-        Continent
-        <select title="Continent" name="continent">
-            <option>Africa</option>
-            <option>Asia</option>
-            <option>American</option>
-            <option>Australia</option>
-            <option>Europe</option>
-        </select><br><br>
+        <table>
+            <tbody>
+                
+                <tr>
+                    <td>First Name</td>
+                    <td><input placeholder="first name"  type="text" name="firstname" value="<?=$firstname?>"></td>
+                </tr>
+                <tr>
+                    <td>Last Name</td>
+                    <td><input placeholder="last name"  type="text" name="lastname" value="<?=$lastname ?>"></td>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td><input placeholder="email@gmail.com"  type="email" name="email" value="<?=$email ?>"></td>
+                </tr>
+                <tr>
+                    <td>Password</td>
+                    <td><input placeholder="password"  type="password" name="password" value="<?= $password?>"></td>
+                </tr>
+                <tr>
+                    <td>Confirm Password </td>
+                    <td><input placeholder="confirm password"  type="password" name="confirmpassword" value="<?=$confirmpassword?>"></td>
+                </tr>
+                <tr>
+                    <td>Insert Profile Picture:</td>
+                    <td><input type="file" name="profilepic" id="profilepic"></td>
+                </tr>
+                <tr>
+                    <td>Continent</td>
+                    <td> <select title="Continent" name="continent">
+                            <option>Africa</option>
+                            <option>Asia</option>
+                            <option>American</option>
+                            <option>Australia</option>
+                            <option>Europe</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr class="buttons">
+                    <td><input type="submit" name="submit" class="submit" onclick="signIn()"></td>
+                    <td><input type="button" value="cancel" class="cancel" onclick="back()"></td>
+                </tr>
+            </tbody>
+        </table>
+  
         
-    
-        <input type="submit" name="submit" onclick="signIn()">
-        <input type="button" value="cancel" onclick="back()">
         <p>Already have an account?<a href="login.php">login</a></p>
     </form>
     <script src="script.js" >
