@@ -195,6 +195,14 @@
             <div class="dashboardprofile">
                 <div class="profile_pic">
                     <?php
+                    if(isset($_SESSION['addcarsuccess'])): ?>
+                    <div class="successmessage">
+                        <p><?=$_SESSION['addcarsuccess'];
+                        unset($_SESSION['addcarsuccess']);
+                        ?></p>
+                    </div>
+                    <?php endif ?>
+                    <?php
                     if(isset($_SESSION['user-email'])){
                         $image=$_SESSION['user-email'];
                         $image_query="SELECT profilepic FROM users WHERE email='$image'";

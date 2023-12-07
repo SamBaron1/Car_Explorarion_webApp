@@ -101,6 +101,7 @@ require_once('database/connection.php');
             mysqli_query($conn,$addquery);
             if(!mysqli_errno($conn)){
                 $_SESSION['addcarsuccess']="Car was successfully addded";
+                header('location:'.ROOT_URL.'dashboard.php');
             }
         }
     }else{
