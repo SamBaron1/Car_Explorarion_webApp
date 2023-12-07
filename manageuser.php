@@ -128,6 +128,16 @@
 </head>
 <body>
     <section class="dashboard">
+        
+        <?php
+            if(isset($_SESSION['deletesuccess'])) :?>
+            <div class="successmessage">
+                <p><?=$_SESSION['deletesuccess'];
+                 unset($_SESSION['deletesuccess']);
+                 ?></p>
+            </div>
+        <?php endif?>
+
         <?php
             if(isset($_SESSION['editusersuccess'])) :?>
             <div class="successmessage">
