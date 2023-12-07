@@ -178,7 +178,15 @@
     all: unset;
     color: #fff;
 }
-    
+
+.errormessage{
+    background: red;
+    padding: 5px;
+}
+.successmessage{
+    background: green;
+    padding: 5px;
+}
     </style>
 </head>
 <body>
@@ -205,6 +213,15 @@
                     </div>
             </div>
         </div>
+        
+        <?php
+        if(isset($_SESSION['addusersuccess'])): ?>
+        <div class="successmessage">
+            <p><?=$_SESSION['addusersuccess'];
+            unset($_SESSION['addusersuccess']);
+            ?></p>
+        </div>
+        <?php endif ?>
         <div class="container dashboard_container">
             <button id="show_sidebar-btn" class="sidebar_toggle"><i class="fa-solid fa-chevron-right"></i></button>
             <button id="hide_sidebar-btn" class="sidebar_toggle"><i class="fa-solid fa-chevron-left"></i></button>

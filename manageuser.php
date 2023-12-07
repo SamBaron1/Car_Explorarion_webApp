@@ -5,6 +5,10 @@
  if(!isset($_SESSION['user-email'])){
     header('location:'.ROOT_URL);
  }
+
+ $loggedinadmin=$_SESSION['user-email'];
+ $usersquery="SELECT * FROM users WHERE NOT email='$loggedinadmin'";
+ $users=mysqli_query($conn,$usersquery);
  ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -166,12 +170,14 @@
                         </tr>
                     </thead>
                     <tbody>
+                        <?php while($user=mysqli_fetch_assoc($users)): ?>
                         <tr>
-                            <td>Kijana mtesi</td>
-                            <td>mfula@kutesa.com</td>
-                            <td><a href="edit-user.php" class="btn sm">Edit</a></td>
+                            <td><?=$user['firstname']?></td>
+                            <td><?=$user['email']?></td>
+                            <td><a href="edituser.php" class="btn sm">Edit</a></td>
                             <td><a href="delete-zip.php" class="btn sm danger">Delete</a></td>
                         </tr>
+                        <?php endwhile?>
                     </tbody>
                 </table>
             </main>
