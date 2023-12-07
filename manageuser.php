@@ -174,8 +174,8 @@
                         <tr>
                             <td><?=$user['firstname']?></td>
                             <td><?=$user['email']?></td>
-                            <td><a href="edituser.php" class="btn sm">Edit</a></td>
-                            <td><a href="delete-zip.php" class="btn sm danger">Delete</a></td>
+                            <td><a href="edituser.php?id=<?=$user['id'] ?>" class="btn sm">Edit</a></td>
+                            <td><a href="delete.php?id=<?=$user['id'] ?>" class="btn sm danger">Delete</a></td>
                         </tr>
                         <?php endwhile?>
                     </tbody>
