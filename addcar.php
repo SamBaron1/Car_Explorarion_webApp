@@ -1,7 +1,6 @@
 <?php 
     require_once 'database/connection.php';
 
-    if(isset($_SESSION['addcardata'])){
     $manufactureyear=$_SESSION['addcardata']['manufactureyear'] ?? null;
     $make=$_SESSION['addcardata']['make'] ?? null;
     $model=$_SESSION['addcardata']['model'] ?? null;
@@ -10,7 +9,7 @@
     $price=$_SESSION['addcardata']['price'] ?? null;
     $country=$_SESSION['addcardata']['country'] ?? null;
     $mileage=$_SESSION['addcardata']['mileage'] ?? null;
-    }
+    
 ?>
 <?php
  if(!isset($_SESSION['user-email'])){

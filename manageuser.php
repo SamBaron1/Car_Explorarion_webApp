@@ -130,10 +130,10 @@
     <section class="dashboard">
         
         <?php
-            if(isset($_SESSION['deletesuccess'])) :?>
+            if(isset($_SESSION['deleteusersuccess'])) :?>
             <div class="successmessage">
-                <p><?=$_SESSION['deletesuccess'];
-                 unset($_SESSION['deletesuccess']);
+                <p><?=$_SESSION['deleteusersuccess'];
+                 unset($_SESSION['deleteusersuccess']);
                  ?></p>
             </div>
         <?php endif?>
@@ -200,7 +200,7 @@
                             <td><?=$user['firstname']?></td>
                             <td><?=$user['email']?></td>
                             <td><a href="edituser.php?id=<?=$user['id'] ?>" class="btn sm">Edit</a></td>
-                            <td><a href="delete.php?id=<?=$user['id'] ?>" class="btn sm danger">Delete</a></td>
+                            <td><a href="deleteuser.php?id=<?=$user['id'] ?>" class="btn sm danger">Delete</a></td>
                         </tr>
                         <?php endwhile?>
                     </tbody>

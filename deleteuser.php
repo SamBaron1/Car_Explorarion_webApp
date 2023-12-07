@@ -17,7 +17,7 @@
                 unlink($profilepic);
             }
 
-            $_SESSION['deletesuccess']="{$name} was successfully deleted";
+            $_SESSION['deleteusersuccess']="{$name} was successfully deleted";
             header('location:'.ROOT_URL.'manageuser.php');
             die();
         }
