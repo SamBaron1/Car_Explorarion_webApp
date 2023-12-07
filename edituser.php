@@ -5,6 +5,21 @@
  if(!isset($_SESSION['user-email'])){
     header('location:'.ROOT_URL);
  }
+
+    if(!isset($_GET['id'])){
+        header('location:'.ROOT_URL.'manageuser.php');
+        die();
+    }else{
+        $id=$_GET['id'];
+        $userquery="SELECT * FROM users WHERE id='$id'";
+        $userresult=mysqli_query($conn,$userquery);
+
+        $user=mysqli_fetch_assoc($userresult);
+
+        $firstname=$user['firstname'];
+        $lastname=$user['lastname'];
+        $email=$user['email'];
+    }
  ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -38,35 +53,22 @@
     </style>
 </head>
 <body>
-    <form action="">
+    <form action="<?=ROOT_URL?>edituserback.php" method="post">
         <h1>EDIT USER</h1>
         <hr>
         <br>
         <br>
         First Name
-        <input placeholder="first name"  type="text"><br><br>
+        <input placeholder="first name"  type="text" value="<?=$firstname?>" name="firstname"><br><br>
         Last Name
-        <input placeholder="last name"  type="text"><br><br>
+        <input placeholder="last name"  type="text" value="<?=$lastname?>" name="lastname"><br><br>
         Email 
-        <input placeholder="email@gmail.com"  type="email"><br><br>
-        Password 
-        <input placeholder="password"  type="password"><br><br>
-        Confirm Password 
-        <input placeholder="confirm password"  type="password"><br><br>
-        Insert Profile Picture:
-        <input type="file"><br><br>
-        Continet
-        <select title="Continet">
-            <option>Africa</option>
-            <option>Asia</option>
-            <option>American</option>
-            <option>Australia</option>
-            <option>Europe</option>
-        </select><br><br>
+        <input placeholder="email@gmail.com"  type="email" value="<?=$email?>" name="email"><br><br>
         
+        <input type="hidden" value="<?=$id ?>" name="id">
     
-        <input type="button" value="submit" onclick="signIn()">
-        <input type="button" value="cancel" onclick="back()">
+        <input type="submit" name="submit" >
+        <input type="reset" value="cancel" >
     </form>
 </body>
 </html>
