@@ -8,21 +8,21 @@
         $email=filter_var($_POST['email'],FILTER_VALIDATE_EMAIL);
 
         if(!$firstname || !$lastname || !$email){
-            $_SESSION['editusererror']="INVALID INPUTS";
+            $_SESSION['editusererror']="INVALID INPUTS!!TRY AGAIN";
         }else{
-            
-            if(isset($_SESSION['editusererror'])){
-                header('location:'.ROOT_URL.'edituser.php'.'?id='.$id);
-                die();
-            }else{
                 $updatequery="UPDATE users SET firstname='$firstname',lastname='$lastname',email='$email' WHERE id='$id'";
                 $updateresults=mysqli_query($conn,$updatequery);
-                    if(mysqli_errno($conn)){
+
+                if(!mysqli_errno($conn)){
                     $_SESSION['editusersuccess']="{$firstname} editted successfully";
-                    header('location:'.ROOT_URL.'managuser.php');
+                    header('location:'.ROOT_URL.'manageuser.php');
                     die();
-                    }
-            }
+                }
+        }
+            
+        if(isset($_SESSION['editusererror'])){
+            header('location:'.ROOT_URL.'edituser.php'.'?id='.$id);
+            die();
         }
     }else{
         header('location:'.ROOT_URL.'edituser.php');

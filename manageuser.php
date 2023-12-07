@@ -115,12 +115,27 @@
         display: none;
     }
 
-
+.errormessage{
+    background: red;
+    padding: 5px;
+}
+.successmessage{
+    background: green;
+    padding: 5px;
+}
     
     </style>
 </head>
 <body>
     <section class="dashboard">
+        <?php
+            if(isset($_SESSION['editusersuccess'])) :?>
+            <div class="successmessage">
+                <p><?=$_SESSION['editusersuccess'];
+                 unset($_SESSION['editusersuccess']);
+                 ?></p>
+            </div>
+        <?php endif?>
         <div class="container dashboard_container">
             <button id="show_sidebar-btn" class="sidebar_toggle"><i class="fa-solid fa-chevron-right"></i></button>
             <button id="hide_sidebar-btn" class="sidebar_toggle"><i class="fa-solid fa-chevron-left"></i></button>

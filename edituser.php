@@ -45,10 +45,16 @@
             position: relative;
             top: 20vh;
             padding: 30px;
-           
+         
+        }
 
-            
-            
+        .errormessage{
+            background: red;
+            padding: 5px;
+        }
+        .successmessage{
+            background: green;
+            padding: 5px;
         }
     </style>
 </head>
@@ -56,6 +62,14 @@
     <form action="<?=ROOT_URL?>edituserback.php" method="post">
         <h1>EDIT USER</h1>
         <hr>
+        <?php
+            if(isset($_SESSION['editusererror'])) :?>
+            <div class="errormessage">
+                <p><?=$_SESSION['editusererror'];
+                 unset($_SESSION['editusererror']);
+                 ?></p>
+            </div>
+        <?php endif?>
         <br>
         <br>
         First Name
