@@ -234,15 +234,13 @@
     <?php while($car=mysqli_fetch_assoc($carsresult)) : ?>
 
         <div class="car-container">
-            <img src="<?=$car['frontview'] ?>" alt="Car Image1">
-            <ul>
-                <li>Name: <?=$car['make']. " " .$car['model']?></li>
-                <li>Drive Type: AWD/FF</li>
-                <li>Engine Capacity: 1586cc</li>
-                <li>Number of seats: 5</li>
-                <li>Mileage: <?=$car['mileage']?> KM</li>
-                <li>Price: Kshs <?=$car['price']?></li>
-            </ul>
+            <a href="<?=ROOT_URL?>car.php?id=<?=$car['id']?>">
+                <img src="<?=$car['frontview'] ?>" alt="Car Image1">
+            </a>
+                <ul>
+                    <li>Name: <?=$car['make']. " " .$car['model']?></li>
+                    <li>Price: Kshs <?=$car['price']?></li>
+                </ul>
         </div>
     <?php endwhile?>
 
