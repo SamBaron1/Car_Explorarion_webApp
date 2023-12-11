@@ -1,6 +1,9 @@
 <?php 
     require_once 'database/connection.php';
 
+    $carsquery="SELECT * FROM cars";
+    $carsresult=mysqli_query($conn,$carsquery);
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -228,289 +231,21 @@
 
     <h1 class="sub-title">Featured <span>Cars.</span></h1>
     <div class="car-details" id="featured">
+    <?php while($car=mysqli_fetch_assoc($carsresult)) : ?>
+
         <div class="car-container">
-            <img src="images/images/featured-cars/suzuki.jpeg" alt="Car Image1">
+            <img src="<?=$car['frontview'] ?>" alt="Car Image1">
             <ul>
-                <li>Name: Suzuki-swift</li>
+                <li>Name: <?=$car['make']. " " .$car['model']?></li>
                 <li>Drive Type: AWD/FF</li>
                 <li>Engine Capacity: 1586cc</li>
                 <li>Number of seats: 5</li>
-                <li>Mileage: 10.3 kmpl</li>
-                <li>Price: Kshs.1.4M</li>
+                <li>Mileage: <?=$car['mileage']?> KM</li>
+                <li>Price: Kshs <?=$car['price']?></li>
             </ul>
         </div>
-    
-        <div class="car-container">
-            <img src="images/images/featured-cars/blueranger.jpeg" alt="Car Image2">
-            <ul>
-            <li>Name: FordRanger</li>
-                <li>Drive Type: 4WD</li>
-                <li>Engine Capacity: 125Kw/2.0ltr</li>
-                <li>Number of seats: 5</li>
-                <li>Mileage: 10.3 kmpl</li>
-                <li>Price: Kshs. 5.5M</li>
-            </ul>
-        </div>
-    
-        <div class="car-container">
-            <img src="images/images/featured-cars/defender.jpeg" alt="Car Image3">
-            <ul>
-                <li>Name: Defender</li>
-                <li>Drive Type: 4WD</li>
-                <li>Engine Capacity: 5000cc</li>
-                <li>Number of seats: 7</li>
-                <li>Mileage: 13.3 kmpl</li>
-                <li>Price: Kshs. 17.4M</li>
-            </ul>
-        </div>
-        
-        <div class="car-container">
-            <img src="images/images/featured-cars/newfortuner.jpeg" alt="Car Image4">
-            <ul>
-            <li>Name: Fortuner</li>
-                <li>Drive Type: 4WD</li>
-                <li>Engine Capacity: 2755cc</li>
-                <li>Number of seats: 7</li>
-                <li>Mileage: 10.3 kmpl</li>
-                <li>Price: Kshs. 11.5M</li>
-            </ul>
-        </div>
-        
-        <div class="car-container">
-            <img src="images/images/featured-cars/fordeverest.jpeg" alt="Car Image5">
-            <ul>
-            <li>Name: Ford-Everest</li>
-                <li>Drive Type: 4WD</li>
-                <li>Engine Capacity: 3.0ltr turbo</li>
-                <li>Number of seats: 5/7</li>
-                <li>Mileage: 10.3 kmpl</li>
-                <li>Price: Kshs. 5.3M</li>
-            </ul>
-        </div>
-        
-        <div class="car-container">
-            <img src="images/images/featured-cars/forester.jpeg" alt="Car Image6">
-            <ul>
-            <li>Name: Subaru-Forester2022</li>
-                <li>Drive Type: AWD</li>
-                <li>Engine Capacity: 1994-2498cc</li>
-                <li>Number of seats: 5</li>
-                <li>Mileage: 10.3 kmpl</li>
-                <li>Price: Kshs. 5.8M</li>
-            </ul>
-        </div>
-        
-        <div class="car-container">
-            <img src="images/images/featured-cars/newaudi.jpeg" alt="Car Image7">
-            <ul>
-            <li>Name: Audi</li>
-                <li>Drive Type: AWD/FF</li>
-                <li>Engine Capacity: 1984cc</li>
-                <li>Number of seats: 5</li>
-                <li>Mileage: 10.3 kmpl</li>
-                <li>Price: Kshs. 4.5M</li>
-            </ul>
-        </div>
-        
-        <div class="car-container">
-            <img src="images/images/featured-cars/fordranger.jpeg" alt="Car Image8">
-            <ul>
-            <li>Name: Ranger</li>
-                <li>Drive Type: 4WD</li>
-                <li>Engine Capacity: 2784cc</li>
-                <li>Number of seats: 6</li>
-                <li>Mileage: 10.3 kmpl</li>
-                <li>Price: Kshs. 5M</li>
-            </ul>
-        </div>
-        
-        <div class="car-container">
-            <img src="images/images/featured-cars/toyotacrown.jpeg" alt="Car Image8">
-            <ul>
-                <li>Name: TOYOTA CROWN</li>
-                <li>Drive Type: AWD/FR</li>
-                <li>Engine Capacity: 1988-2997cc</li>
-                <li>Number of seats: 5-6</li>
-                <li>Mileage: 10.3 kmpl</li>
-                <li>Price: Kshs. 6M</li>
-            </ul>
-        </div>
-        <div class="car-container">
-            <img src="images/images/featured-cars/lexus2.jpeg" alt="Car Image8">
-            <ul>
-                <li>Name: LEXUS</li>
-                <li>Drive Type: 4WD</li>
-                <li>Engine Capacity: 5.7Ltr</li>
-                <li>Number of seats: 8</li>
-                <li>Mileage: 13.3 kmpl</li>
-                <li>Price: Kshs. 21-32M</li>
-            </ul>
-        </div>
-        <div class="car-container">
-            <img src="images/images/featured-cars/newtx.jpeg" alt="Car Image8">
-            <ul>
-                <li>Name: LANDCRUISER TX2021</li>
-                <li>Drive Type: 4WD</li>
-                <li>Engine Capacity: 3.0L diesel</li>
-                <li>Number of seats: 7</li>
-                <li>Mileage: 13.3 kmpl</li>
-                <li>Price: Kshs. 7.5M</li>
-            </ul>
-        </div>
-        <div class="car-container">
-            <img src="images/images/featured-cars/isuzudmux.jpeg" alt="Car Image8">
-            <ul>
-                <li>Name: ISUZU DMUX</li>
-                <li>Drive Type: RWD</li>
-                <li>Engine Capacity: 2499cc</li>
-                <li>Number of seats: 7</li>
-                <li>Mileage: 10.3 kmpl</li>
-                <li>Price: Kshs. 4.8M</li>
-            </ul>
-        </div>
-        <div class="car-container">
-            <img src="images/images/featured-cars/discovery.jpeg" alt="Car Image8">
-            <ul>
-                <li>Name: DISCOVERY</li>
-                <li>Drive Type: 4WD</li>
-                <li>Engine Capacity: 2993cc</li>
-                <li>Number of seats: 7</li>
-                <li>Mileage: 11.4 kmpl</li>
-                <li>Price: Kshs. 8.9M</li>
-            </ul>
-        </div>
-        <div class="car-container">
-            <img src="images/images/featured-cars/rangerover2.jpeg" alt="Car Image8">
-            <ul>
-                <li>Name: RANGEROVER2023 SPORT</li>
-                <li>Drive Type: 4WD</li>
-                <li>Engine Capacity: 2997cc</li>
-                <li>Number of seats: 5</li>
-                <li>Mileage: 11.4 kmpl</li>
-                <li>Price: Kshs. 41M</li>
-            </ul>
-        </div>
-        <div class="car-container">
-            <img src="images/images/featured-cars/pajero.jpeg" alt="Car Image8">
-            <ul>
-                <li>Name: PAJERO</li>
-                <li>Drive Type: 4WD</li>
-                <li>Engine Capacity: 2997cc</li>
-                <li>Number of seats: 7</li>  
-                <li>Mileage: 10,000 km</li>
-                <li>Price: Kshs. 6.8M</li>
-            </ul>
-        </div>
-        <div class="car-container">
-            <img src="images/images/featured-cars/alphard.jpeg" alt="Car Image8">
-            <ul>
-                <li>Name: ALPHARD 2023</li>
-                <li>Drive Type: AWD/FF</li>
-                <li>Engine Capacity: 2362-3456cc</li>
-                <li>Number of seats: 4-8</li>
-                <li>Mileage: 10.3 kmpl</li>
-                <li>Price: Kshs. 6M</li>
-            </ul>
-        </div>
-        <div class="car-container">
-            <img src="images/images/featured-cars/matatuhiace.jpeg" alt="Car Image8">
-            <ul>
-                <li>Name: HIACE 2021</li>
-                <li>Drive Type: AWD/FF</li>
-                <li>Engine Capacity: 2986cc</li>
-                <li>Number of seats: 15</li>
-                <li>Mileage: 10.3 kmpl</li>
-                <li>Price: Kshs. 6.5M</li>
-            </ul>
-        </div>
-        <div class="car-container">
-            <img src="images/images/featured-cars/chrysler.jpg" alt="Car Image8">
-            <ul>
-                <li>Name: BENTLEY</li>
-                <li>Drive Type: 4WD</li>
-                <li>Engine Capacity: 3993-5993cc</li>
-                <li>Number of seats: 4-5</li>
-                <li>Mileage: 12.9 kmpl</li>
-                <li>Price: Kshs. 30-45M</li>
-            </ul>
-        </div>
-        <div class="car-container">
-            <img src="images/images/featured-cars/damemobius.jpeg" alt="Car Image8">
-            <ul>
-                <li>Name: MOBIUS</li>
-                <li>Drive Type: 4WD</li>
-                <li>Engine Capacity: 1798cc</li>
-                <li>Number of seats: 5</li>
-                <li>Mileage: 10.3 kmpl</li>
-                <li>Price: Kshs. 3.95M</li>
-            </ul>
-        </div>
-        <div class="car-container">
-            <img src="images/images/featured-cars/gwagon.jpeg" alt="Car Image8">
-            <ul>
-                <li>Name: G-WAGON</li>
-                <li>Drive Type: AWD</li>
-                <li>Engine Capacity: 2960-5977cc</li>
-                <li>Number of seats: 4-7</li>
-                <li>Mileage: 13.3 kmpl</li>
-                <li>Price: Kshs. 31M</li>
-            </ul>
-        </div>
-        <div class="car-container">
-            <img src="images/images/featured-cars/mercedes1.jpeg" alt="Car Image8">
-            <ul>
-                <li>Name: MERCEDES BENZ</li>
-                <li>Drive Type: AWD/FF</li>
-                <li>Engine Capacity: 1993cc</li>
-                <li>Number of seats: 5</li>
-                <li>Mileage: 10.3 kmpl</li>
-                <li>Price: Kshs. 23M</li>
-            </ul>
-        </div>
-        <div class="car-container">
-            <img src="images/images/featured-cars/bmw2.jpeg" alt="Car Image8">
-            <ul>
-                <li>Name: BMW NEWMODEL</li>
-                <li>Drive Type: AWD/FF</li>
-                <li>Engine Capacity: 113hp </li>
-                <li>Number of seats: 5</li>
-                <li>Mileage: 13.3 kmpl</li>
-                <li>Price: Kshs. 8.9M</li>
-            </ul>
-        </div>
-        <div class="car-container">
-            <img src="images/images/featured-cars/lexus1.jpeg" alt="Car Image8">
-            <ul>
-                <li>Name: LEXUS L600</li>
-                <li>Drive Type: 4WD</li>
-                <li>Engine Capacity: 3.4L v-6</li>
-                <li>Number of seats: 7</li>
-                <li>Mileage: 13.4 kmpl</li>
-                <li>Price: Kshs. 21-32M</li>
-            </ul>
-        </div>
-        <div class="car-container">
-            <img src="images/images/featured-cars/volkswagen.jpeg" alt="Car Image8">
-            <ul>
-                <li>Name: VOLKSWAGEN</li>
-                <li>Drive Type: FF</li>
-                <li>Engine Capacity: 1984cc</li>
-                <li>Number of seats: 5</li>
-                <li>Mileage: 10.3 kmpl</li>
-                <li>Price: Kshs. 3.4M</li>
-            </ul>
-        </div>
-        <div class="car-container">
-            <img src="images/images/featured-cars/lc200.jpeg" alt="Car Image8">
-            <ul>
-                <li>Name: LANDCRUISER LC300</li>
-                <li>Drive Type: 4WD</li>
-                <li>Engine Capacity: 3346cc twin-Turbo</li>
-                <li>Number of seats: 8</li>
-                <li>Mileage: 13.4 kmpl</li>
-                <li>Price: Kshs.26.2M</li>
-            </ul>
-        </div>
+    <?php endwhile?>
+
     </div>
 
 

@@ -9,6 +9,7 @@
     $price=$_SESSION['addcardata']['price'] ?? null;
     $country=$_SESSION['addcardata']['country'] ?? null;
     $mileage=$_SESSION['addcardata']['mileage'] ?? null;
+    // unset($_SESSION['addcardata']);
     
 ?>
 <?php
