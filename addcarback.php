@@ -10,6 +10,10 @@ require_once('database/connection.php');
         $price=filter_var($_POST['price'],FILTER_VALIDATE_INT);
         $country=filter_var($_POST['country'],FILTER_SANITIZE_FULL_SPECIAL_CHARS);
         $mileage=filter_var($_POST['mileage'],FILTER_VALIDATE_INT);
+        $engine=filter_var($_POST['engine'],FILTER_VALIDATE_INT);
+        $capacity=filter_var($_POST['capacity'],FILTER_VALIDATE_INT);
+        $doors=filter_var($_POST['doors'],FILTER_VALIDATE_INT);
+        $driveType=filter_var($_POST['driveType'],FILTER_SANITIZE_FULL_SPECIAL_CHARS);
         $front=$_FILES['front'];
         $back=$_FILES['back'];
         $side=$_FILES['side'];
@@ -31,6 +35,14 @@ require_once('database/connection.php');
             $_SESSION['addcar']="country cannot be blank";
         }elseif(!$mileage){
             $_SESSION['addcar']="Mileage cannot be blank";
+        }elseif(!$engine){
+            $_SESSION['addcar']="Engine capacity cannot be blank";
+        }elseif(!$doors){
+            $_SESSION['addcar']="No of doors cannot be blank";
+        }elseif(!$capacity){
+            $_SESSION['addcar']="Car capacity cannot be blank";
+        }elseif(!$driveType){
+            $_SESSION['addcar']="Drive type cannot be blank";
         }elseif(!$front){
             $_SESSION['addcar']="Insert front view image";
         }elseif(!$back){
@@ -97,7 +109,7 @@ require_once('database/connection.php');
             die();
         }else{
             // Insert data to database 
-            $addquery="INSERT INTO cars(manufactureyear, make, model, bodytype, carcondition, price, country, mileage, frontview, backview, sideview ,interior) VALUES('$manufactureyear','$make','$model','$bodytype','$carcondition','$price','$country','$mileage','$front_path','$back_path','$side_path','$interior_path')";
+            $addquery="INSERT INTO cars(manufactureyear, make, model, bodytype, carcondition, price, country, mileage, engine, capacity, doors, driveType, frontview, backview, sideview ,interior) VALUES('$manufactureyear','$make','$model','$bodytype','$carcondition','$price','$country','$mileage','$engine','$capacity','$doors','$driveType','$front_path','$back_path','$side_path','$interior_path')";
             mysqli_query($conn,$addquery);
             if(!mysqli_errno($conn)){
                 $_SESSION['addcarsuccess']="Car was successfully addded";

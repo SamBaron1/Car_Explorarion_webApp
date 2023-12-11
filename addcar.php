@@ -9,6 +9,10 @@
     $price=$_SESSION['addcardata']['price'] ?? null;
     $country=$_SESSION['addcardata']['country'] ?? null;
     $mileage=$_SESSION['addcardata']['mileage'] ?? null;
+    $engine=$_SESSION['addcardata']['engine'] ?? null;
+    $capacity=$_SESSION['addcardata']['capacity'] ?? null;
+    $doors=$_SESSION['addcardata']['doors'] ?? null;
+    $driveType=$_SESSION['addcardata']['driveType'] ?? null;
     // unset($_SESSION['addcardata']);
     
 ?>
@@ -119,6 +123,22 @@
             <tr>
                 <td>Mileage:</td>
                 <td><input type="text" placeholder="20000" name="mileage" value="<?=$mileage?>"></td>
+            </tr>
+            <tr>
+                <td>Engine:</td>
+                <td><input type="text" placeholder="20000" name="engine" value="<?=$engine?>"></td>
+            </tr>
+            <tr>
+                <td>Capacity:</td>
+                <td><input type="text" placeholder="4" name="capacity" value="<?=$capacity?>"></td>
+            </tr>
+            <tr>
+                <td>Doors:</td>
+                <td><input type="text" placeholder="4" name="doors" value="<?=$doors?>"></td>
+            </tr>
+            <tr>
+                <td>Drive Type:</td>
+                <td><input type="text" placeholder="4WD" name="driveType" value="<?=$driveType?>"></td>
             </tr>
             <tr>
                 <td>Front view:</td>

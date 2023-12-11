@@ -84,19 +84,19 @@
                 </tr>
                 <tr>
                 <td>Engine:</td>
-                <td>Ford</td>
+                <td><?=$car['engine']?></td>
                 </tr>
                 <tr>
                 <td>Seating Capacity:</td>
-                <td>Ford</td>
+                <td><?=$car['capacity']?></td>
                 </tr>
                 <tr>
                 <td>Doors:</td>
-                <td>Ford</td>
+                <td><?=$car['doors']?></td>
                 </tr>
                 <tr>
                 <td>Drive Type:</td>
-                <td>Ford</td>
+                <td><?=$car['driveType']?></td>
                 </tr>
             </table>
         </div>
