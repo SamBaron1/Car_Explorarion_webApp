@@ -4,6 +4,9 @@
     $carsquery="SELECT * FROM cars";
     $carsresult=mysqli_query($conn,$carsquery);
 
+    $makesquery="SELECT * FROM carmakes";
+    $makesresults=mysqli_query($conn,$makesquery);
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -361,73 +364,16 @@
         <h1 class="sub-title">Our <span>Brands.</span></h1>
 			<div class="brand-container" id="logos">
 				<div class="brand-area">
+                    <?php while($make=mysqli_fetch_assoc($makesresults)) : ?>
 						<div class="item">
-							<a href="#">
-								<img src="images/images/brand/fordlogo.png" alt="brand-image" />
+							<a href="<?=ROOT_URL?>make.php?id=<?=$make['id']?>">
+								<img src="<?=$make['logo'] ?>" alt="brand-image" />
 							</a>
                             <div class="description">
-                                <p>Ford</p>
+                                <p><?=$make['makename']?></p>
                             </div>
 						</div><!--/.item-->
-						<div class="item">
-							<a href="#">
-								<img src="images/images/brand/benzcars.png" alt="brand-image" />
-							</a>
-                            <div class="description">
-                                <p>Mercedes-Benz</p>
-                            </div>
-						</div><!--/.item-->
-						<div class="item">
-							<a href="#">
-								<img src="images/images/brand/toyota.jpeg" alt="brand-image" />
-							</a>
-                            <div class="description">
-                                <p>Toyota</p>
-                            </div>
-						</div><!--/.item-->
-
-						<div class="item">
-							<a href="#">
-								<img src="images/images/brand/audi.png" alt="brand-image" />
-							</a>
-                            <div class="description">
-                                <p>Audi</p>
-                            </div>
-						</div><!--/.item-->
-                        <div class="item">
-							<a href="#">
-								<img src="images/images/brand/mitsubishi.png" alt="brand-image" />
-							</a>
-                            <div class="description">
-                                <p>Mitsubishi</p>
-                            </div>
-						</div><!--/.item-->
-
-
-                        <div class="item">
-							<a href="#">
-								<img src="images/images/brand/volkswagenpng.png" alt="brand-image" />
-							</a>
-                            <div class="description">
-                                <p>Volkswagen</p>
-                            </div>
-						</div><!--/.item-->
-                        <div class="item">
-							<a href="#">
-								<img src="images/images/brand/landrover.jpeg" alt="brand-image" />
-							</a>
-                            <div class="description">
-                                <p>LandRover</p>
-                            </div>
-						</div><!--/.item-->
-                        <div class="item">
-							<a href="#">
-								<img src="images/images/brand/suzuki.png" alt="brand-image" />
-							</a>
-                            <div class="description">
-                                <p>Suzuki</p>
-                            </div>
-						</div><!--/.item-->
+                    <?php endwhile?>
 				</div><!--/.clients-area-->
 
                 </div><!--/.container-->

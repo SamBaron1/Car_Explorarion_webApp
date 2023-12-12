@@ -29,30 +29,43 @@
             background-color: blanchedalmond;
             position: relative;
             top: 20vh;
-            padding: 30px;
-           
-
-            
-            
+            padding: 30px; 
         }
+
+        .errormessage{
+            background: red;
+            padding: 5px;
+        }
+        .successmessage{
+            background: green;
+            padding: 5px;
+}
     </style>
 </head>
 <body>
-    <form action="">
+    <form action="<?=ROOT_URL?>addmakeback.php" method="post" enctype="multipart/form-data">
         <h1>ADD MAKE</h1>
         <hr>
+        <?php if(isset($_SESSION['addmakeerror'])) :?>
+            <div class="errormessage">
+                <p><?=$_SESSION['addmakeerror'];
+                unset($_SESSION['addmakeerror']);
+                ?></p>
+            </div>
+        <?php endif?>
+
         <br>
         <br>
         Make Description
-        <input placeholder="This make was invented........"  type="text"><br><br>
+        <input placeholder="This make was invented........"  type="text" name="description"><br><br>
         Make Name
-        <input placeholder="Toyota"  type="text"><br><br>
+        <input placeholder="Toyota"  type="text" name="makename"><br><br>
         Insert Make Logo:
-        <input type="file"><br><br>
+        <input type="file" name="logo"><br><br>
         
     
-        <input type="button" value="submit" onclick="signIn()">
-        <input type="button" value="cancel" onclick="back()">
+        <input type="submit" value="submit" name="submit">
+        <input type="reset" value="cancel">
     </form>
 </body>
 </html>

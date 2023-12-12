@@ -1,3 +1,15 @@
+<?php
+    include('database/connection.php');
+
+    $id=filter_var($_GET['id'],FILTER_VALIDATE_INT);
+    $getmakequery="SELECT * FROM carmakes WHERE id='$id'";
+    $makeresults=mysqli_query($conn,$getmakequery);
+    $make=mysqli_fetch_assoc($makeresults);
+
+    $makename=$make['makename'];
+    $carsquery="SELECT * FROM cars WHERE make='$makename'";
+    $carsresults=mysqli_query($conn,$carsquery);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,22 +21,15 @@
 <body>
     <div class="makecontainer">
         <div class="makecontent">
-            <img src="images/images/brand/suzuki.png" alt="">
-            <h1>Suzuki</h1>
-            <p>Born in Japan, Suzuki is an automaker that has made a name for itself by crafting vehicles that emphasize value and affordability. Through the years, the brand's lineup has included sedans, wagons and SUVs. However, in late 2012 the company decided to stop selling new vehicles in the United States.</p>
+            <img src="<?=$make['logo']?>" alt="">
+            <h1><?=$make['makename']?></h1>
+            <p><?=$make['description']?></p>
             <div class="makecars">
-                <hr><h1>Suzuki cars</h1>
+                <hr><h1><?=$make['makename']?> cars</h1>
                 <div class="makecarsimages">
-                    <img src="images/fc1.png" alt="">
-                    <img src="images/fc1.png" alt="">
-                    <img src="images/fc1.png" alt="">
-                    <img src="images/fc1.png" alt="">
-                    <img src="images/fc1.png" alt="">
-                    <img src="images/fc1.png" alt="">
-                    <img src="images/fc1.png" alt="">
-                    <img src="images/fc1.png" alt="">
-                    <img src="images/fc1.png" alt="">
-                    <img src="images/fc1.png" alt="">
+                    <?php while($car=mysqli_fetch_assoc($carsresults)) :?>
+                        <a href="<?=ROOT_URL?>car.php?id=<?=$car['id']?>"><img src="<?=$car['frontview']?>" alt=""></a>
+                    <?php endwhile ?>
                 </div>
             </div>
         </div>

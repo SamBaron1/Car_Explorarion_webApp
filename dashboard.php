@@ -230,6 +230,14 @@
             ?></p>
         </div>
         <?php endif ?>
+        <?php
+        if(isset($_SESSION['addmakesuccess'])): ?>
+        <div class="successmessage">
+            <p><?=$_SESSION['addmakesuccess'];
+            unset($_SESSION['addmakesuccess']);
+            ?></p>
+        </div>
+        <?php endif ?>
         <div class="container dashboard_container">
             <button id="show_sidebar-btn" class="sidebar_toggle"><i class="fa-solid fa-chevron-right"></i></button>
             <button id="hide_sidebar-btn" class="sidebar_toggle"><i class="fa-solid fa-chevron-left"></i></button>
