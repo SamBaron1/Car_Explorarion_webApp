@@ -2,9 +2,12 @@
     require_once 'database/connection.php';
 ?>
 <?php
- if(!isset($_SESSION['user-email'])){
-    header('location:'.ROOT_URL);
- }
+    if(!isset($_SESSION['user-email'])){
+        header('location:'.ROOT_URL);
+    }
+    
+    $makesquery="SELECT * FROM carmakes";
+    $makesresults=mysqli_query($conn,$makesquery);
  ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -280,19 +283,19 @@
                 <table>
                     <thead>
                         <tr>
-                            <th>Description</th>
                             <th>Make</th>
                             <th>Edit</th>
                             <th>Delete</th>
                         </tr>
                     </thead>
                     <tbody>
+                    <?php while($make=mysqli_fetch_assoc($makesresults)) :?>
                         <tr>
-                            <td>Lorem ipsum dolor sit amet consectetur adipisicing elit.</td>
-                            <td>Subaru</td>
+                            <td><?=$make['makename']?></td>
                             <td><a href="edit-car.php" class="btn sm">Edit</a></td>
                             <td><a href="delete-car.php" class="btn sm danger">Delete</a></td>
                         </tr>
+                    <?php endwhile?>
                     </tbody>
                 </table>
             </main>

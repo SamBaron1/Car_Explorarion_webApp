@@ -7,6 +7,24 @@
     $makesquery="SELECT * FROM carmakes";
     $makesresults=mysqli_query($conn,$makesquery);
 
+    $caryearquery="SELECT DISTINCT manufactureyear FROM cars";
+    $yearresult=mysqli_query($conn,$caryearquery);
+
+    $carmakequery="SELECT DISTINCT make FROM cars";
+    $makeresult=mysqli_query($conn,$carmakequery);
+
+    $carmodelquery="SELECT DISTINCT model FROM cars";
+    $modelresult=mysqli_query($conn,$carmodelquery);
+
+    $carpricequery="SELECT DISTINCT price FROM cars";
+    $priceresult=mysqli_query($conn,$carpricequery);
+
+    $carconditionquery="SELECT DISTINCT carcondition FROM cars";
+    $conditionresult=mysqli_query($conn,$carconditionquery);
+
+    $carbodystylequery="SELECT DISTINCT bodytype FROM cars";
+    $bodystyleresult=mysqli_query($conn,$carbodystylequery);
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -17,12 +35,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="fontawesome-free-6.4.2-web/css/all.min.css">
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
-    
-    <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-8Z+Xj1zVJ3+U6vYJf2Ywz5t7K1L9x9h0Q6vJ8yZtXv7HlqLsQO2jKmG9gRb5rZsWxW8yLrBdQq4fVl3vz1+2jA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"> -->
     <title>Car Exploration Web App</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
@@ -108,104 +120,87 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="model-search-content">
+                    <form action="<?=ROOT_URL?>search.php" method="post">
                     <div class="row">
                         <div class="col-md-offset-1 col-md-2 col-sm-12">
                             <div class="single-model-search">
                                 <h2>select year</h2>
                                 <div class="model-select-icon">
-                                    <select class="form-control">
-
-                                        <option value="default">year</option><!-- /.option-->
-
-                                        <option value="2018">2021</option><!-- /.option-->
-
-                                        <option value="2017">2018</option><!-- /.option-->
-                                        <option value="2016">2016</option><!-- /.option-->
-
-                                    </select><!-- /.select-->
-                                </div><!-- /.model-select-icon -->
+                                    <select class="form-control" name="year">
+                                            <option>0</option>
+                                        <?php while($car=mysqli_fetch_assoc($yearresult)) :?>
+                                            <option><?=$car['manufactureyear']?></option>
+                                        <?php endwhile?>
+                                    </select>
+                                </div>
                             </div>
                             <div class="single-model-search">
                                 <h2>body style</h2>
                                 <div class="model-select-icon">
-                                    <select class="form-control">
-
-                                        <option value="default">style</option><!-- /.option-->
-
-                                        <option value="sedan">sedan</option><!-- /.option-->
-
-                                        <option value="van">van</option><!-- /.option-->
-                                        <option value="suv">suv</option><!-- /.option-->
-
-                                    </select><!-- /.select-->
-                                </div><!-- /.model-select-icon -->
+                                    <select class="form-control" name="bodystyle">
+                                            <option>0</option>
+                                        <?php while($car=mysqli_fetch_assoc($bodystyleresult)) :?>
+                                            <option><?=$car['bodytype']?></option>
+                                        <?php endwhile?>
+                                    </select>
+                                </div>
                             </div>
                         </div>
                         <div class="col-md-offset-1 col-md-2 col-sm-12">
                             <div class="single-model-search">
                                 <h2>select make</h2>
                                 <div class="model-select-icon">
-                                    <select class="form-control">
-
-                                        <option value="default">make</option><!-- /.option-->
-
-                                        <option value="toyota">toyota</option><!-- /.option-->
-
-                                        <option value="land-rover">land-rover</option><!-- /.option-->
-                                        <option value="mercedes-benz">mercedes-benz.</option><!-- /.option-->
-
-                                    </select><!-- /.select-->
-                                </div><!-- /.model-select-icon -->
+                                    <select class="form-control" name="make">
+                                            <option>0</option>
+                                        <?php while($car=mysqli_fetch_assoc($makeresult)) :?>
+                                            <option><?=$car['make']?></option>
+                                        <?php endwhile?>
+                                    </select>
+                                </div>
                             </div>
                             <div class="single-model-search">
                                 <h2>car condition</h2>
                                 <div class="model-select-icon">
-                                    <select class="form-control">
-
-                                        <option value="default">condition</option><!-- /.option-->
-                                        <option value="new">new</option><!-- /.option-->
-                                        <option value="used">used</option><!-- /.option-->
-                                        <option value="old">old</option><!-- /.option-->
-                                    </select><!-- /.select-->
-                                </div><!-- /.model-select-icon -->
+                                    <select class="form-control" name="condition">
+                                            <option>0</option>
+                                        <?php while($car=mysqli_fetch_assoc($conditionresult)) :?>
+                                            <option><?=$car['carcondition']?></option>
+                                        <?php endwhile?>
+                                    </select>
+                                </div>
                             </div>
                         </div>
                         <div class="col-md-offset-1 col-md-2 col-sm-12">
                             <div class="single-model-search">
                                 <h2>select model</h2>
                                 <div class="model-select-icon">
-                                    <select class="form-control">
-
-                                        <option value="default">model</option><!-- /.option-->
-                                        <option value="subaru">subaru forester</option><!-- /.option-->
-                                        <option value="bmw">bmw x6</option><!-- /.option-->
-                                        <option value="ford">ford-everest</option><!-- /.option-->
-                                        <option value="ford">toyota-crown</option>
-                                    </select><!-- /.select-->
-                                </div><!-- /.model-select-icon -->
+                                    <select class="form-control" name="model">
+                                            <option>0</option>
+                                        <?php while($car=mysqli_fetch_assoc($modelresult)) :?>
+                                            <option><?=$car['model']?></option>
+                                        <?php endwhile?>
+                                    </select>
+                                </div>
                             </div>
                             <div class="single-model-search">
                                 <h2>select price</h2>
                                 <div class="model-select-icon">
-                                    <select class="form-control">
-
-                                        <option value="default">price</option><!-- /.option-->
-                                        <option value="$20000.00">$20000.00</option><!-- /.option-->
-                                        <option value="$8000.00">$80000.00</option><!-- /.option-->
-                                        <option value="$90000.00">$90000.00</option><!-- /.option-->
-
-                                    </select><!-- /.select-->
-                                </div><!-- /.model-select-icon -->
+                                    <select class="form-control" name="price">
+                                            <option>0</option>
+                                        <?php while($car=mysqli_fetch_assoc($priceresult)) :?>
+                                            <option><?=$car['price']?></option>
+                                        <?php endwhile?>
+                                    </select>
+                                </div>
                             </div>
                         </div>
                         <div class="col-md-2 col-sm-12">
                             <div class="single-model-search text-center">
-                                <button class="welcome-btn model-search-btn" onclick="window.location.href='#'">
-                                    search
-                                </button>
+                                <input class="welcome-btn model-search-btn" type="submit" name="search" >
                             </div>
                         </div>
                     </div>
+                    </form>
                 </div>
             </div>
         </div>
@@ -234,19 +229,18 @@
 
     <h1 class="sub-title">Featured <span>Cars.</span></h1>
     <div class="car-details" id="featured">
-    <?php while($car=mysqli_fetch_assoc($carsresult)) : ?>
+        <?php while($car=mysqli_fetch_assoc($carsresult)) : ?>
 
-        <div class="car-container">
-            <a href="<?=ROOT_URL?>car.php?id=<?=$car['id']?>">
-                <img src="<?=$car['frontview'] ?>" alt="Car Image1">
-            </a>
-                <ul>
-                    <li>Name: <?=$car['make']. " " .$car['model']?></li>
-                    <li>Price: Kshs <?=$car['price']?></li>
-                </ul>
-        </div>
-    <?php endwhile?>
-
+            <div class="car-container">
+                <a href="<?=ROOT_URL?>car.php?id=<?=$car['id']?>">
+                    <img src="<?=$car['frontview'] ?>" alt="Car Image1">
+                </a>
+                    <ul>
+                        <li>Name: <?=$car['make']. " " .$car['model']?></li>
+                        <li>Price: Kshs <?=$car['price']?></li>
+                    </ul>
+            </div>
+        <?php endwhile?>
     </div>
 
 
